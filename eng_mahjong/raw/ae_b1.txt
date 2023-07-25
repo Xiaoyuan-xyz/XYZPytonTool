@@ -1,0 +1,2890 @@
+cattle
+like
+although
+although
+and
+or
+close
+second
+after
+as
+as
+as
+before
+before
+but
+if
+if
+if
+plus
+second
+since
+since
+while
+zero
+though
+till
+unless
+until
+until
+whenever
+wherever
+whether
+yet
+goalkeeper
+soap opera
+lab
+cash
+note
+depart
+bike
+permit
+second
+ages
+bunch
+make
+disagree
+dislike
+replace
+commercial
+criminal
+performance
+appearance
+assistant
+conference
+performer
+reader
+speaker
+speaker
+dishwasher
+freezer
+heater
+leader
+lover
+partner
+diver
+server
+backpacker
+babysitter
+barber
+barber
+builder
+employer
+firefighter
+officer
+recording
+feeling
+ending
+greeting
+handwriting
+meaning
+central heating
+lightning
+ironing
+feeling
+feeling
+boxing
+ice skating
+crossing
+backpacking
+parking
+farming
+animation
+exhibition
+operation
+presentation
+communication
+punctuation
+registration
+description
+discussion
+explanation
+pronunciation
+graduation
+graduation
+admission
+pollution
+decision
+action
+preparation
+conclusion
+imagination
+election
+relation
+celebration
+position
+destination
+expedition
+reservation
+immigration
+organization
+cyclist
+quantity
+facility
+security
+apologize
+organize
+realize
+entertainment
+argument
+development
+achievement
+disappointment
+disappointment
+excitement
+government
+equipment
+employment
+illness
+fitness
+happiness
+competitor
+director
+instructor
+relationship
+relationship
+friendship
+championship
+delivery
+killer
+murderer
+ant
+bat
+bee
+bug
+bull
+butterfly
+cage
+calf
+camel
+creature
+dolphin
+donkey
+fly
+frog
+giraffe
+goat
+kangaroo
+kitten
+mosquito
+parrot
+penguin
+puppy
+shark
+fur
+act
+album
+article
+audience
+biography
+chapter
+character
+circus
+display
+documentary
+festival
+film
+flute
+gallery
+headline
+hero
+intermission
+novel
+paper
+part
+picture
+poem
+poet
+record
+role
+scene
+series
+soap
+cable
+culture
+fiction
+folk
+literature
+poetry
+science fiction
+comedy
+drama
+sculpture
+contents
+graphics
+act
+advertise
+ache
+ankle
+body
+breast
+cheek
+chin
+cough
+cut
+diet
+elbow
+forehead
+heart attack
+human
+knee
+lip
+patient
+pill
+shoulder
+breath
+flu
+sight
+aspirin
+backache
+bone
+disease
+earache
+fever
+skin
+beat
+bleed
+recover
+burn
+cut
+breathe
+button
+collar
+heel
+pullover
+sandal
+sleeve
+pantyhose
+dress
+accent
+alarm
+alphabet
+brochure
+call
+card
+certificate
+comma
+comment
+consonant
+cry
+demand
+diagram
+entry
+excuse
+excuse
+figure
+form
+guess
+interview
+interview
+issue
+joke
+label
+lie
+line
+logo
+paper
+paragraph
+period
+photocopy
+phrase
+point
+prayer
+promise
+question mark
+questionnaire
+scream
+shout
+signature
+contact
+language
+notice
+speech
+apology
+complaint
+ink
+inquiry
+material
+reply
+request
+argue
+complain
+count
+insist
+joke
+lie
+listen
+add
+announce
+approve
+blame
+convince
+date
+demand
+encourage
+encourage
+excuse
+get
+greet
+inform
+mail
+mean
+mean
+mention
+name
+persuade
+predict
+promise
+pronounce
+recommend
+remind
+repeat
+report
+request
+say
+say
+say
+show
+admit
+advise
+ask
+ask
+ask
+call
+communicate
+confirm
+cry
+forgive
+hear
+interrupt
+learn
+promise
+refuse
+register
+reply
+ring
+scream
+sign
+crime
+pirate
+prisoner
+rule
+crime
+arrest
+amount
+average
+bit
+bunch
+dozen
+drop
+extra
+foot
+inch
+limit
+mile
+millimeter
+pattern
+piece
+pile
+row
+average
+depth
+distance
+height
+length
+number
+shape
+couple
+maximum
+increase
+curriculum
+degree
+exchange
+grade
+period
+place
+pupil
+quiz
+secondary school
+science
+know
+review
+fridge
+frying pan
+grill
+kettle
+oven
+pan
+pea
+peanut
+pepper
+pot
+recipe
+roll
+saucer
+beef
+broccoli
+chewing gum
+corn
+flour
+hunger
+cabbage
+coconut
+cucumber
+flavor
+lettuce
+peach
+pie
+pineapple
+spice
+refreshments
+barbecue
+boil
+grill
+burn
+freeze
+fry
+balcony
+bathtub
+cabin
+candle
+chest of drawers
+cottage
+cupboard
+cushion
+faucet
+fire station
+frame
+hut
+iron
+laboratory
+ladder
+monument
+palace
+pillow
+place
+row
+rug
+ruin
+sheet
+air conditioning
+architecture
+the first floor
+the ground floor
+account
+bill
+coin
+exchange rate
+fee
+loan
+penny
+change
+change
+credit
+currency
+bay
+branch
+breeze
+cave
+cliff
+coast
+continent
+district
+flood
+forecast
+landscape
+leaf
+peak
+planet
+rain forest
+region
+rose
+season
+shower
+countryside
+heat
+iron
+land
+life
+oil
+sand
+scenery
+shade
+space
+climate
+jungle
+metal
+rock
+shore
+bottom
+earth
+blow
+pour
+rise
+set
+boil
+flood
+freeze
+check
+experiment
+fight
+hug
+jump
+laugh
+look
+search
+housework
+effort
+exchange
+habit
+rescue
+routine
+act
+behave
+blow
+escape
+fish
+hide
+jog
+knock
+meet
+move
+pause
+rest
+slip
+achieve
+attach
+attempt
+avoid
+bury
+cancel
+carry
+catch
+circle
+collect
+control
+count
+create
+damage
+decorate
+defend
+design
+destroy
+develop
+discover
+exchange
+finish
+fix
+follow
+form
+get
+give
+hand
+handle
+hide
+hit
+hold
+hold
+hug
+imagine
+install
+invent
+join
+knock
+learn
+lift
+meet
+miss
+name
+offer
+pass
+pick
+pin
+point
+postpone
+pour
+prevent
+produce
+prove
+provide
+push
+quit
+raise
+remove
+rescue
+save
+smell
+arrange
+attend
+babysit
+clap
+connect
+continue
+date
+deliver
+dig
+divide
+drop
+explore
+face
+fasten
+fight
+fold
+grab
+hang
+iron
+lead
+light
+lock
+manage
+notice
+pass
+plan
+press
+protect
+push
+search
+select
+shake
+shoot
+haircut
+lady
+mustache
+beauty
+sex
+childhood
+cream
+grow
+shave
+background
+dream
+experience
+favorite
+fool
+head
+hero
+idea
+mind
+experience
+peace
+pleasure
+respect
+respect
+attitude
+character
+doubt
+fear
+heart
+hope
+memory
+mood
+shock
+skill
+sense
+care
+annoy
+attract
+control
+disappoint
+experience
+interest
+regret
+respect
+behave
+care
+feel
+hurt
+judge
+mind
+please
+relax
+politics
+anniversary
+bride
+ceremony
+date
+enemy
+family
+groom
+love
+nephew
+niece
+relative
+culture
+divorce
+marriage
+romance
+call
+celebrate
+leave
+basket
+captain
+chain
+champion
+checkout
+club
+contest
+course
+court
+cup
+defeat
+field
+final
+league
+net
+point
+product
+record
+score
+ski
+snowboard
+gymnastics
+leisure
+pool
+service
+defense
+extreme sports
+beat
+lose
+bulb
+button
+card
+disk
+document
+download
+drive
+folder
+link
+message board
+password
+plug
+pump
+remote control
+access
+dot
+hardware
+power
+radio
+return
+social networking
+CD-ROM
+display
+attach
+brake
+cab
+cabin
+campsite
+check-in (counter)
+crash
+cruise
+ferry
+garage
+gate
+harbor
+jet
+line
+pass
+pocket
+resort
+ride
+ride
+route
+schedule
+sidewalk
+souvenir
+baggage
+customs
+entry
+public transportation
+rail
+camp
+camp
+departure
+port
+go
+sail
+reach
+board
+book
+land
+sail
+agency
+architect
+career
+employee
+guard
+head
+industry
+model
+profession
+architecture
+business
+benefit
+advertise
+retire
+manage
+spider
+cancer
+murder
+bacon
+pork
+bomb
+priest
+recycling
+disadvantage
+disappear
+disappear
+refund
+rebuild
+replace
+recycle
+arrival
+importance
+difference
+baker
+blogger
+border
+butcher
+buyer
+designer
+foreigner
+hairdresser
+keeper
+lawyer
+lighter
+officer
+owner
+reader
+reporter
+rider
+seller
+ending
+engineering
+jogging
+parking
+ambition
+application
+attraction
+collection
+collection
+composition
+direction
+generation
+location
+occasion
+position
+situation
+solution
+attention
+organization
+relaxation
+connection
+correction
+invention
+population
+position
+chemist
+guitarist
+journalist
+scientist
+celebrity
+quality
+ability
+charity
+opportunity
+possibility
+recognize
+improvement
+development
+announcement
+improvement
+author
+calculator
+director
+professor
+sailor
+membership
+difficulty
+killing
+accountant
+aim
+airline
+alarm
+ambulance
+answer
+antique
+area
+article
+assignment
+athlete
+backyard
+barbershop
+bargain
+bell
+blog
+board
+book
+branch
+break
+break
+bucket
+bulletin board
+canal
+case
+cash machine
+chance
+checkout
+cinema
+clinic
+club
+coach
+contract
+copy
+count noun
+cover
+cover
+crew
+crop
+cross
+CV
+dance
+danger
+date
+definite article
+deposit
+design
+detail
+detective
+disc jockey
+disk
+DJ
+drive
+drugstore
+edge
+elementary school
+embassy
+essay
+event
+event
+expert
+fair
+fan
+fare
+favor
+festival
+fifth
+figure
+film-maker
+fine
+finish
+fire
+flag
+floor
+fountain
+goal
+guide
+gun
+hair dryer
+hairstylist
+handkerchief
+herb
+hit
+hole
+honeymoon
+hostel
+hot dog
+indefinite article
+infinitive
+item
+jar
+judge
+key
+kit
+label
+lecture
+line
+lock
+lottery
+mall
+method
+modal (verb)
+moment
+monster
+musician
+neighborhood
+nickname
+nightclub
+nightmare
+nightmare
+object
+object
+offer
+olive
+opinion
+opposite
+option
+pedestrian
+period
+pharmacy
+phrasal verb
+pin
+pipe
+pleasure
+plug
+politician
+preposition
+prescription
+prince
+princess
+pronoun
+purpose
+range
+report
+result
+result
+résumé
+review
+reward
+reward
+ride
+robot
+rule
+run
+salesman
+saleswoman
+salon
+search
+season
+secret
+section
+session
+sign
+sign
+signpost
+site
+sleep
+smell
+smile
+access
+behavior
+care
+chance
+common sense
+cotton
+credit
+damage
+design
+design
+dirt
+diving
+dust
+economics
+effort
+energy
+energy
+entrance
+entry
+fashion
+garbage
+gas
+interest
+law
+light
+love
+love
+luxury
+ma'am
+medicine
+nightlife
+northeast
+northwest
+notice
+offense
+order
+pay
+permission
+progress
+property
+research
+room
+sex
+side
+silence
+silk
+sleep
+smoke
+southeast
+southwest
+advantage
+attack
+battle
+benefit
+challenge
+chance
+charge
+chili
+cod
+custom
+death
+decrease
+defense
+diet
+drama
+duty
+effect
+emergency
+entry
+fuel
+height
+jail
+lamb
+life
+liquid
+material
+mystery
+powder
+prison
+religion
+repair
+result
+review
+salary
+salmon
+service
+shadow
+shrimp
+society
+speed
+contents
+groceries
+atmosphere
+bottom
+mix
+return
+firework
+change
+appear
+appear
+apply
+blog
+burn
+compete
+concentrate
+cough
+cycle
+dive
+dive
+exist
+fall
+float
+go
+go
+grow
+hitchhike
+lie
+lie
+live
+operate
+pass
+point
+rise
+shine
+shoot
+shop
+skate
+ski
+smell
+accompany
+admire
+allow
+answer
+change
+comb
+contain
+cover
+cover
+declare
+defeat
+delay
+delete
+deserve
+direct
+display
+drag
+employ
+enter
+expect
+fax
+feed
+figure
+fill
+fill
+find
+fix
+forget
+gain
+give
+give
+give
+give
+guide
+have
+have
+hide
+hold
+imagine
+imagine
+injure
+install
+intend
+interview
+introduce
+involve
+involve
+keep
+know
+let
+lose
+lose
+make
+mean
+mean
+miss
+need
+open
+own
+pick
+plant
+play
+post
+punish
+raise
+reduce
+rent
+require
+rob
+run
+save
+solve
+accept
+agree
+attack
+bite
+boil
+bounce
+break
+burn
+charge
+check
+compare
+consider
+continue
+crash
+decrease
+develop
+dial
+direct
+dream
+enter
+entertain
+exercise
+exit
+explode
+film
+fit
+float
+follow
+follow
+forget
+forget
+gain
+hunt
+join
+kid
+knit
+live
+marry
+match
+mix
+pay
+perform
+play
+quit
+race
+report
+reserve
+score
+search
+see
+sew
+share
+sink
+smile
+air force
+angel
+bomb
+ghost
+soldier
+murder
+incredible
+scary
+frozen
+sir
+pretty
+irregular
+disabled
+recycled
+acceptable
+reasonable
+reasonable
+comfortable
+enjoyable
+reliable
+cultural
+financial
+environmental
+professional
+political
+digital
+electrical
+animated
+advanced
+damaged
+limited
+old-fashioned
+barbecued
+boiled
+middle-aged
+amazed
+annoyed
+ashamed
+bored
+confused
+delighted
+disappointed
+embarrassed
+exhausted
+experienced
+frightened
+relaxed
+satisfied
+scared
+shocked
+divorced
+engaged
+different
+confident
+intelligent
+painful
+cheerful
+grateful
+helpful
+hopeful
+peaceful
+powerful
+sensible
+romantic
+basic
+basic
+basic
+scientific
+electric
+electronic
+electronic
+amusing
+disgusting
+freezing
+amazing
+annoying
+charming
+confusing
+disappointing
+easygoing
+embarrassing
+frightening
+relaxing
+shocking
+education
+imagination
+selfish
+quality
+creative
+negative
+careless
+hopeless
+absolutely
+actually
+clearly
+completely
+exactly
+extremely
+finally
+fortunately
+fully
+generally
+heavily
+honestly
+hopefully
+mainly
+particularly
+partly
+personally
+possibly
+approximately
+fairly
+beautifully
+lively
+lonely
+amazingly
+angrily
+bravely
+curiously
+dangerously
+excitedly
+happily
+kindly
+politely
+arrangement
+enormous
+anxious
+curious
+generous
+jealous
+nervous
+serious
+curly
+spicy
+icy
+icy
+rainy
+sandy
+guilty
+alcoholic
+comic
+lead
+live
+orchestra
+publish
+set
+alive
+asleep
+awake
+blind
+deaf
+human
+hurt
+mad
+pregnant
+sore
+casual
+flat
+brief
+complete
+great
+anyway
+besides
+down
+hardly
+how
+how
+indeed
+just
+just
+quite
+rather
+initial
+madam
+inform
+offer
+ancient
+antique
+average
+bad
+bad
+blank
+brand new
+brilliant
+broad
+clever
+colorful
+deep
+equal
+exact
+extraordinary
+FALSE
+flat
+front
+gentle
+giant
+heavy
+high
+high
+high
+huge
+individual
+last
+light
+low
+magnificent
+main
+marvelous
+maximum
+medium
+minimum
+narrow
+nasty
+navy blue
+near
+nearby
+opposite
+outdoor
+pretty
+regular
+rough
+rough
+sharp
+smooth
+apart
+around
+away
+behind
+below
+deep
+down
+extra
+high
+indoors
+least
+low
+more
+much
+much
+near
+nearby
+opposite
+percent
+minimum
+elementary
+secondary
+school
+bitter
+frozen
+hot
+raw
+sour
+ingredient
+downstairs
+first-floor
+owe
+calm
+clear
+cool
+fine
+frozen
+green
+humid
+mild
+seaside
+choice
+look
+push
+match
+reserve
+elderly
+handsome
+afraid
+bad
+brave
+brilliant
+calm
+certain
+cold
+cruel
+difficult
+gentle
+good
+honest
+honest
+hurt
+miserable
+nasty
+new
+patient
+positive
+proud
+shy
+silly
+smart
+interest
+knowledge
+public
+party
+close
+gay
+couple
+out
+abroad
+in
+on
+full-time
+part-time
+promote
+impossible
+inexpensive
+internationally
+intermediate
+fashionable
+reasonable
+sociable
+annual
+central
+cultural
+essential
+historical
+natural
+original
+original
+personal
+personal
+personal
+principal
+professional
+social
+important
+complicated
+depressed
+dressed
+prepared
+convenient
+convenient
+efficient
+independent
+further
+powerful
+possible
+historic
+realistic
+romantic
+burning
+challenging
+missing
+condition
+position
+quality
+active
+active
+possessive
+likely
+monthly
+accidentally
+briefly
+correctly
+definitely
+differently
+directly
+frequently
+lately
+lightly
+loudly
+mostly
+normally
+obviously
+perfectly
+pleasantly
+previously
+properly
+quietly
+quietly
+rarely
+really
+recently
+regularly
+regularly
+secretly
+seriously
+softly
+specially
+delicious
+obvious
+previous
+serious
+serious
+dusty
+funny
+juicy
+lucky
+messy
+shiny
+sleepy
+absent
+alike
+all right
+bald
+bright
+certain
+certain
+clear
+common
+common
+complete
+correct
+cozy
+direct
+downtown
+due
+dull
+duty-free
+early
+eastern
+face-to-face
+fair
+fair
+familiar
+fancy
+fancy
+female
+forbidden
+former
+frequent
+fresh
+fresh
+full
+future
+general
+gorgeous
+hard
+hidden
+incorrect
+individual
+light
+little
+local
+loose
+lost
+magic
+male
+modern
+neat
+necessary
+next-door
+northeast
+northern
+northwest
+open
+ordinary
+out-of-date
+overnight
+passive
+past
+past
+perfect
+permanent
+plain
+plain
+present
+private
+private
+proper
+pure
+pure
+quiet
+rare
+real
+recent
+regular
+regular
+right
+rude
+safe
+second-hand
+secret
+self-service
+separate
+separate
+shut
+silent
+silly
+similar
+simple
+soft
+southeast
+southern
+southwest
+spare
+special
+spectacular
+above
+ahead
+ahead
+along
+along
+aloud
+already
+altogether
+any
+around
+back
+backward
+besides
+best
+either
+even
+face to face
+first
+first
+forever
+forward
+furthest
+half
+hard
+home
+in
+just
+just
+last
+loud
+luckily
+meanwhile
+next door
+not
+nowadays
+nowhere
+off
+off
+once
+only
+only
+only
+otherwise
+out
+out
+out
+outdoors
+over
+over
+right
+safely
+second
+somehow
+someplace
+choice
+choice
+fall
+future
+hurry
+interest
+memory
+mess
+popcorn
+range
+accompany
+last
+unemployment
+thriller
+stranger
+swimmer
+writing
+warning
+wedding
+training
+windsurfing
+station
+television
+suggestion
+translation
+tourism
+tiger
+web
+whale
+wing
+statue
+talk show
+trumpet
+star
+tablet
+temperature
+test
+throat
+thumb
+tongue
+sweatshirt
+top
+underwear
+underpants
+take
+subject
+table
+talk
+text
+tip
+title
+topic
+use
+vowel
+text
+welcome
+suggest
+suggest
+take
+underline
+warn
+welcome
+translate
+wonder
+write
+stripe
+yard
+worst
+take
+strawberry
+takeout
+vegetarian
+spinach
+taste
+tuna
+step
+study
+tower
+sum
+tip
+tax
+stream
+valley
+waterfall
+wave
+weather forecast
+sunshine
+thunder
+stone
+sunrise
+sunset
+step
+support
+work
+succeed
+sunbathe
+turn
+spoil
+stop
+strike
+take
+take
+take
+tie
+transfer
+try
+use
+waste
+wrap
+spill
+start
+stick
+stop
+tear
+tie
+turn
+thought
+worry
+stress
+talent
+surprise
+trust
+vote
+twin
+stall
+tournament
+track
+squash
+yoga
+support
+switch
+virus
+webcam
+window
+volume
+technology
+stop
+stay
+tent
+track
+traffic jam
+traveler
+truck
+trunk
+tunnel
+van
+vehicle
+windshield
+transportation
+travel
+strike
+thief
+temple
+uncountable noun
+undress
+unpack
+trainer
+user
+writer
+teaching
+training
+spot
+spy
+stain
+state
+stick
+stop
+studio
+studio
+subject
+success
+system
+tense
+tissue
+total
+travel agent
+trend
+trick
+trick
+tube
+turn
+unit
+vase
+vet
+video clip
+view
+visa
+visit
+voice
+way
+wheelchair
+workout
+zone
+stuff
+success
+time
+toothpaste
+town
+trade
+trash
+trouble
+value
+variety
+weight
+wildlife
+style
+style
+technique
+trouble
+turkey
+use
+value
+wage
+way
+stay
+surf
+think
+think
+travel
+work
+support
+support
+surround
+take
+taste
+teach
+test
+turn
+update
+upload
+weigh
+stir
+tour
+train
+type
+understand
+vote
+wave
+win
+wonder
+unwell
+unbelievable
+uncomfortable
+unexpected
+uninterested
+unemployed
+uninteresting
+unhealthy
+unimportant
+unpleasant
+unhappy
+unkind
+valuable
+well-dressed
+stressed
+talented
+terrified
+stressful
+surprising
+tiring
+working
+stylish
+useless
+terribly
+totally
+surprisingly
+tasty
+tight
+written
+therefore
+thank you
+strong
+strong
+terrific
+thick
+tiny
+through
+vegetarian
+upstairs
+stone
+waste
+touch
+teenage
+weak
+white
+youth
+strict
+stupid
+sweet
+weak
+strong
+sports
+team
+union
+unforgettable
+unlikely
+unlucky
+unfair
+unfriendly
+unknown
+unnecessary
+suitable
+traditional
+typical
+usual
+successful
+suddenly
+typically
+urgently
+sticky
+steep
+strange
+strong
+temporary
+thick
+top
+top
+total
+TRUE
+upper
+up-to-date
+urgent
+used
+warm
+waste
+welcome
+western
+western
+wet
+wrong
+still
+straight
+together
+up
+why
+worse
+start
+tear
+time
+world
+regarding
+may
+in
+could
+could
+according to
+because of
+despite
+in
+itself
+double
+few
+little
+after
+along
+before
+beside
+by
+in
+of
+on
+out of
+out of
+over
+over
+little
+none
+plenty
+in
+for
+damn
+do
+all
+most
+other
+Cheers!
+can
+could
+may
+might
+ought to
+should
+should
+against
+at
+before
+behind
+behind
+besides
+between
+beyond
+but
+for
+from
+in
+instead of
+into
+into
+like
+of
+off
+off
+on
+on
+onto
+out of
+over
+over
+anybody
+anyone
+either
+nothing
+via
+which
+to
+underneath
+with
+within
+to
+via
+the
+their
+what
+whose
+whose
+your
+would
+would
+would
+would
+through
+through
+to
+to
+to
+to
+toward
+with
+within
+them
+they
+we
+what
+whatever
+who
+whose
+regards
+I bet (you)
+Are you kidding?/You're kidding!
+quite a bit
+loads of/a load of
+be dying for/to do sth
+Oh my God!
+thank God
+sb's call
+hours
+a book/cat/dog, etc. lover
+a horror film/movie/story
+the news
+appear in/at/on, etc.
+wait a minute
+believe it or not
+I guess
+by hand
+change your mind
+make up your mind or make your mind up
+fall asleep
+have a question/idea/plan, etc.
+make sb do sth
+set a date/time (for sth)
+help yourself (to sth)
+not believe your eyes
+for fun or for the fun of it
+find sb/sth easy/boring/funny, etc.
+old friend
+be friends (with sb)
+make friends (with sb)
+make friends (with sb)
+come after/first/last, etc.
+pay attention (to sth)
+by accident
+in back of sb/sth
+out of date
+up to date
+the girls
+guys
+a hand
+that kind of thing
+some kind of
+by mistake
+Route
+the public
+without delay
+have no doubt
+there's no doubt
+2/3/4, etc. o'clock in the morning
+in the morning
+come true
+fall in love
+not believe your eyes/ears
+bring (sb) happiness/luck/peace, etc.
+find the money/time, etc.
+have sth cleaned/repaired, etc.
+have sth stolen/taken, etc.
+have no idea
+be located in/near/on/etc.
+make up your mind or make your mind up
+make a face
+have been meaning to do sth
+show sb what to do/how to do sth
+can't/couldn't help doing sth
+hope to do sth
+Sincerely (yours)
+catch up with sb
+no way
+Oh my gosh!
+or so
+quite a bit
+or so
+hang on
+be into sth
+be mad about sb/sth
+hold on
+nice and sth
+likes and dislikes
+be responsible for sb/sth/doing sth
+sparkling water/wine
+feelings
+in addition (to)
+not really
+on display
+folk art/dancing, etc.
+on display
+blow your nose
+take care of sb/sth
+get cancer/flu, etc.
+have on sth or have sth on
+call up (sb) or call (sb) up
+give in
+hear from sb
+Look out!
+look up sth or look sth up
+pass on sth or pass sth on
+How/What about?
+after all
+after all
+and so on
+apart from
+as long as
+at least
+too bad
+Come on!
+of course
+due to
+in fact
+for instance
+in general
+get in touch
+to be honest
+How about ...?
+if I were you
+if only
+in fact
+in the end
+in general
+in particular
+for instance
+keep in touch
+keep a/sth secret
+you know
+at least
+at least
+as/so long as
+as/so long as
+out loud
+Would you mind...?
+wait a moment
+no more/less/better, etc., than
+not at all
+of course
+on the whole
+once upon a time
+out loud
+in particular
+break in or break into sth
+at least
+quite a few
+in front
+in front
+just about
+just as bad/good/tall/clever, etc. (as sb/sth)
+a little sth
+one or two
+over here/there
+be short of sth
+do badly/well
+to go
+pay back sb/sth or pay sb/sth back
+blow away (sth) or blow (sth) away
+blow down (sth) or blow (sth) down
+come out
+go down
+the cold
+before/after dark
+the environment
+fresh air
+the ground
+add up (sth) or add (sth) up
+blow up sth or blow sth up
+blow up (sth/sb) or blow (sth/sb) up
+call for sb
+carry on (sth) or carry (sth) on
+carry out sth or carry sth out
+come along
+cut up sth or cut sth up
+deal with sth
+fall down
+fall over
+fill up (sth) or fill (sth) up
+fix up sth or fix sth up
+get in
+give out sth or give sth out
+give up sth or give sth up
+give up sth or give sth up
+go away
+go off
+go on
+hand out sth or hand sth out
+hang around (swh)
+hang out
+hang up sth or hang sth up
+hurry up
+join in (sth)
+keep sb in
+keep (sb/sth) off sth
+keep on doing sth
+keep (sb/sth) out
+keep up sth or keep sth up
+knock sb down
+laugh at sb/sth
+leave behind sb/sth or leave sb/sth behind
+look around (swh)
+pass on sth or pass sth on
+put away sth or put sth away
+put back sth or put sth back
+put down sb/sth or put sb/sth down
+put off sth/doing sth or put sth off
+put out sth or put sth out
+put up sth or put sth up
+put up sth or put sth up
+show sb around
+sign up
+take it/things easy
+get down/into/off, etc.
+get rid of sth
+glance at/around/toward, etc.
+break/cut, etc. sth in half
+jump in/into/up, etc.
+keep doing sth
+take part
+pass by/over/through, etc.
+pay attention (to sth)
+pull sth off/out/up
+get rid of sth
+get/go to sleep
+put on sth or put sth on
+believe in sth
+look forward to sth/doing sth
+feel bad about sth/doing sth
+change your mind
+feel like/as if
+feel like sth/doing sth
+feel like sb/sth
+feel sorry for
+be fond of sb/sth
+for fun or for the fun of it
+a sense of humor
+in tears
+likes and dislikes
+would rather
+seem happy/a nice person, etc.
+a sense of humor
+feel sorry for
+break up
+bring up sb or bring sb up
+get together
+go out
+get to know sb/sth
+get to know sb/sth
+single parent
+on sale
+in first/second/third, etc. place
+on sale
+break down
+out of order
+out of order
+book sb in or book sb into sth
+get around (somewhere)
+get in
+get out
+go away
+go back
+set off
+set out
+on board
+on board
+the sights
+be in charge
+out of work
+be situated in/on/by, etc.
+later on
+the following day/morning, etc.
+conditions
+daily life
+reasonably priced
+shortly afterward; shortly after/before sth
+base sth on sth
+belong to sth
+blow out (sth) or blow (sth) out
+check in
+check in/check into sth
+check out
+come out
+complain of sth
+consist of sth
+depend on/upon sb/sth
+eat out
+end up
+give away sth or give sth away
+go down
+go off
+go on
+go out
+go up
+hand in sth or hand sth in
+hang up
+hold up sb/sth or hold sb/sth up
+move in
+move out
+put down sth or put sth down
+put sb through
+remind sb of sth/sb
+run out
+send sth back or send back sth
+set up sth or set sth up
+show up
+shut (sth) down or shut down (sth)
+above all
+in advance
+take advantage of sth
+can afford
+day after day/year after year, etc.
+again and again
+once again
+aim to do sth
+at all
+above all
+all is well
+and all (that)
+can/could always do sth
+one another
+the army
+as soon as
+at all
+at his/its, etc. best
+at (long) last
+at first
+at the same time
+at once
+attend a church/college/school, etc.
+attract attention/interest, etc.
+two weeks/five hours, etc. away
+begin with sth
+to begin with
+the best
+at his/its, etc. best
+do/try your best
+a broad range/variety, etc.
+by accident/mistake, etc.
+by hand
+in case of sth
+(just) in case
+catch fire
+have sth in common
+go crazy
+the dark
+the other day
+one day/some day/one of these days
+for days
+it/that depends
+in detail
+do your hair/makeup, etc.
+do your best
+drag and drop
+drag and drop
+a sound/special/visual effect
+either ... or
+either way
+elder sister/brother/son/daughter
+eldest child/brother/daughter, etc.
+in the end
+not even
+hardly ever
+ever since
+for ever
+except that
+be expecting sb/sth
+make a face
+so far
+sb's fault
+feel at home
+catch fire
+on fire
+at first
+the first
+fit (sth) in/into/through/under, etc.
+for ever
+for sure
+in full
+the future
+in the future
+get cold/ill/late, etc.
+get worse
+get caught/killed/told off, etc.
+get sth wrong
+go badly/well, etc.
+go wrong
+go bald/blind/gray, etc.
+the heart of sth
+with the help of sth
+feel at home
+have no idea
+in time
+in advance
+in love
+in addition (to)
+in detail
+in full
+in the future
+in order (for sb/sth) to do sth
+(just) in case
+in case of sth
+(by) itself
+be just about to do sth
+just before/over/under, etc.
+I know
+as you know
+be known as sth
+lack of sth
+at (long) last
+family/private/work, etc. life
+a/sb's way of life
+a little
+all day long
+no longer
+all day long
+no longer
+look like
+it looks like/as if
+the middle
+be in the middle of (doing) sth
+miss a chance/opportunity
+once more
+believe it or not
+not even
+on fire
+on purpose
+on time
+(all) on your own
+(all) on your own
+once again
+once more
+one another
+one day
+if only
+or two
+in order (for sb/sth) to do sth
+the other side/end (of sth)
+the other day/week, etc.
+others
+out of date
+all over somewhere
+of your own
+(all) on your own
+(all) on your own
+the passive
+the past
+sb's past
+take place
+the present
+on purpose
+quite a while
+rather than
+remain calm/open, etc.
+right away/now/after
+at the same time
+the same
+seem like/as if/to, etc.
+set the table
+shake hands
+every single
+smell of/like; smell delicious/horrible, etc.
+so did we/so have I/so is mine, etc.
+so far
+so (that)
+as soon as
+that sort of thing
+sound like/as if/as though
+speak about/of sth
+special offer
+thank God
+a quick/slow/good, etc. worker
+take care of sb/sth
+wait (a minute)
+taste good/bad/sweet, etc.
+keep sb waiting
+take part
+take it/things easy
+walk sb home/to sth
+walk the dog
+walking/hockey, etc. stick
+set the table
+take place
+take a break/rest, etc.
+take advantage of sth
+Yours truly,
+Yours sincerely
+no way
+be up to sth
+can't stand sb/sth
+What's up?
+be unable to do sth
+tired of doing sth
+be used to sb/sth/doing sth
+get/become used to sb/sth/doing sth
+suffer from sth
+have a temperature
+I suppose (so)
+tell sb how/what/when to do sth
+I can't tell you how ...
+once upon a time
+too bad
+be/get/keep, etc. in touch
+once upon a time
+be welcome to do sth
+Oh well
+What about ...?
+What if ...?
+whether... or
+on the whole
+why not?
+wish sb luck
+not believe/understand/hear/say, etc. a word
+Would you mind ...?
+three/eight/nine, etc. times
+a wide range/selection/variety, etc.
+get worse
+be worth
+the universe
+start (sth) off or start off(sth)
+take out sb or take sb out
+take out sth or take sth out
+take up sth or take sth up
+throw away/out sth or throw sth away/out
+turn down sth or turn sth down
+wear (sth) out or wear out (sth)
+wrap sth up or wrap up sth
+step back/forward/over, etc.
+step on/in sth
+go/walk, etc. up to sb/sth
+in tears
+be willing (to do sth)
+wish (that)
+would rather
+split up
+switch off sth or switch sth off
+switch on sth or switch sth on
+take back sth or take sth back
+take out sth or take sth out
+turn (sb/sth) into sb/sth
+turn up sth or turn sth up
+type in sth or type sth in
+work out
+write sth down or write down sth
+in spite of sth
+be supposed to do sth
+for sure
+burst into tears
+that sort of thing
+a thing
+the same thing
+things
+things like that
+think of sth
+it's time
+in time
+on time
+at the same time
+in a day's/two months', etc. time
+come true
+the truth
+or two
+not until
+not until
+be up to sb
+up to 10, 20, etc.
+up to/until/till, etc.
+used to do/be sth
+(a) good value
+a/sb's way of life
+either way
+all is well
+a while
+quite a while
+5 miles/10 feet, etc. wide
+without delay
+be worth sth/doing sth
+be worth it
+get sth wrong
+go wrong
+for years

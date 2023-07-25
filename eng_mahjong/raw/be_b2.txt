@@ -1,0 +1,4164 @@
+if
+while
+or
+provided (that)
+whereas
+now
+once
+though
+when
+where
+grant
+acquire
+ensure
+descend
+gender
+guts
+fancy
+consume
+cease
+heaven
+get
+dissatisfaction
+disability
+disagreement
+dishonesty
+discourage
+disapprove
+invade
+input
+interfere
+commercial
+musical
+approval
+chemical
+disposal
+appearance
+guidance
+insurance
+assistance
+maintenance
+appearance
+confidence
+independence
+intelligence
+influence
+independence
+bestseller
+learner
+helper
+consumer
+defender
+browser
+bumper
+manufacturer
+classic
+characteristic
+clothing
+learning
+catering
+fighting
+feeling
+marketing
+landing
+manufacturing
+composition
+edition
+condition
+examination
+infection
+construction
+definition
+expression
+introduction
+confession
+confirmation
+expression
+addition
+introduction
+admission
+construction
+institution
+inflation
+conservation
+evolution
+collection
+cooperation
+identification
+introduction
+action
+calculation
+contribution
+invasion
+impression
+admiration
+ambition
+appreciation
+determination
+exhaustion
+motivation
+affection
+confusion
+frustration
+inspiration
+adoption
+division
+application
+generation
+connection
+immigration
+division
+competition
+criticism
+motorist
+capacity
+majority
+minority
+capacity
+creativity
+curiosity
+generosity
+identity
+community
+activity
+agreement
+argument
+agreement
+arrangement
+encouragement
+investment
+adjustment
+assessment
+movement
+amazement
+amusement
+astonishment
+enjoyment
+commitment
+embarrassment
+government
+attachment
+management
+consciousness
+illness
+carelessness
+eagerness
+greatness
+kindness
+laziness
+escalator
+investor
+collector
+ancestor
+inspector
+discovery
+bravery
+addiction
+breed
+cell
+collar
+crocodile
+deer
+eagle
+egg
+feather
+fox
+leopard
+bark
+breed
+beat
+cello
+column
+display
+episode
+guest
+image
+issue
+item
+background
+craft
+contents
+lyrics
+broadcast
+compose
+conduct
+go
+beat
+bite
+breakdown
+bruise
+bug
+chest
+cure
+dose
+drug
+drug
+eyebrow
+eyelid
+fingernail
+gum
+heel
+hip
+jaw
+lap
+lung
+nail
+care
+eyesight
+injury
+liver
+muscle
+ache
+faint
+freeze
+bump
+cure
+develop
+heal
+badge
+bikini
+bow
+bra
+cardigan
+helmet
+hood
+mask
+dress
+gear
+costume
+accent
+account
+apostrophe
+arrow
+ban
+booklet
+chart
+colon
+command
+dash
+draft
+exclamation mark
+fight
+first language
+graph
+handout
+hint
+hint
+hyphen
+idiom
+insult
+manual
+matter
+native speaker
+blame
+data
+feedback
+fluency
+gossip
+code
+compromise
+defence
+emphasis
+legend
+mention
+myth
+inverted commas
+check
+cheer
+communicate
+compromise
+fight
+gossip
+insist
+amuse
+assume
+assure
+call
+capture
+challenge
+claim
+confirm
+defend
+define
+deny
+emphasize
+excuse
+expose
+express
+guarantee
+highlight
+highlight
+indicate
+insult
+invent
+justify
+list
+mark
+argue
+beg
+beg
+boast
+claim
+comment
+confess
+decline
+enquire
+inquire
+interpret
+mumble
+mutter
+burglar
+case
+case
+gang
+guilt
+justice
+arrest
+burglary
+court
+law
+base
+block
+curve
+diamond
+dimension
+disc
+level
+level
+load
+accuracy
+degree
+increase
+drop
+extent
+drop
+branch
+credit
+field
+graduate
+discipline
+graduate
+bite
+bun
+cherry
+loaf
+junk food
+mint
+aubergine
+fat
+leek
+barrier
+basement
+bench
+brick
+cabinet
+cellar
+chimney
+cloth
+column
+corridor
+estate
+fence
+frame
+hook
+lobby
+monument
+atmosphere
+award
+balance
+budget
+debit
+debt
+economy
+fortune
+debt
+finance
+expense
+debit
+atom
+bank
+berry
+bush
+carbon footprint
+cloud
+earthquake
+element
+hedge
+aluminium
+carbon
+carbon dioxide
+carbon monoxide
+climate change
+copper
+daylight
+earth
+global warming
+ground
+land
+moonlight
+mud
+acid
+dawn
+diamond
+frost
+gas
+harvest
+mist
+act
+attempt
+estimate
+fight
+glance
+go
+laughter
+conflict
+dash
+grip
+hold
+act
+adjust
+cooperate
+cope
+crawl
+dash
+experiment
+fight
+freeze
+hesitate
+kneel
+acquire
+adapt
+adjust
+adopt
+analyse
+arrange
+assess
+avoid
+beat
+burgle
+bury
+calculate
+capture
+conduct
+construct
+control
+copy
+cut
+demolish
+deny
+deprive
+dip
+disrupt
+distinguish
+distract
+distribute
+disturb
+drag
+drop
+enable
+estimate
+examine
+exploit
+exploit
+explore
+extend
+extract
+fit
+fix
+forbid
+force
+found
+free
+gather
+grip
+guard
+guard
+identify
+identify
+ignore
+implement
+introduce
+keep
+launch
+lick
+limit
+locate
+lower
+maintain
+assist
+balance
+bang
+bend
+brush
+charge
+chase
+combine
+convert
+copy
+crack
+distinguish
+dominate
+fight
+fight
+fire
+gather
+hunt
+invest
+lead
+load
+miss
+feature
+figure
+grown-up
+look
+chance
+coward
+figure
+gentleman
+idiot
+joy
+liar
+anger
+anxiety
+appeal
+certainty
+comfort
+command
+courage
+courtesy
+credit
+despair
+disgrace
+enthusiasm
+envy
+faith
+fame
+force
+grief
+guilt
+honesty
+honour
+horror
+humour
+joy
+life
+loyalty
+charm
+concern
+concern
+cruelty
+delight
+depth
+desire
+emotion
+freedom
+image
+love
+misery
+nature
+honour
+appeal
+approve
+belong
+blush
+admire
+appreciate
+bear
+betray
+bother
+confuse
+doubt
+draw
+endure
+envy
+face
+fear
+fear
+feel
+impress
+inspire
+inspire
+inspire
+cheat
+learn
+citizen
+kingdom
+nation
+democracy
+control
+affair
+bond
+brother-in-law
+circle
+companion
+darling
+daughter-in-law
+father-in-law
+funeral
+gang
+host
+mother-in-law
+company
+mix
+adopt
+divorce
+arrow
+brand
+catalogue
+lap
+marathon
+martial art
+export
+guarantee
+lead
+appear
+browse
+hold
+lead
+backup
+bookmark
+breakdown
+bug
+bulb
+chip
+control
+cursor
+database
+desktop
+desktop
+device
+hard drive
+hit
+icon
+key
+laser
+microphone
+monitor
+broadband
+data
+cable
+failure
+flash
+crash
+fail
+access
+bookmark
+burn
+equip
+generate
+Google
+browse
+charge
+display
+aircraft
+captain
+crossroads
+cycle
+deck
+horn
+jam
+lane
+lane
+approach
+cruise
+carry
+agent
+analyst
+chief
+client
+deadline
+deal
+fisherman
+industry
+duty
+job
+head
+manufacture
+addict
+haunt
+disappearance
+misunderstanding
+disappear
+import
+input
+interact
+misunderstand
+approval
+consultant
+consequence
+convenience
+existence
+coincidence
+banker
+composer
+container
+counter
+dealer
+determiner
+entertainer
+gardener
+lecturer
+maker
+master
+minister
+advertising
+banking
+coaching
+gardening
+hunting
+lighting
+living
+addition
+association
+collocation
+conjunction
+consideration
+demonstration
+explosion
+expression
+extension
+extension
+extension
+generation
+generation
+institution
+mission
+concentration
+confusion
+confusion
+consideration
+construction
+decoration
+destruction
+division
+evolution
+expansion
+civilization
+combination
+connection
+creation
+decoration
+depression
+distinction
+donation
+exception
+intention
+interruption
+introduction
+investigation
+impression
+journalism
+economist
+facility
+activity
+authority
+availability
+equality
+flexibility
+identity
+alternative
+imperative
+arrangement
+attachment
+commitment
+development
+investment
+judgment
+amusement
+involvement
+darkness
+friendliness
+ambassador
+conductor
+editor
+inspector
+inventor
+investigator
+difficulty
+bomber
+gambling
+affair
+agent
+animal
+approach
+area
+aspect
+bakery
+bang
+bar
+bargain
+barrier
+base
+basis
+battle
+beam
+bell
+bend
+billion
+blade
+board
+bonus
+bonus
+bow
+breakthrough
+bullet
+candidate
+carnival
+category
+cause
+cell
+cemetery
+chain
+citizen
+claim
+clause
+clue
+concept
+control
+copy
+county
+crash
+critic
+cut
+cycle
+debit card
+decade
+dilemma
+dimension
+diplomat
+dive
+dive
+dot
+edge
+electrician
+element
+environment
+episode
+equal
+era
+estate
+example
+extract
+factor
+faith
+fate
+fault
+fault
+feature
+female
+flame
+flash
+force
+form
+function
+gap
+gap
+gap
+grave
+hair
+hammer
+handle
+heart
+highlight
+icon
+immigrant
+incident
+individual
+institute
+interior
+jewel
+judge
+landlady
+landlord
+layer
+leaflet
+leak
+lesson
+lid
+life
+lifestyle
+line
+link
+male
+mark
+match
+mayor
+measure
+medal
+message
+mine
+miracle
+motive
+motor
+nail
+absence
+agriculture
+balance
+board
+cardboard
+centigrade
+chaos
+cloth
+commerce
+concrete
+daytime
+demand
+denim
+ease
+efficiency
+electronics
+evidence
+fact
+faith
+fate
+genetics
+good
+harm
+harmony
+heaven
+hunger
+justice
+laundry
+liberty
+litter
+luck
+magic
+man
+mankind
+absence
+advance
+advantage
+analysis
+backup
+belief
+campus
+class
+collapse
+comparison
+conflict
+context
+contrast
+control
+control
+costume
+crab
+crisis
+debate
+decline
+dialogue
+disaster
+disaster
+disguise
+error
+evil
+failure
+fantasy
+fortune
+gender
+habit
+income
+length
+loss
+loss
+material
+mixture
+belongings
+earnings
+human rights
+means
+background
+brush
+content
+distance
+the first person
+help
+the last minute
+manner
+manner
+mess
+mixture
+need
+agree
+apply
+belong
+brake
+climb
+collapse
+collapse
+come
+compete
+cooperate
+correspond
+correspond
+count
+decline
+demonstrate
+differ
+dip
+emerge
+fail
+go
+jump
+keep
+look
+abandon
+abolish
+absorb
+accept
+accept
+accuse
+affect
+amuse
+approach
+balance
+block
+boost
+burn
+catch
+catch
+cause
+chop
+commit
+concern
+concern
+confuse
+congratulate
+contain
+cost
+cover
+cover
+cut
+deceive
+declare
+defeat
+demand
+demonstrate
+disguise
+distinguish
+divide
+edit
+educate
+enclose
+encounter
+exchange
+expect
+extend
+face
+finance
+fine
+fool
+form
+frighten
+generate
+grab
+hang
+hold
+illustrate
+imagine
+interrupt
+involve
+lack
+launch
+leave
+light
+link
+lose
+lower
+maintain
+make
+measure
+miss
+move
+name
+alter
+bend
+benefit
+blink
+bother
+bounce
+break
+burst
+chew
+chew
+close
+coach
+collect
+contribute
+cool
+decay
+donate
+double
+escape
+expand
+export
+fade
+feature
+feel
+flash
+flood
+fly
+govern
+help
+invest
+investigate
+leak
+lend
+load
+mark
+melt
+devil
+god
+hell
+hell
+abuse
+abuse
+bombing
+haunt
+impolite
+boiling
+moreover
+half
+full
+fed up
+evidently
+formerly
+evident
+fire
+illegal
+disorganized
+dissatisfied
+inexperienced
+irresponsible
+misleading
+interactive
+illegally
+impatiently
+incredibly
+dishonest
+dislike
+impatient
+impatient
+irregular
+capable
+comfortable
+desirable
+favourable
+dental
+fatal
+medical
+alphabetical
+critical
+criminal
+additional
+artificial
+beneficial
+exceptional
+educational
+economical
+chemical
+coastal
+ecological
+global
+emotional
+emotional
+intellectual
+mental
+industrial
+inhabitant
+arrogant
+addicted
+injured
+canned
+addicted
+amused
+astonished
+bad-tempered
+bothered
+concerned
+convinced
+determined
+devoted
+distinguished
+fascinated
+impressed
+irritated
+motivated
+developed
+adopted
+fluent
+fluent
+innocent
+innocent
+innocent
+independent
+designer
+delightful
+dreadful
+harmful
+cheerful
+doubtful
+artistic
+classic
+academic
+domestic
+economic
+dynamic
+energetic
+enthusiastic
+democratic
+domestic
+gymnastic
+atomic
+automatic
+growing
+astonishing
+caring
+depressing
+distressing
+encouraging
+exhausting
+fascinating
+irritating
+moving
+developing
+expectation
+corporation
+childish
+childish
+foolish
+community
+decorative
+extensive
+impressive
+massive
+aggressive
+competitive
+cooperative
+decisive
+competitive
+competitive
+criticize
+harmless
+hopeless
+actually
+admittedly
+alternatively
+apparently
+apparently
+consequently
+deeply
+desperately
+entirely
+exactly
+extraordinarily
+fantastically
+firstly
+fluently
+frankly
+generally
+generally
+greatly
+largely
+necessarily
+legally
+adequately
+badly
+barely
+brightly
+densely
+merely
+financially
+ecologically
+environmentally
+globally
+elegantly
+cowardly
+aggressively
+anxiously
+boldly
+brilliantly
+calmly
+carelessly
+cheerfully
+confidently
+creatively
+cruelly
+desperately
+eagerly
+emotionally
+enthusiastically
+foolishly
+furiously
+gently
+happily
+honestly
+hopefully
+jealously
+closely
+automatically
+electronically
+measurement
+adventurous
+ambitious
+anxious
+cautious
+furious
+jealous
+bloody
+guilty
+faulty
+misty
+greedy
+icy
+biological
+abstract
+literary
+audience
+cast
+choir
+comedian
+dizzy
+eyelash
+itch
+absolute
+little
+anyhow
+anyhow
+anyhow
+far
+furthermore
+hardly
+bracket
+ban
+legal
+legal
+jury
+absurd
+adequate
+adequate
+appropriate
+approximate
+average
+bare
+bizarre
+breathtaking
+circular
+decent
+deep
+delicate
+delicate
+dense
+distant
+entire
+extreme
+faint
+FALSE
+fierce
+fine
+firm
+genuine
+high
+ideal
+inaccurate
+inconvenient
+inner
+inside
+key
+level
+low
+medieval
+mere
+middle
+modest
+fine
+flat
+inside
+dairy
+mild
+budget
+award
+damp
+environmentally friendly
+green
+manual
+adapt
+harm
+elegant
+grown-up
+aware
+bitter
+bitter
+bitter
+bold
+bright
+bright
+clumsy
+content
+crazy
+dear
+decent
+deep
+desperate
+desperate
+down
+eager
+evil
+expert
+fierce
+fierce
+fond
+hard
+inner
+loyal
+mature
+mean
+mean
+miserable
+nasty
+naughty
+generously
+inside
+mentally
+belief
+boost
+idea
+name
+move
+council
+defeat
+fellow
+household
+high-tech
+hi-tech
+mechanical
+in
+gear
+chief
+manual
+committee
+crew
+drunk
+immoral
+informal
+internal
+disorganized
+irregular
+breakable
+considerable
+memorable
+accidental
+commercial
+controversial
+conventional
+critical
+critical
+crucial
+external
+external
+fatal
+functional
+gradual
+identical
+logical
+magical
+magical
+mathematical
+natural
+abandoned
+abandoned
+armed
+balanced
+confused
+detailed
+divided
+educated
+endangered
+estimated
+fixed
+improved
+limited
+influence
+confident
+dependent
+independent
+later
+further
+colourful
+doubtful
+faithful
+meaningful
+meaningful
+accessible
+flexible
+incredible
+invisible
+artistic
+athletic
+dramatic
+exotic
+demanding
+entertaining
+existing
+forthcoming
+leading
+living
+meaning
+active
+alternative
+alternative
+attractive
+communicative
+effective
+exclusive
+intensive
+endless
+hourly
+hourly
+lonely
+accidentally
+actively
+additionally
+annually
+appropriately
+artificially
+automatically
+basically
+casually
+comfortably
+considerably
+constantly
+continuously
+conveniently
+critically
+culturally
+curiously
+currently
+deliberately
+directly
+dramatically
+effectively
+efficiently
+equally
+especially
+essentially
+eventually
+fairly
+finely
+firmly
+firmly
+freely
+gradually
+highly
+ideally
+ideally
+importantly
+increasingly
+independently
+initially
+innocently
+instantly
+lastly
+literally
+morally
+narrowly
+naturally
+naturally
+ambitious
+continuous
+continuous
+mysterious
+bossy
+cheeky
+lazy
+muddy
+abstract
+actual
+apparent
+awkward
+bad
+bare
+bitter
+casual
+chief
+close
+complex
+compulsory
+constant
+contemporary
+current
+dead
+deadly
+definite
+deliberate
+direct
+diverse
+eastern
+equal
+expected
+extreme
+far
+firm
+flat
+foreign
+formal
+fortunate
+free
+free
+free
+fresh
+general
+general
+glad
+golden
+great
+grey
+hard-working
+hidden
+immediate
+immediate
+initial
+instant
+intransitive
+joint
+junior
+junior
+known
+last-minute
+latter
+little
+long-distance
+long-term
+loose
+low
+major
+minor
+moral
+naked
+nationwide
+native
+native
+about
+ahead
+alike
+alike
+altogether
+altogether
+always
+apart
+apart
+aside
+aside
+away
+back
+back
+back
+elsewhere
+forever
+forward
+free
+genuinely
+here
+in
+last
+late
+nationwide
+near
+background
+balance
+character
+circumstance
+cost
+end
+enemy
+escape
+fall
+fire brigade
+growth
+headquarters
+impact
+ingredient
+lifetime
+luxury
+affect
+charge
+compose
+correct
+correct
+drown
+educate
+elect
+entitle
+establish
+form
+hire
+hit
+military
+navy
+position
+state
+rubbish
+obtain
+perform
+seek
+purchase
+receipt
+purchase
+purchase
+regret
+plus
+soul
+unhappiness
+rewrite
+rearrange
+rebuild
+repay
+undo
+unlock
+untie
+undo
+potential
+reference
+patience
+self-confidence
+preference
+presenter
+viewer
+offender
+smoker
+supplier
+officer
+plumber
+researcher
+writing
+understanding
+programming
+recording
+trekking
+publication
+publication
+production
+promotion
+reaction
+sensation
+recommendation
+objection
+prediction
+recession
+prevention
+reaction
+satisfaction
+tension
+obsession
+reputation
+temptation
+sensation
+revolution
+separation
+tension
+recreation
+promotion
+racism
+specialist
+quantity
+personality
+quality
+personality
+priority
+responsibility
+organize
+socialize
+treatment
+statement
+punishment
+payment
+retirement
+retirement
+sickness
+softness
+politeness
+sadness
+tiredness
+willingness
+sponsor
+sponsor
+operator
+partnership
+terrorism
+terrorist
+owl
+paw
+polar bear
+seal
+species
+swan
+tail
+trap
+wasp
+wolf
+worm
+zebra
+territory
+picture
+piece
+portrait
+script
+series
+set
+shot
+show
+solo
+soundtrack
+string
+tabloid
+track
+verse
+whistle
+work
+publicity
+rhythm
+present
+print
+print
+promote
+remedy
+rib
+scar
+sense
+skeleton
+spot
+stroke
+symptom
+thigh
+toenail
+virus
+waist
+wound
+wrist
+X-ray
+smell
+surgery
+sweat
+touch
+welfare
+poison
+therapy
+sweat
+treat
+zip
+pyjamas
+order
+outline
+profile
+proposal
+quarrel
+query
+remark
+row
+semicolon
+sense
+sign
+signal
+slash
+speech
+summary
+survey
+syllable
+symbol
+tale
+talk
+term
+theme
+threat
+update
+use
+yell
+pressure
+support
+protest
+record
+response
+rumour
+stress
+tone
+terms
+thanks
+object
+quarrel
+respond
+swear
+talk
+talk
+oppose
+order
+outline
+persuade
+praise
+propose
+reach
+recommend
+reject
+remark
+represent
+reveal
+settle
+show
+specify
+stress
+stress
+support
+tell
+threaten
+underline
+welcome
+protest
+spread
+swear
+tease
+whisper
+yell
+offence
+penalty
+sentence
+suspect
+witness
+trial
+suspect
+percentage
+pint
+pound
+ring
+roll
+sample
+scale
+shade
+shortage
+ton
+triangle
+volume
+weight
+scale
+width
+scale
+nursery
+pass
+seminar
+philosophy
+study
+pancake
+portion
+prawn
+teaspoon
+tin
+tray
+service
+vinegar
+pudding
+passage
+resident
+shed
+shelter
+stool
+storey
+terrace
+venue
+property
+structure
+rate
+poverty
+support
+treasure
+wealth
+profit
+savings
+pond
+pool
+rainbow
+range
+reserve
+root
+seed
+suburb
+tide
+tornado
+trunk
+volcano
+oxygen
+rubber
+steam
+steel
+sunlight
+warmth
+oak
+pine
+shell
+skin
+soil
+process
+punch
+sigh
+struggle
+study
+tap
+reach
+violence
+rush
+wait
+participate
+queue
+scratch
+shiver
+snore
+stare
+struggle
+struggle
+switch
+trip
+wander
+yawn
+observe
+occupy
+overcome
+poison
+present
+preserve
+process
+punch
+remove
+restore
+reward
+roll
+rub
+ruin
+scratch
+seize
+send
+set
+skip
+slap
+slice
+sort
+spot
+spray
+squash
+squeeze
+stimulate
+store
+stroke
+study
+substitute
+supply
+support
+sweep
+tackle
+take
+test
+time
+transform
+update
+upgrade
+watch
+water
+wipe
+wrap
+obey
+pound
+reach
+research
+resist
+rip
+rush
+separate
+separate
+share
+slam
+smash
+soak
+splash
+split
+stretch
+stretch
+supervise
+swing
+tap
+tighten
+turn
+warm
+whistle
+widen
+tan
+strength
+style
+strengthen
+point of view
+soul
+test
+wish
+offence
+pain
+pity
+pride
+pride
+revenge
+sense
+surprise
+sympathy
+trust
+warmth
+wisdom
+worry
+panic
+passion
+pressure
+rage
+regret
+strain
+taste
+will
+nerves
+point
+sense
+spirit
+pretend
+react
+offend
+reject
+respect
+risk
+risk
+satisfy
+terrify
+tolerate
+worry
+panic
+reckon
+shock
+stimulate
+suffer
+policy
+service
+rule
+opponent
+roommate
+sister-in-law
+son-in-law
+stepfather
+stepmother
+widow
+separate
+opponent
+penalty
+pitch
+referee
+run
+set
+shot
+swing
+target
+trophy
+play
+stock
+track
+sale
+victory
+represent
+network
+part
+pedal
+satellite
+signal
+telescope
+thermometer
+tone
+upgrade
+wire
+virtual reality
+parachute
+rocket
+steering wheel
+stopover
+subway
+trail
+voyage
+wing
+yacht
+transport
+rush hour
+run
+sail
+post
+servant
+slave
+overtime
+paperwork
+trade
+strike
+open
+operate
+transfer
+rape
+robbery
+whisky
+replacement
+reflect
+reflect
+regain
+repay
+replace
+review
+original
+principal
+professional
+survival
+performance
+reference
+presence
+organizer
+partner
+philosopher
+producer
+publisher
+shopkeeper
+supporter
+planning
+suffering
+timing
+upbringing
+occasion
+position
+reception
+reflection
+regulation
+revolution
+selection
+suspicion
+vision
+observation
+production
+production
+protection
+selection
+vision
+obligation
+presentation
+recommendation
+reduction
+relation
+separation
+tradition
+variation
+novelist
+pharmacist
+psychologist
+possibility
+popularity
+reality
+similarity
+objective
+specialize
+recognize
+requirement
+payment
+treatment
+weakness
+weakness
+operator
+razor
+spectator
+survivor
+tutor
+relationship
+shooting
+needle
+neighbour
+network
+note
+nut
+pack
+package
+package
+parade
+passage
+path
+pattern
+pattern
+pause
+peak
+pension
+phase
+plan
+platform
+plot
+point
+point
+point
+point of view
+prefix
+process
+programme
+project
+proper noun
+proposal
+question
+range
+rate
+ray
+rebel
+release
+remedy
+representative
+resource
+right
+ring
+rise
+role
+salon
+sample
+scene
+scent
+schedule
+scheme
+scratch
+series
+shot
+side
+slope
+smell
+society
+source
+spirit
+splash
+spot
+spray
+spreadsheet
+stage
+stain
+state
+step
+story
+strategy
+studio
+substitute
+suffix
+surface
+surgery
+sword
+system
+target
+task
+terminal
+text
+theory
+thesis
+thing
+thing
+third
+threat
+time
+timetable
+tomb
+tool
+tool
+torch
+trick
+trolley
+tube
+turn
+update
+version
+victim
+vitamin
+volunteer
+ward
+wave
+weight
+opinion
+order
+pace
+peace
+pottery
+pottery
+power
+privacy
+proof
+psychology
+question
+quiet
+reach
+reason
+right
+safety
+shelter
+sight
+space
+speed
+storage
+study
+taste
+thought
+today
+trouble
+trouble
+trouble
+truth
+waste
+wheat
+origin
+prejudice
+procedure
+prospect
+rehearsal
+risk
+rope
+scandal
+service
+silence
+standard
+string
+substance
+supply
+territory
+trace
+tragedy
+transfer
+wire
+outskirts
+remains
+statistics
+surroundings
+telecommunications
+point
+rule
+the second person
+surface
+taste
+the third person
+view
+picture
+occur
+pray
+progress
+propose
+qualify
+rebel
+recover
+remain
+return
+rise
+run
+settle
+shake
+sigh
+sink
+sit
+smell
+sneeze
+sob
+speak
+spread
+suffer
+think
+train
+tremble
+vanish
+vary
+occupy
+overlook
+peel
+photograph
+poison
+pollute
+present
+produce
+prove
+put
+raise
+reach
+record
+reject
+release
+release
+renew
+represent
+revise
+rule
+run
+sack
+search
+see
+see
+sentence
+set
+show
+stab
+stamp
+store
+strain
+strike
+submit
+suggest
+suit
+suit
+suspect
+suspend
+take
+test
+train
+transport
+treat
+treat
+treat
+trick
+underestimate
+upset
+use
+value
+wear
+weigh
+witness
+nod
+operate
+overtake
+pause
+qualify
+qualify
+recall
+resign
+reverse
+row
+scratch
+sell
+shrink
+spread
+start
+start
+steer
+survive
+swallow
+touch
+trade
+vary
+widen
+refugee
+weapon
+suicide
+theft
+rape
+starving
+thus
+posh
+unacceptable
+unreasonable
+unreliable
+unavailable
+undressed
+unlimited
+unhelpful
+unrealistic
+undoubtedly
+unexpectedly
+unconscious
+unfit
+unsatisfactory
+unaware
+uncertain
+uneasy
+unfortunate
+unpopular
+unsure
+remarkable
+reasonable
+respectable
+orchestral
+original
+physical
+psychological
+oral
+substantial
+trivial
+residential
+regional
+tropical
+racial
+spiritual
+technical
+official
+presidential
+technical
+technological
+virtual
+professional
+redundant
+so-called
+twisted
+well-balanced
+organized
+petrified
+puzzled
+qualified
+relieved
+respected
+sophisticated
+thrilled
+related
+united
+united
+sophisticated
+scheduled
+retired
+painful
+peaceful
+skilful
+thoughtful
+responsible
+responsible
+toxic
+organic
+optimistic
+pessimistic
+realistic
+sympathetic
+tragic
+setting
+outstanding
+stunning
+thrilling
+winding
+setting
+terrifying
+understanding
+worrying
+sensation
+opportunity
+negative
+negative
+objective
+offensive
+sensitive
+sensitive
+physically
+psychologically
+perfectly
+personally
+possibly
+precisely
+secondly
+seriously
+simply
+slightly
+strongly
+surely
+surely
+tremendously
+virtually
+negatively
+nicely
+precisely
+roughly
+scientifically
+nervously
+nicely
+passionately
+patiently
+peacefully
+positively
+proudly
+readily
+reasonably
+sadly
+violently
+warmly
+willingly
+virtually
+suspicious
+precious
+outrageous
+suspicious
+sexy
+salty
+wealthy
+stormy
+risky
+rusty
+tabloid
+non-smoking
+poisonous
+swollen
+recovery
+pure
+short
+slight
+straight
+total
+nevertheless
+overall
+rather
+well
+nonsense
+question
+question
+strict
+outer
+outside
+oval
+poor
+precise
+rectangular
+satisfactory
+severe
+shallow
+single
+solid
+solid
+standard
+stiff
+stiff
+straight
+strong
+sufficient
+superb
+thick
+tight
+transparent
+tremendous
+tremendous
+upright
+vast
+vivid
+that
+together
+underneath
+upside down
+off
+rich
+rotten
+tough
+weak
+thirst
+rough
+rural
+solar
+underground
+underground
+wild
+worldwide
+search
+struggle
+touch
+try
+schedule
+set
+shower
+squash
+well-built
+passionate
+passive
+poor
+positive
+secure
+self-confident
+severe
+sharp
+sorry
+strict
+strong
+strong
+stubborn
+tense
+tense
+tough
+vivid
+welcome
+wise
+witty
+nuisance
+relief
+side
+side
+temper
+terror
+touch
+revolutionary
+state
+parliament
+presidency
+tribe
+semi-final
+senior
+silent
+vacant
+profession
+shift
+violent
+violent
+unbearable
+unbelievable
+unfashionable
+unpredictable
+unsuitable
+unchanged
+unsuccessful
+unattractive
+unfairly
+uncertain
+unclear
+unfair
+unfamiliar
+unfortunate
+unnatural
+unwilling
+predictable
+preferable
+probable
+profitable
+reasonable
+understandable
+valuable
+optional
+partial
+potential
+practical
+seasonal
+social
+supernatural
+universal
+visual
+organized
+prepared
+related
+relaxed
+scheduled
+skilled
+soaked
+so-called
+varied
+well-organized
+powerful
+successful
+successful
+visible
+specific
+neighbouring
+remaining
+soaking
+sparkling
+starving
+striking
+surrounding
+opening
+opening
+understanding
+population
+possession
+productive
+productive
+progressive
+protective
+sensitive
+sensitive
+sensitive
+transitive
+priceless
+newly
+normally
+occasionally
+originally
+permanently
+potentially
+powerfully
+practically
+preferably
+presumably
+primarily
+privately
+promptly
+rapidly
+readily
+rightly
+sadly
+separately
+severely
+sharply
+shortly
+significantly
+silently
+simply
+simply
+simultaneously
+smoothly
+steadily
+strangely
+strictly
+successfully
+suitably
+suspiciously
+temporarily
+terribly
+thoroughly
+thoroughly
+tightly
+traditionally
+truly
+typically
+vividly
+warmly
+widely
+wildly
+wrongly
+precious
+religious
+religious
+ridiculous
+serious
+rusty
+tricky
+sexual
+nuclear
+nuclear
+odd
+open
+opposite
+overseas
+overweight
+packed
+pale
+particular
+peculiar
+picturesque
+poisonous
+popular
+positive
+positive
+primary
+private
+prompt
+proposed
+public
+rapid
+raw
+real
+real
+rear
+regular
+relevant
+remote
+revolutionary
+rich
+right
+ripe
+rough
+royal
+rude
+secure
+senior
+separate
+short-term
+significant
+simple
+slow
+solo
+steady
+steady
+still
+straightforward
+stuck
+sudden
+thorough
+tight
+tight
+tough
+ultimate
+underwater
+unique
+unique
+urban
+vacant
+valid
+valid
+vital
+waterproof
+weak
+weak
+weird
+well-paid
+wild
+worthwhile
+wrong
+neither
+never
+nor
+now
+often
+on
+on
+on
+otherwise
+out
+over
+right
+second
+seldom
+since
+somehow
+then
+there
+though
+tight
+today
+together
+top
+up
+up
+wide
+worst
+prime minister
+scene
+share
+side
+spread
+strain
+track
+trap
+union
+vote
+prohibit
+raise
+regard
+set
+tackle
+win
+wound
+Cheers!
+concerning
+amongst
+considering
+do
+against
+for
+enough
+least
+at
+beneath
+beyond
+from
+following
+every
+can
+can
+must
+according to
+after
+along
+beyond
+by
+by
+from
+from
+from
+in
+like
+near
+herself
+himself
+it
+least
+most
+myself
+upon
+whom
+out of
+towards
+whatever
+some
+within
+unlike
+one
+one
+one
+one
+such
+the
+the
+whatever
+whichever
+whichever
+ought to
+would
+of
+off
+on
+on
+onto
+out of
+over
+owing to
+past
+throughout
+times
+to
+under
+with
+with
+neither
+next
+that
+that
+themselves
+they
+which
+which
+whichever
+whoever
+whoever
+yourself
+yourself
+forgive me
+kind of
+to date
+a bit
+not have a clue
+be a piece of cake
+not have a clue
+the hell
+discourage sb from doing sth
+be a bad/good influence (on sb)
+lay eggs
+the headlines
+capture sb/sth on camera/film, etc.
+the media
+be out of breath
+hold your breath
+do sb good
+give birth
+on the one hand ... on the other hand
+to my mind
+mother tongue
+the basics
+to a great/large, etc. extent
+to some extent/to a certain extent
+don't hesitate to do sth
+would appreciate
+I/We appreciate...
+exchange looks, opinions, views, etc.
+have a word with sb
+justify yourself
+make sense
+not to mention
+I guess so/not
+find sb guilty/not guilty
+set an example
+keep your/an eye on sb/sth
+make fun of sb/sth
+avoid doing sth
+fix sth onto/to/under, etc.
+give a performance/speech, etc.
+make the most of sth
+make fun of sb/sth
+lean (sth) back/forward/out, etc.
+lean (sth) against/on sth
+cut off sb/sth or cut sb/sth off
+devote sth to sb/sth
+not believe your ears
+at ease
+take your breath away
+break the ice
+bored/frightened/scared, etc. to death
+be in a mood
+make a fool (out) of sb
+make a fool of yourself
+at sb's disposal
+attract/get (sb's) attention
+draw (sb's) attention to sth/sb
+behind bars
+on a daily/monthly/regular, etc. basis
+a dose of sth
+be in a dream
+in sb's eyes
+hand in hand
+learn your lesson
+bear/keep sb/sth in mind
+cross your mind
+have/keep an open mind
+(at) any minute; any minute now
+the last minute
+can't keep/take your eyes off sb/sth
+have an eye for sth
+look sb in the eye/eyes
+take a deep breath
+the East
+be no good or be not any/much good
+by/in contrast
+be in doubt
+without (a) doubt
+it appears (that)
+be absorbed in sth
+be exposed to sth
+find yourself somewhere/doing sth
+be found
+have sb over/round/to stay, etc.
+have nothing to do with sb/sth
+have nothing to do with sb
+hold your breath
+be/get hooked on sth
+make the/sb's bed
+make the best of sth
+make a (big) difference
+to make matters worse
+make sense
+cut off sb/sth or cut sb/sth off
+knock sb out
+kill time
+look forward to sth/doing sth
+Don't ask!
+Don't ask me
+Who cares?
+fair enough
+fair enough
+a little
+an awful lot (of sth)
+great big/long, etc.
+not half as good/bad/exciting, etc.
+masses
+go for sth
+mess up sth or mess sth up
+drive sb mad/crazy, etc.
+at your convenience
+in view of sth
+not/never get anywhere
+can't be bothered
+no end
+I expect
+can't/couldn't get over sth
+hundreds
+millions
+be over the moon
+capable of sth/doing sth
+be ashamed of sb
+a handful of
+the following
+In conclusion
+be under the impression
+not exactly
+Yours faithfully
+be conscious of/that
+arts
+the charts
+burn out
+care for sb/sth
+come down with sth
+get over sth/sb
+go down with sth
+give birth
+call in sick
+be expecting (a baby)
+lose your voice
+bring up sth or bring sth up
+burst out
+catch up
+chat sb up or chat up sb
+clear up sth or clear sth up
+come up
+come up with sth
+get across sth or get sth across
+give away sth or give sth away
+go ahead
+go on
+look at sth
+look through sth
+make up sth or make sth up
+in actual fact
+all in all
+among other things
+as for
+as a matter of fact
+as follows
+as far as I know
+aside from sth
+at least
+on balance
+to begin with
+in brief
+be none of sb's business
+by far
+in any case
+in that case
+catch sb's attention, interest, etc.
+change the subject
+go into detail/s
+even if
+even though
+in actual fact
+as a matter of fact
+the fact (of the matter) is
+as far as I know
+as far as sb is concerned
+as far as sth is concerned
+by far
+as follows
+in general
+get sb/sth to do sth
+go into detail/s
+it goes without saying
+it's a good thing
+Good for you!
+get hold of sth/sb
+in general
+in actual fact
+in any case
+in that case
+in brief
+In conclusion
+in other words
+in writing
+in response to
+judging by/from
+keep notes/records, etc.
+as far as I know
+I know
+you never know
+to (the best of) my knowledge
+last but not least
+at least
+lose touch
+Dear Madam
+as a matter of fact
+your native language/tongue
+get away with sth
+let sb off or let off sb
+against the law
+break the law
+the law
+on average
+a good/great deal
+one metre/6 ft, etc. deep
+a great deal
+in two/half
+in all
+more or less
+a mass of sth
+more and more
+more or less
+get through sth
+go off
+live on sth
+an army/prison/refugee, etc. camp
+come down
+live on sth
+sb's finances
+clear up
+come up
+the atmosphere
+back up sb or back sb up
+beat up sb or beat sb up
+blow up sth or blow sth up
+break through sth
+burst into sth
+call back
+call in
+call off sth or call sth off
+catch up (sb) or catch (sb) up
+catch up on/with sth
+clear up (sth) or clear (sth) up
+come across sb/sth
+come up
+cut across sth
+cut down sth or cut sth down
+cut down sth or cut sth down
+devote sth to sb/sth
+do up sth or do sth up
+follow up sth or follow sth up
+get at sth
+get down to sth
+get out of sth/doing sth
+get round to sth
+get up
+give up (sth/doing sth) or give (sth) up
+go ahead
+go on
+hand over sb/sth or hand sb/sth over
+help out (sb) or help (sb) out
+hurry up sb/sth or hurry sb/sth up
+keep (sb/sth) back
+keep down sth or keep sth down
+keep sth off (sb/sth)
+knock sth down
+knock sb out
+knock sth/sb over
+leave out sb/sth or leave sb/sth out
+let out sb/sth or let sb/sth out
+line (sb/sth) up or line up (sb/sth)
+lock in sb or lock sb in
+lock out sb or lock sb out
+look at sth
+look into sth
+look out for sb/sth
+make for sth
+make sth into sth
+bounce along/around/into, etc.
+break a record
+bump against/into sth
+take charge
+chase sb/sth away/off/out, etc.
+climb into/out of/through, etc.
+dig a hole/tunnel
+do damage/harm, etc.
+draw into/out/away, etc.
+draw (sb's) attention to sth/sb
+fail to do sth
+fasten sth on/to/together, etc.
+set sb/sth free
+gaze at/into/out of, etc.
+get to do sth
+glance at/over/through, etc.
+head back/down/towards, etc.
+catch/get/grab/take hold of sth/sb
+do a good/excellent, etc. job
+keep your/an eye on sb/sth
+let sb/sth in/past/through, etc.
+lock sth/sb away/in, etc.
+make the most of sth
+(be) in your eighties
+the elder
+the eldest
+(be) in your fifties
+(be) in your forties
+believe in sth/doing sth
+be/get carried away
+chill out
+cool down/off (sb/sth) or cool (sb/sth) down/off
+face up to sth
+figure out sth/sb or figure sth/sb out
+get sb down
+go off sth/sb
+identify with sb/sth
+let sb down or let down sb
+live for sth/sb
+look down on sb
+look up to sb
+dare (to) do sth
+deep down
+can't face sb/sth/doing sth
+be familiar with sth/sb
+be in favour of sth
+feel different/strange, etc.
+fill sb with anger/joy/pride, etc.
+make a fool (out) of sb
+make a fool of yourself
+get the feeling/idea/impression, etc.
+get on sb's nerves
+go red
+be hard on sb
+in honour of sb/sth
+be in favour of sth
+in sb's eyes
+in good/high/low, etc. spirits
+in honour of sb/sth
+know better (than to do sth)
+lose interest/patience, etc.
+lose your temper
+cheat on sb
+depend on/upon sb/sth
+hit it off
+live together
+live with sb
+keep sb company
+keep sb company
+break sb's heart
+bring out sth or bring sth out
+give in
+in stock
+get away
+get away
+keep up (with sb/sth)
+first/second/third, etc. gear
+lead into/to/towards, etc.
+act as sth
+on/off duty
+keep sb amused
+a balanced diet/meal
+as far as sb is concerned
+as far as sth is concerned
+be/get involved (in/with sth)
+make a (big) difference
+make no difference/not make any difference
+on condition that
+in connection with sth
+take sth into consideration
+in sb's direction
+add to sth
+agree with sth
+back up (sth) or back (sth) up
+break off (sth) or break (sth) off
+break out
+burn down (sth) or burn (sth) down
+burn up sth or burn sth up
+burst into sth
+calm down (sb) or calm (sb) down
+cheer up (sb) or cheer (sb) up
+close down (sth) or close (sth) down
+come along
+come down
+come out
+come to sth
+come to sth
+cool down/off (sb/sth) or cool (sb/sth) down/off
+count on sb
+count on sth
+cut down sth or cut sth down
+date back
+date from sth
+deal with sb
+depend on/upon sb/sth
+die out
+do without (sb/sth)
+eat up (sth) or eat (sth) up
+fade away
+fall apart
+fall apart
+fall for sb
+fall out
+fall through
+finish with sb
+fit in with sth
+focus (sth) on/upon sb/sth
+get in
+get into sth
+get on with sth
+get to
+go by
+go off
+go over sth
+go through sth
+go through sth
+be heading for sth
+have heard of sb/sth
+heat up sth or heat sth up
+keep (sb/sth) away
+keep to sth
+keep up (with sb/sth)
+key in sth or key sth in
+know of sth/sb
+lead to sth
+live up to sth
+log in/on
+log off/out
+look at sth
+look back
+make out sth/sb or make sth/sb out
+make up for sth
+miss out
+mix up sb/sth or mix sb/sth up
+accept responsibility/blame
+take account of sth
+take into account sth
+on account of sth
+take advantage of sb/sth
+all over again
+yet again
+be aimed at sb
+the air
+in all
+all of a sudden
+all over again
+all along
+all over the place
+leave sb alone
+all along
+along with sb/sth
+among the best/worst/biggest, etc.
+or anything
+anything like
+be around
+as a result of sth
+as a whole
+as if/as though
+as far as sb is concerned
+as far as sth is concerned
+be associated with sth
+at all costs
+at sb's disposal
+at fault
+at risk
+be attracted to sb
+be based at/in/etc.
+bear (sb/sth) in mind
+on behalf of sb or on sb's behalf
+behind bars
+make the best of sth
+beyond my/our, etc. control
+American/Italian, etc. by birth
+go blank
+bound to do sth
+break an agreement/promise, etc.
+a broken heart
+by heart
+day by day/little by little/one by one, etc.
+be the case
+a certain
+be coming up
+common knowledge
+compared to/with sb/sth
+consider sb/sth (to be) sth
+on the contrary
+beyond your/out of control
+under control
+take control
+at all costs
+could have
+couldn't have
+in due course
+in those days
+take a deep breath
+a deep sleep
+deliver a speech/talk, etc.
+in depth
+be designed for/to do sth
+despite the fact that
+be a disgrace
+do sb good
+be/have to do with sth
+draw a conclusion
+draw near/close
+in due course
+earn a/your living
+the eighties
+either side/end, etc.
+or else
+for hours/days, etc. on end
+put an end to sth
+strangely enough
+ever so
+be/mean everything
+despite the fact that
+failure to do sth
+at fault
+the fifties
+at first sight
+in the first place
+fall flat on your face
+for the moment
+for once
+for real
+forget it
+the former
+the forties
+from side to side
+from time to time
+a week/six months/ten years, etc. from now
+in the near future
+get rid of sth
+take sb/sth for granted
+take it for granted
+grow tired/old/calm, etc.
+with all your heart
+by heart
+here and there
+however cold/difficult/slowly, etc.
+if so
+as if
+in connection with sth
+in due course
+in sb's direction
+in season
+in secret
+in person
+in place of sth
+in the first place
+in practice
+in private
+in progress
+in relation to sth
+in relation to sth
+in this respect/in many respects
+in a row
+in those days
+in turn
+inside out
+it's sb/sth
+in itself
+just as
+keep sb waiting
+keep a/your promise
+keep sb/sth in mind
+common knowledge
+a working knowledge of sth
+the last person/thing, etc.
+the last
+the day/week/year, etc. before last
+the latter
+lead a busy/normal/quiet, etc. life
+last but not least
+leave sb alone
+let me/us
+like mad
+little by litte
+before (very/too) long
+in the long term
+look as if/as though
+the look of sb/sth
+lose your life
+lose track
+like mad
+the main thing
+manners
+to make matters worse
+no matter how/what/when, etc.
+may have
+may as well
+in the meantime
+in the middle of nowhere
+might have
+might as well
+for the moment
+more and more
+in the near future
+no need
+be in need of sth
+break the ice
+break sb's heart
+cross your mind
+a pile of/ piles of sth
+tons of sth
+be a piece of cake
+in/with regard to sth
+require sb to do sth
+in writing
+keep in shape
+keep/break a promise
+change the subject
+in response to
+worst of all
+put pressure on sb
+raise a question/subject, etc.
+it goes without saying
+take sb's word for it
+take milk/sugar, etc.
+place sth in/on, etc.
+plant a bomb
+put an end to sth
+rub sth into/on, etc.
+take charge
+take sb's place
+wipe sth away/from/off, etc.
+steady/strong nerves
+get on sb's nerves
+can't take sth
+take sth/sb seriously
+take pleasure/pride/an interest, etc.
+take your breath away
+be tempted
+on offer
+first/second/third/final, etc., round
+in stock/out of stock
+the wheel
+take/accept/claim responsibility for sth
+in person
+the pros and cons
+roots
+in a row
+in the long run
+in season
+no sign of sb/sth
+a stream of sth
+a short/ten-minute, etc. walk
+in progress
+(the) West
+in good/bad, etc. shape
+in ... terms/in terms of sth
+the perfect (tense)
+be said to be
+seize a chance/opportunity
+take account of sth
+take into account sth
+take advantage of sb/sth
+take control
+take a deep breath
+take sb/sth for granted
+take it for granted
+take the/this opportunity to do sth
+be trapped
+to start with
+with/in reference to sth
+with respect to sth
+Dear Sir
+with respect to sth
+keep your mouth shut
+the thing is...
+Who cares?
+not half as good/bad/exciting, etc.
+sort of
+pop in/out/over, etc.
+wish to do sth
+be sick of sth
+stick together
+remain at/in/with, etc.
+to date
+in view of sth
+pretty much/well
+thousands
+be a pain
+unusually big/strong/good,etc.
+be unfamiliar with sth
+be obsessed by/with sb/sth
+be responsible for sth/doing sth
+relations
+relatively good/bad/cheap, etc.
+reasonably good/successful/well, etc.
+take sb/sth seriously
+the press
+pass out
+throw up (sth) or throw (sth) up
+be out of breath
+sit up/stand up straight
+upset stomach
+lose your voice
+note down sth or note sth down
+pick on sb
+point out sth or point sth out
+put down sb or put sb down
+read out sth or read sth out
+read over/through sth or read sth over/through
+refer to sb/sth
+rub out sth or rub sth out
+set out sth or set sth out
+shut (sb) up
+speak up
+stand for sth
+stand up for sth/sb
+sum up (sth/sb) or sum (sth/sb) up
+talk sb into sth/doing sth
+talk over sth or talk sth over
+tell off sb or tell sb off
+turn down sb/sth or turn sb/sth down
+turn to sb/sth
+watch out
+be none of sb's business
+not at all
+not to mention
+on balance
+on the one hand ... on the other hand
+I only hope (that) ... /I only wish ... (that)
+in other words
+owe sb an apology/explanation/favour, etc.
+the point
+put pressure on sb
+protest (about/against/at sth)
+push (sb) for sth/to do sth
+reach a decision/agreement/conclusion, etc.
+make sense
+generally/personally, etc. speaking
+come/get straight to the point
+among other things
+it's a good thing
+to my mind
+mother tongue
+lose touch
+What ...for?
+what's/what is more
+no wonder
+have a word (with sb)
+in other words
+Yours faithfully
+others
+be out of sth
+somewhere around/between, etc.
+not a single thing
+as a whole
+worse and worse
+pay off sth or pay sth off
+put sth aside
+standard of living
+pack up (sth) or pack (sth) up
+pass around/round sth or pass sth around/round
+run away
+run into sb
+see to sth/sb
+set up sth or set sth up
+settle down
+slow (sb/sth) down/up or slow down/up (sb/sth)
+slow down
+sort out sth or sort sth out
+sort out sth or sort sth out
+spread out
+squeeze (sb/sth) in/squeeze (sb/sth) into sth
+stand back
+stay out
+stick to sth
+take sb around/round (sth/swh)
+take away sth or take sth away
+take away sth or take sth away
+take down sth or take sth down
+throw out sb or throw sb out
+tie up sb/sth or tie sb/sth up
+try out sth or try sth out
+turn out
+use up sth or use sth up
+wear sb out or wear out sb
+work at sth
+work on sth
+work sth out or work out sth
+pass (the) time
+pay sb/sth a visit or pay a visit to sb/sth
+pitch a tent
+take sb's place
+pull yourself along/up, etc.
+push yourself
+can/can't/could, etc. reach (sth)
+rest your eyes/feet/legs, etc.
+return to sth
+roll (sth) across/around/over, etc.
+set an example
+slam sth down/onto/into, etc.
+slide (sth) across/down/along, etc.
+splash about/around/through, etc.
+stand (sth) in/against/by, etc. sth
+stick (sth) in/into/through, etc.
+take turns or take it in turns
+wind (sth) around/round, etc. sth
+(be) in your nineties
+(be) in your seventies
+(be) in your sixties
+(be) in your thirties
+(be) in your twenties
+the young
+sb's youth
+pour sth out or pour out sth
+put off sb or put sb off (sb/sth/doing sth)
+put up with sth/sb
+rely on/upon sb/sth
+needs
+play a joke/trick on sb
+be too proud (to do sth)
+go red
+take a risk
+sound angry/happy/rude, etc.
+in good/high/low, etc. spirits
+bored/scared/worried, etc. stiff
+be sure of sth
+be sure of yourself
+can tell
+lose your temper
+be under the impression
+values
+stand for sth
+stand by sb
+stand up sb or stand sb up
+take after sb
+sell out
+on offer
+out of stock
+sales
+save a goal
+stay over
+open up (sth) or open (sth) up
+pick up sth or pick sth up
+take off sth or take sth off
+off duty
+on duty
+the sack
+be unclear about sth
+the supernatural
+be prepared to do sth
+whenever possible
+wherever possible
+a working knowledge of sth
+preparations
+in relation to sth
+in relation to sth
+take the/this opportunity to do sth
+the reality/realities of sth
+become a reality
+strictly forbidden/prohibited
+differ/vary widely
+pass away
+pay off
+pile up
+plug sth in
+pull down sth or pull sth down
+pull in/into sth
+pull out
+pull over
+pull up
+put sth together or put together sth
+put up sth or put sth up
+put up sb or put sb up
+rely on/upon sb/sth
+result in sth
+run into sth
+run out
+run over sb/sth or run sb/sth over
+see off sb or see sb off
+see through sb/sth
+send off sth or send sth off
+show off
+shut (sth) down or shut down (sth)
+soak up sth or soak sth up
+stand out
+stand out
+stay up
+stick out
+stick with sth/sb
+stop over
+be taken in
+take off
+take on sb or take sb on
+take out sth or take sth out
+take over (sth) or take (sth) over
+take up sth or take sth up
+think over sth or think sth over
+think through sth or think sth through
+turn (sth) back
+turn out
+turn out
+turn up (somewhere)
+wear off
+work out
+neither ... nor
+the weekend/week/Thursday, etc. after next
+the nineties
+no wonder
+no need
+be no good or be not any/much good
+no such thing
+no matter how/what/when, etc.
+neither ... nor
+not only
+not quite
+nothing but
+have nothing to do with sb/sth
+be/have nothing to do with sb
+for nothing
+now and then
+any day/minute/time, etc. now
+in the middle of nowhere
+a number of sth
+be obliged to do sth
+on account of sth
+on behalf of sb or on sb's behalf
+on condition that
+on top of sth
+for once
+(every) once in a while
+one by one
+one at a time
+one after another
+one way or another
+one way or the other
+not only
+have/keep an open mind
+or else
+the other way round/around
+out of control
+out of nowhere
+be out of practice
+the outside
+over and over (again)
+all over again
+have/play a part in sth
+pass a law
+in place of sth
+in the first place
+all over the place
+play a part in sth
+be at/on the point of doing sth
+up to a point
+be poor in sth
+pour into/out/from, etc.
+be out of practice
+in practice
+to be precise
+in private
+promise to be sth
+propose to do sth
+sb's prospects
+in public
+not quite
+range from sth to sth/between sth and sth
+for real
+as regards sth
+remain a secret/mystery, etc.
+in this respect/in many respects
+in return
+get rid of sth
+at risk
+roll down/in/off, etc.
+round and round
+rush to do sth
+for the sake of sb/sth; for sb's/sth's sake
+the same
+the same
+scales
+the club/gay/music, etc. scene
+be seated
+the secret
+in secret
+It seems...
+make sense
+set a record
+the seventies
+shake your head
+a sharp rise/increase/drop, etc.
+in the short term
+why should/shouldn't...?
+side by side
+from side to side
+the sight of sb/sth
+at first sight
+the sixties
+if so
+so as to
+sooner or later
+special attention/care/treatment
+better/worse still
+what struck me/the first thing that struck me...
+no such thing
+all of a sudden
+be supposed to be sth
+be supposed to be sth
+be supposed to do sth
+be/get swept along/away, etc.
+tend to do sth
+thanks to sb/sth
+that's it
+now and then
+in theory
+here and there
+the whole thing
+no such thing
+the main thing
+the thirties
+those who/which/that
+even though
+as though
+from time to time
+for some time
+on top of sth
+the trouble with sb/sth
+turn blue/cold/nasty, etc.
+the twenties
+under attack/control/investigation, etc.
+up and down
+up and down
+be (of) any/some use
+be (of) no use
+be no use doing sth
+make use of sth
+one way or another
+one way or the other
+the other way round/around
+make your way
+all the way
+in a way; in some/many ways
+may/might as well
+may/might/could well
+it's just as well
+or whatever
+whenever possible
+wherever possible
+(every) once in a while
+will have
+wind along/through, etc.
+to make matters worse
+the best/worst, etc. yet
+yet again
+from/out of nowhere
+lose track
