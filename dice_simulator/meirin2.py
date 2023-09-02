@@ -23,7 +23,7 @@ DAMAGE_MULTIPLY = 10
 DAMAGE_ADDITION = 20
 FINAL_DAMAGE_MULTIPLY = 30
 
-debug_mode = False
+debug_mode = True
 if debug_mode:
     logging.basicConfig(level=logging.DEBUG)
     n_times = 1

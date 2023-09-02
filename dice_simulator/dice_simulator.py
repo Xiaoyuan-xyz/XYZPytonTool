@@ -74,6 +74,8 @@ tags:
     【无视减伤】 ignore_damage_reduction
     【无视破解】 uncounterattackable
     【技能伤害】 skill_attack
+实现
+    【破解后依然可用】 uncounterattackable
 消息
     【破解】 counterattack
 """
@@ -178,7 +180,6 @@ class SkillGroup(SkillPriority):
         self.functions: list[Function] = functions
         self.base_tags = base_tags
         self.tags = self.base_tags.copy()
-        self.func_after_counterattack = None
         self.func_allow_activate = None
         self.owner: Character = None
 
@@ -196,9 +197,10 @@ class SkillGroup(SkillPriority):
         message.kind = 'SPELL_SELF'
         self.owner.process_message(message)  # 【宣言后】
         if 'counterattack' in message.tags:
-            if self.func_after_counterattack is not None:
-                # ? 应该给有的Function一个标记 在破解后保留它
-                self.func_after_counterattack()
+            # 被破解后 只把具有不可破解标记的技能放上去
+            for it in self.functions:
+                if 'uncounterattackable' in self.functions:
+                    it.target.add_skill(it)
         else:
             for it in self.functions:
                 it.target.add_skill(it)
@@ -228,25 +230,31 @@ class Function(SkillPriority):
 
 
 class ActiveFunction(Function):
-    def __init__(self, name, stage, priority, duration, apply_func, target_is_owner=True, tags=None):
+    def __init__(self, name, stage, priority, duration, apply_func=None, target_is_owner=True, tags=None):
         super().__init__(name, stage, priority, duration, target_is_owner, tags)
         self.apply_func = apply_func
+
+    def apply_inner(self):
+        return self.apply_func(self)
 
     def apply(self):
         if self.stage in self.target.skip_stage:
             return
-        self.apply_func(self)
+        self.apply_inner()
 
 
 class PassiveFunction(Function):
-    def __init__(self, name, stage, priority, duration, process_func, target_is_owner=True, tags=None):
+    def __init__(self, name, stage, priority, duration, process_func=None, target_is_owner=True, tags=None):
         super().__init__(name, stage, priority, duration, target_is_owner, tags)
         self.process_func = process_func
+
+    def process_inner(self, message:Message):
+        return self.process_func(self, message)
 
     def process(self, message: Message):
         if self.stage in self.target.skip_stage:
             return
-        self.process_func(self, message)
+        self.process_inner(message)
 
 
 class Character:
