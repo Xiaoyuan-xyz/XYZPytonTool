@@ -1,4 +1,6 @@
 import logging
+import random
+import re
 
 from dice_simulator import ActiveFunction, PassiveFunction, Message
 
@@ -27,8 +29,13 @@ class Priority:
     SHIELD = 50  # 护甲
     WHEN_DAMAGE = 60  # 受到伤害前
 
+    # ! DICE
+    DICE = 0
 
-# ! 被动能力
+    # ! PASSIVE SPELL
+    COUNTERATTACK = 0 # 破解技能
+
+
 # ? 攻击力乘
 class AtkIncrease(ActiveFunction):
     def __init__(self, times, duration=999):
@@ -99,9 +106,21 @@ class Resistance(ActiveFunction):
         target = self.target
         target.tags["resistance"] = 1
 
+# ? 修改战斗骰
+class FightDice(ActiveFunction):
+    def __init__(self, dice_expr, duration):
+        self.dice_expr = dice_expr
+        super().__init__(f'修改战斗骰为：{dice_expr}', 'DICE', Priority.DICE, duration)
 
+    def apply_inner(self):
+        match = re.match(r'(\d+)d(\d+)', self.dice_expr)
+        m = int(match.group(1))
+        n = int(match.group(2))
+        dice = sum(random.randint(1, n) for _ in range(m))
+        target = self.target
+        target.last_dice = dice
+        logging.debug(f'{self.target.name} 修改战斗骰为 {self.dice_expr}={dice}')
 
-# ! modifier期
 # ? 拼点攻击伤害乘
 class DamageIncrease(PassiveFunction):
     def __init__(self, times:int, duration:int):
@@ -146,4 +165,51 @@ class DamageSubtraction(PassiveFunction):
         if message.kind == 'HURT' and 'ignore_damage_reduction' not in message.tags:
             logging.debug(f'{self.belongs_to.name} 使伤害{message.value}-{self.value}={int(message.value - self.value)}')
             message.value = int(message.value - self.value)
+
+# ? 最终受到伤害乘
+class FinalDamageDecrease(PassiveFunction):
+    def __init__(self, times, kinds, tags, duration:int):
+        self.times = times
+        self.check_kinds = kinds
+        self.check_tags = tags
+        super().__init__(f'受到最终伤害乘{self.times}', 'REDUCTION', Priority.FINAL_DAMAGE_MULTIPLY, duration)
+
+    def process_inner(self, message:Message):
+        if 'ignore_damage_reduction' in message.tags:
+            return
+        if message.kind in self.check_kinds and bool(set(message.tags.keys()) & set(self.check_tags.keys())):
+            logging.debug(f'{self.belongs_to.name} 使最终伤害{message.value}×{self.times}={int(message.value * self.times)}')
+            message.value = int(message.value * self.times)
+
+# ? 宣言破解
+class Counterattack(PassiveFunction):
+    def __init__(self, tags_and_verdict, duration, same_verdict:int=None, allow_ultra=False, force_counterattack=False):
+        self.allow_ultra = allow_ultra
+        self.check_tags = tags_and_verdict
+        self.same_verdict = same_verdict
+        self.force_counterattack = force_counterattack
+        super().__init__(f'破解技能', 'PASSIVE', Priority.FINAL_DAMAGE_MULTIPLY, duration)
+
+    def process_inner(self, message:Message):
+        if message.kind != 'SPELL':
+            return
+        s = message.skill
+        if not self.allow_ultra and 'ultra' in s.tags:
+            return
+        intersection_tags = set(s.tags.keys()) & set(self.check_tags.keys())
+        if bool(intersection_tags) or 'all' in self.check_tags:
+            if not self.force_counterattack and 'uncounterattackable' in s.tags:
+                dice = random.randint(1, 100)
+                if self.same_verdict == None:
+                    verdict = self.check_tags[next(iter(intersection_tags))]
+                else:
+                    verdict = self.same_verdict
+                target = self.target
+                verdict_offset_from_owner = 0 if 'verdict_offset' not in target.tags else target.tags['verdict_offset']
+                verdict_offset_from_skill = 0 if 'verdict_offset' not in s.tags else s.tags['verdict_offset']
+                verdict += verdict_offset_from_owner + verdict_offset_from_skill
+                result = dice > verdict
+                if dice > verdict:
+                    message.tags['counterattack'] = 1
+                logging.info(f"{self.belongs_to.name}发动 出目是{dice}/{verdict} 判定{'成功' if result else '失败'}")
 
