@@ -13,6 +13,8 @@ class MahjongBlockRender:
     用于处理麻将块的类，支持mpsz 东南西北 空格和文本\\
     ! $换行 * \` 暗色 _ 横置 ^ 双横置 + 牌背 | - 空格
     '''
+    # todo 双横置的牌处理不了赤宝牌加杠
+
     _fontSize = 32
     _fontSizeSmall = 18
 
@@ -280,7 +282,7 @@ if __name__ == '__main__':
     rawStr = '7+'
 
     # |摸牌 10|副露|副露 |||文字|
-    outfilepath = r'D:\Life\Project\markdown\mahjong\琪露诺的完美算点教室\assets'
+    outfilepath = r'H:\Life\Project\markdown\mahjong\新手麻将'
     # outfilepath = r'D:\Life\Project\markdown\mahjong\何切记忆\assets'
     # outfilepath = r'D:\Life\Project\markdown\mahjong\绝对手顺\assets'
     while True:

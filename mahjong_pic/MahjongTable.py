@@ -12,8 +12,8 @@ FONT_SIZE_TENBOU = 60  # 点数
 FONT_SIZE_KYOKU = 108  # 局数
 FONT_SIZE_HONBA = 60  # 本场和供托
 
-FONT_PATH_BOLD = r'C:\Users\Xiaoyuan_xyz\AppData\Local\Microsoft\Windows\Fonts\SourceHanSerifCN-Bold.otf'
-FONT_PATH_REGULAR = r'C:\Users\Xiaoyuan_xyz\AppData\Local\Microsoft\Windows\Fonts\SourceHanSerifCN-Regular.otf'
+FONT_PATH_BOLD = r'C:\Users\XiaoyuanXYZ\AppData\Local\Microsoft\Windows\Fonts\SourceHanSerifCN-Bold.otf'
+FONT_PATH_REGULAR = r'C:\Users\XiaoyuanXYZ\AppData\Local\Microsoft\Windows\Fonts\SourceHanSerifCN-Regular.otf'
 
 FONT_SYMBOL = ImageFont.truetype(FONT_PATH_BOLD, FONT_SIZE_SYMBOL)
 FONT_TENBOU = ImageFont.truetype(FONT_PATH_BOLD, FONT_SIZE_TENBOU)
@@ -137,6 +137,7 @@ class MahjongTable:
             (paiWidth, paiHeight) = paiImg.size
             img.paste(paiImg, (PAI_POSITION[i][0]+TENBOU_OFFSET[i][0]*paiWidth//2,
                       PAI_POSITION[i][1]+TENBOU_OFFSET[i][1]*paiHeight//2), mask=paiImg.split()[3])
+            # todo 手牌不应该居中 摸牌不应该更改手牌位置 副露应该放在最右边
 
             # 牌河
             riverImg = mbr.drawMahjong(self.river[i])
