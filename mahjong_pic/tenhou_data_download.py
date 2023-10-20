@@ -81,7 +81,7 @@ def download_paipu_all():
         t.start()
         threads.append(t)
     files = os.listdir('./paipu/2022/')
-    files = files[32:]
+    files = files
     for file in files:
         file_name = file[:-5]
         download_paipu_in_one_day(file_name, q)

@@ -3,6 +3,7 @@ import re
 from PIL import Image, ImageDraw, ImageFont
 
 from MahjongBlock import MahjongBlockRender
+from mahjong_series import MahjongBlock
 
 PILE_WIDTH = 70
 PILE_HEIGHT = 100
@@ -68,7 +69,8 @@ class MahjongTable:
         CENTER_R = (SIZE+SIZE_CENTER)//2
 
         img = Image.new('RGBA', (SIZE, SIZE), color=COLOR_TABLE)
-        mbr = MahjongBlockRender()
+        mbr = MahjongBlock()
+        mbr_old = MahjongBlockRender()
         draw = ImageDraw.Draw(img)
         draw.rectangle((CENTER_L, CENTER_L, CENTER_R, CENTER_R),
                        fill=COLOR_CENTER, outline=COLOR_OUTLINE, width=OUTLINE_WIDTH)
@@ -131,7 +133,7 @@ class MahjongTable:
                       TENBOU_POSITION[i][1]+TENBOU_OFFSET[i][1]*tenbouHeight//2), mask=tenbouImg.split()[3])
 
             # 手牌
-            paiImg = mbr.drawMahjong(self.pai[i])
+            paiImg = mbr.parse(self.pai[i]).generate_image()
             if i != 0:
                 paiImg = paiImg.transpose(Image.ROTATE_90+i-1)
             (paiWidth, paiHeight) = paiImg.size
@@ -140,7 +142,7 @@ class MahjongTable:
             # todo 手牌不应该居中 摸牌不应该更改手牌位置 副露应该放在最右边
 
             # 牌河
-            riverImg = mbr.drawMahjong(self.river[i])
+            riverImg = mbr_old.drawMahjong(self.river[i])
             if i != 0:
                 riverImg = riverImg.transpose(Image.ROTATE_90+i-1)
             (riverWidth, riverHeight) = riverImg.size
@@ -166,10 +168,10 @@ class MahjongTable:
                   riichiHeight+FONT_SIZE_HONBA), riichi, (0, 0, 0), font=FONT_HONBA)
 
         if self.dora == '':
-            doraImg = mbr.drawMahjong(self.wannpai)
+            doraImg = mbr.parse(self.wannpai).generate_image()
         else:
             dora = '[ドラ]-{}'.format(self.dora)
-            doraImg = mbr.drawMahjong(dora)
+            doraImg = mbr_old.drawMahjong(dora)
         (doraWidth, doraHeight) = doraImg.size
         img.paste(doraImg, (DORA_POSITION[0]-doraWidth //
                   2, DORA_POSITION[1]), mask=doraImg.split()[3])

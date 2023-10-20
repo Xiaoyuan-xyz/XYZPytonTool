@@ -290,4 +290,4 @@ if __name__ == '__main__':
         outpath = pathJoin(outfilepath, rawStr+'.png')
         img = mbr.drawMahjong(rawStr)
         img.show()
-        img.save(outpath)
+        # img.save(outpath)

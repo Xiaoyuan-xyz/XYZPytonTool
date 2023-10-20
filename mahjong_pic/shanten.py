@@ -15,6 +15,8 @@ def tenhou_to_vector(mahjong):
     """
     counts_array = np.zeros(34, dtype=int)
 
+    mahjong = mahjong.replace('0', '5')
+
     manzu_pattern = r'\d+m'
     manzu = re.search(manzu_pattern, mahjong)
     if manzu:
@@ -131,7 +133,7 @@ def shanten_ippan(vec):
                     temp = now
             bb[x + 1, n] = temp
 
-    return bb[3, 4] - 1
+    return bb[3, sum(vec)//3] - 1
 
 
 def calc_shanten(mahjong):
@@ -192,7 +194,7 @@ def calc_tenpai(mahjong):
             new_vec[i] -= 1
             if calc_shanten(new_vec) == shanten:
                 total_yuukouhai, yuukouhai, _, _ = clac_youkouhai(new_vec)
-                # print(f'切{pai_name[i]} 有效牌张数：{total_yuukouhai} {yuukouhai}')
+                print(f'     切{pai_name[i]} 有效牌张数：{total_yuukouhai} {yuukouhai}')
                 if total_yuukouhai > max_yuukouhai:
                     max_yuukouhai = total_yuukouhai
     return max_yuukouhai
@@ -221,7 +223,7 @@ def calc_1shanten(mahjong):
                     new_new_vec = new_vec.copy()
                     new_new_vec[i] += 1
                     score = calc_tenpai(new_new_vec)
-                    print(f'{pai_name[i]}:{score}', end=' ')
+                    print(f'{pai_name[i]}:{score}', end='== \n')
                     total_score += (4 - new_vec[i]) * score
                 avg_score = total_score / total_yuukouhai
                 print(f'\n总进张{total_yuukouhai}*听牌时平均张数{avg_score:.2f}={total_score}')
@@ -229,6 +231,11 @@ def calc_1shanten(mahjong):
 
 
 if __name__ == '__main__':
-    mahjong = '133m223p456789s11z'
-    print(mahjong)
-    calc_1shanten(mahjong)
+    mahjong = '23499m06789p'
+    s = calc_shanten(mahjong)
+    if s == 0:
+        print('听牌')
+        print(calc_tenpai(mahjong))
+    elif s == 1:
+        print('一向听')
+        print(calc_1shanten(mahjong))
