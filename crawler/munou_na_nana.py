@@ -113,7 +113,7 @@ for i in range(10):
 #     continue
 # part_id = int(part_id)
 
-for part_id in range(61, 62):
+for part_id in range(62, 63):
     produce(part_id, img_queue)
 
 print('运行结束')

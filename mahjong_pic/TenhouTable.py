@@ -20,13 +20,12 @@ def int_list(string):
 class Player:
     def __init__(self):
         self.hai = []
-        self.tsumo:int|None = None
+        self.tsumo: int | None = None
         self.fuuro = []
         self.kawa = []
         self.riichi = -1  # 表示第n张牌应该横置
 
         self.junme = 0
-
 
 
 def single_hai(hai_num):
@@ -45,6 +44,15 @@ def to_hai(arr):
 
 
 def process_fuuro(m: int):
+    """
+    把天凤的副露代码转换为具体的牌
+    @param m: 副露代码
+    @return:
+        which_index 要从被副露的人那里拿走的手牌
+        indexes 从子家手里拿走的牌
+        fuuro_str 副露字符串
+        fuuro_old_string 加杠时原先的字符串
+    """
     from_who = m & 0x0003  # 自家 下家 对家 上家
     if m & 0x0004:  # 顺子
         pattern = (m & 0xFC00) >> 10
@@ -141,6 +149,11 @@ def process_fuuro(m: int):
 
 
 def player_hai(player: Player):
+    """
+    写出玩家的手牌字符串和牌河字符串
+    @param player: 玩家
+    @return:
+    """
     # todo 自摸牌和副露应该分开写
     hai = player.hai
     tsumo = player.tsumo
@@ -162,6 +175,9 @@ def player_hai(player: Player):
 
 
 class TenhouTable:
+    """
+    一个麻将桌 内含解析天凤牌谱并演算下去的功能
+    """
     # 视角是以东一局的亲家为自家的 我们接下来称它为主视角
     # 主视角下家对家上家分别记为0123
     kyoku = 0
@@ -176,7 +192,15 @@ class TenhouTable:
     index = 0
     total_index = 0
 
+    callback_before = lambda me, ele: None
+    callback_after = lambda me, ele: None
+
     def load_xml(self, path):
+        """
+        读取天凤牌谱
+        @param path: 牌谱路径
+        @return:
+        """
         self.root = [element for element in ET.parse(path).getroot()][4:]
         # 舍弃了开头的SHUFFLE GO UN TAIKYOKU
         self.index = 0
@@ -186,14 +210,19 @@ class TenhouTable:
         return self.index == self.total_index
 
     def step(self):
+        """
+        进行一个步骤 也就是天凤牌谱里一个元素
+        @return: is_over 对局是否已经结束
+        """
         if self.index == len(self.root):
             return True
         element: ET.Element = self.root[self.index]
         self.index += 1
 
-
-        if element.tag == 'UN': # 不知道为什么有时会出现这个
+        if element.tag == 'UN':  # 不知道为什么有时会出现这个
             return False
+
+        self.callback_before(element)
 
         if element.tag == "INIT":
             over_status(self, element)
@@ -208,7 +237,6 @@ class TenhouTable:
             for i in range(4):
                 self.player[i].hai = int_list(element.attrib['hai' + str(i)])
                 self.player[i].hai.sort()
-            init_status(self, element)
         elif element.tag == "REACH":
             who = int(element.attrib['who'])
             if element.attrib['step'] == '1':  # 立直宣言
@@ -216,19 +244,15 @@ class TenhouTable:
             elif element.attrib['step'] == '2':  # 立直成功
                 self.tennsu = int_list(element.attrib['ten'])
                 self.kyoutaku += 1
-            reach_status(self, element)
         elif element.tag == "DORA":
             self.dora_jyouji.append(int(element.attrib['hai']))
         elif element.tag == "AGARI":
-            agari_status(self, element)
             pass
         elif element.tag == "RYUUKYOKU":
-            ryuukyoku_statue(self, element)
             pass
         elif element.tag[0] in "TUVW":  # TUVW为摸牌
             player: Player = self.player[ord(element.tag[0]) - ord('T')]
             player.tsumo = int(element.tag[1:])
-            tuvw_status(self, element)
         elif element.tag[0] in "DEFG":  # DEFG为切牌
             player: Player = self.player[ord(element.tag[0]) - ord('D')]
             player.junme += 1
@@ -240,7 +264,6 @@ class TenhouTable:
                     player.hai.append(player.tsumo)
                 player.hai.sort()
             player.tsumo = None
-            defg_status(self, element)
         elif element.tag == "N":
             who = int(element.attrib['who'])  # 表示谁鸣牌了
             m = int(element.attrib['m'])  # 面子编码
@@ -250,7 +273,7 @@ class TenhouTable:
                 which_index, indexes, fuuro_str, _ = process_fuuro(m)
                 if which_index is not None:
                     self.player[from_who].kawa.remove(which_index)
-                if self.player[who].tsumo is not None: # 暗杠自摸
+                if self.player[who].tsumo is not None:  # 暗杠自摸
                     self.player[who].hai.append(self.player[who].tsumo)
                     self.player[who].tsumo = None
                     self.player[who].hai.sort()
@@ -268,7 +291,9 @@ class TenhouTable:
                     self.player[who].hai.append(self.player[who].tsumo)
                     self.player[who].hai.sort()
                 self.player[who].fuuro = [fuuro_str if it == fuuro_old_str else it for it in self.player[who].fuuro]
-            fuuro_status(self, element)
+
+        self.callback_after(element)
+
         return False
 
     def generate_img(self):
@@ -288,7 +313,7 @@ class Tenhou6Table(TenhouTable):
     pass
 
 
-kyoku_honba = [] # 局数 本场统计量
+kyoku_honba = []  # 局数 本场统计量
 riichi_tongji = []
 
 riichi_flag = [False, False, False, False]
@@ -300,12 +325,14 @@ def over_status(table, element):
         if table.player[i].riichi >= 0:
             riichi_tongji.append(new_riich[i])
 
+
 def init_status(table, element):
     global riichi_flag
     global new_riich
     kyoku_honba.append((table.kyoku, table.honba))
     riichi_flag = [False, False, False, False]
     new_riich = [[], [], [], []]
+
 
 def reach_status(table, element):
     global riichi_flag
@@ -320,6 +347,7 @@ def reach_status(table, element):
 
 def fuuro_status(table, element):
     pass
+
 
 def agari_status(table, element):
     global riichi_flag
@@ -346,7 +374,7 @@ def defg_status(table, element):
     global new_riich
     who = ord(element.tag[0]) - ord('D')
     if riichi_flag[who]:
-        riichi_flag[who]=False
+        riichi_flag[who] = False
         player = table.player[who]
         new_riich[who].append(table.kyoku)
         new_riich[who].append(table.honba)
@@ -361,17 +389,15 @@ def defg_status(table, element):
         new_riich[who].append(clac_youkouhai(tenhou_to_vector(m.to_tenhou()))[0])
         pass
 
+
 def tuvw_status(table, element):
     pass
 
 
 kyoku_honba_tongji = []
 
-
 if __name__ == '__main__':
     table = TenhouTable()
-
-
 
 if __name__ == '__main__':
 
@@ -398,8 +424,6 @@ if __name__ == '__main__':
 
         riichi_tongji = []
         kyoku_honba_tongji = []
-
-
 
     # 巡目 听牌数 打哪张立直 立直通过率 被破一发率 和率 自摸率 立直时点数 追立率 和牌点数
     # 庄家立直率 平均立直数

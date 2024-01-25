@@ -11,7 +11,7 @@ def read_index_file(path):
 
 def tenhou_to_vector(mahjong):
     """
-    天风格式转34长向量
+    天风格式转34长向量 之后管这个向量叫base5格式
     """
     counts_array = np.zeros(34, dtype=int)
 
@@ -60,6 +60,14 @@ def tenhou_to_vector(mahjong):
     return counts_array
 
 
+def makesure_vector(mahjong_or_vec):
+    if type(mahjong_or_vec) == str:
+        vec = tenhou_to_vector(mahjong_or_vec)
+    else:
+        vec = mahjong_or_vec
+    return vec
+
+
 def shanten_kokushi(vec):
     """
     国士计算向听数
@@ -80,11 +88,6 @@ def shanten_chiitoi(vec):
     return result
 
 
-def base5_to_index(pai_array):
-    decimal_result = int("".join(map(str, pai_array)), 5)
-    return decimal_result
-
-
 suupai_index = read_index_file('index_s.txt')
 jihai_index = read_index_file('index_h.txt')
 
@@ -92,9 +95,14 @@ pai_name = ['1m', '2m', '3m', '4m', '5m', '6m', '7m', '8m', '9m', '1p', '2p', '3
             '1s', '2s', '3s', '4s', '5s', '6s', '7s', '8s', '9s', '东', '南', '西', '北', '白', '发', '中']
 
 
+def base5_to_index(pai_array):
+    decimal_result = int("".join(map(str, pai_array)), 5)
+    return decimal_result
+
+
 def shanten_ippan(vec):
     """
-    一般形（四面子+一雀头）计算
+    一般形（四面子+一雀头）计算向听数
     """
     manzu = suupai_index[base5_to_index(vec[:9])]
     pinzu = suupai_index[base5_to_index(vec[9:18])]
@@ -133,7 +141,7 @@ def shanten_ippan(vec):
                     temp = now
             bb[x + 1, n] = temp
 
-    return bb[3, sum(vec)//3] - 1
+    return bb[3, sum(vec) // 3] - 1
 
 
 def calc_shanten(mahjong):
@@ -144,23 +152,56 @@ def calc_shanten(mahjong):
     return min(shanten_kokushi(vec), shanten_ippan(vec), shanten_chiitoi(vec))
 
 
-def clac_youkouhai(vec):
+def calc_ukeire(vec):
     """
-    切一张之后 计算哪张是进张 返回总进张数
+    计算进张
     """
     shanten = calc_shanten(vec)
-    total_yuukouhai = 0
-    yuukouhai = []
-    yuukouhai_index = []
+    ukeire = []
+    ukeire_index = []
+    total_ukeire = 0
     for i in range(34):
-        if vec[i] < 4:
-            new_vec = vec.copy()
-            new_vec[i] += 1
-            if calc_shanten(new_vec) == shanten - 1:
-                yuukouhai.append(pai_name[i])
-                total_yuukouhai += 4 - vec[i]
-                yuukouhai_index.append(i)
-    return total_yuukouhai, yuukouhai, shanten, yuukouhai_index
+        if vec[i] == 4:
+            continue
+        new_vec = vec.copy()
+        new_vec[i] += 1
+        new_shanten = calc_shanten(new_vec)
+        if new_shanten == shanten - 1:
+            total_ukeire += 4 - vec[i]
+            ukeire.append(pai_name[i])
+            ukeire_index.append(i)
+    return shanten, total_ukeire, ukeire, ukeire_index
+
+
+def calc_youkouhai(vec):
+    """
+    当前牌数应当是13张 返回当前的进张和改良
+    """
+    shanten, total_ukeire, ukeire, ukeire_index = calc_ukeire(vec)
+    koukeihenka = []
+    total_koukeihenka = 0
+    koukeihenka_index = []
+    for i in range(34):
+        if vec[i] == 4:
+            continue
+        if i in ukeire_index:
+            continue
+        new_vec = vec.copy()
+        new_vec[i] += 1
+        # todo 这里要切掉一张
+        _, new_ukeire, _, _ = calc_ukeire(new_vec)
+        if new_ukeire > total_ukeire:
+            total_koukeihenka += 4 - vec[i]
+            koukeihenka.append(pai_name[i])
+            koukeihenka_index.append(i)
+    return shanten, total_ukeire, ukeire, ukeire_index, total_koukeihenka, koukeihenka, koukeihenka_index
+
+
+def clac_koukeihenka(vec):
+    shanten, total_ukeire, ukeire, ukeire_index, total_koukeihenka, koukeihenka, koukeihenka_index = calc_youkouhai(vec)
+    return shanten, total_koukeihenka, koukeihenka, koukeihenka_index
+
+
 
 def calc_13(mahjong):
     if type(mahjong) == str:
@@ -218,7 +259,7 @@ def calc_1shanten(mahjong):
                 print(f'切{pai_name[i]}进入一向听')
                 # 切掉一张进入一向听
                 total_yuukouhai, _, _, yuukouhai_index = clac_youkouhai(new_vec)
-                total_score = 0 # 听牌机会
+                total_score = 0  # 听牌机会
                 for i in yuukouhai_index:
                     new_new_vec = new_vec.copy()
                     new_new_vec[i] += 1
@@ -229,13 +270,7 @@ def calc_1shanten(mahjong):
                 print(f'\n总进张{total_yuukouhai}*听牌时平均张数{avg_score:.2f}={total_score}')
 
 
-
 if __name__ == '__main__':
-    mahjong = '23499m06789p'
-    s = calc_shanten(mahjong)
-    if s == 0:
-        print('听牌')
-        print(calc_tenpai(mahjong))
-    elif s == 1:
-        print('一向听')
-        print(calc_1shanten(mahjong))
+    mahjong = tenhou_to_vector('24m123456789s11z')
+    print(calc_youkouhai(mahjong))
+
