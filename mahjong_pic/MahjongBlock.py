@@ -282,7 +282,7 @@ if __name__ == '__main__':
     rawStr = '7+'
 
     # |摸牌 10|副露|副露 |||文字|
-    outfilepath = r'H:\Life\Project\markdown\mahjong\新手麻将'
+    outfilepath = r'H:\Life\Project\markdown\mahjong\麻将学习牌效率\assets'
     # outfilepath = r'D:\Life\Project\markdown\mahjong\何切记忆\assets'
     # outfilepath = r'D:\Life\Project\markdown\mahjong\绝对手顺\assets'
     while True:
@@ -290,4 +290,4 @@ if __name__ == '__main__':
         outpath = pathJoin(outfilepath, rawStr+'.png')
         img = mbr.drawMahjong(rawStr)
         img.show()
-        # img.save(outpath)
+        img.save(outpath)

@@ -12,6 +12,13 @@ for i in range(1, 12):
     df['评分'] = df['票数'].cumsum()
     df = df[::-1]
     df['评分'] = df['评分'] / df['评分'][0]
+
+
+    for index, row in df.iterrows():
+        if index < len(df) - 1 and row['票数'] == df.iloc[index + 1]['票数']:
+            df.at[index + 1, '评分'] = row['评分'] # 如果同分的情形
+
+
     dfs.append(df)
 
 roles = dfs[-1]['角色名'].tolist()
@@ -43,13 +50,15 @@ for i, df in enumerate(dfs):
             role = role_replace[role]
         if role not in roles:
             continue
-        role_votes[role][f'第{i}届'] = votes
+        role_votes[role][f'第{i+1}届'] = votes
 
 new_df = pd.DataFrame.from_dict(role_votes, orient='index')
 new_df = new_df.reset_index()
 new_df = new_df.rename(columns={'index': '角色名'})
 
-name_arr = ['八云紫', '洩矢诹访子', '八坂神奈子']  # 替换为你要分析的角色名列表
+name_arr = ['宇佐见莲子', '玛艾露贝莉·赫恩', '宇佐见堇子']  # 替换为你要分析的角色名列表
+name_arr = list(dfs[-1]['角色名'])
+
 df = new_df[new_df['角色名'].isin(name_arr)]
 
 legend_labels = df['角色名']
@@ -62,3 +71,5 @@ plt.title('票数累计分布')
 plt.legend()
 plt.grid(True)
 plt.show()
+
+df.to_csv('data.csv', index=False, encoding='gbk')
