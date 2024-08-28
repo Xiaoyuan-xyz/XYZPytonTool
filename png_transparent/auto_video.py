@@ -1,3 +1,5 @@
+# 这是一个自动配中国兔的脚本
+
 import matplotlib.pyplot as plt
 from moviepy.video.fx.resize import resize
 from moviepy.editor import VideoFileClip, ImageClip, clips_array, ImageSequenceClip, AudioFileClip, CompositeVideoClip
@@ -6,10 +8,12 @@ from pydub import AudioSegment
 from imageio import imread
 import numpy as np
 
+audio_index = 4
+
 # video_path = r"G:\Project\VideoMake\日语汉字学习\0\TextExample.mp4"
 # video_clip = VideoFileClip(video_path)
 volume_threshold = -35
-audio_clip = AudioSegment.from_file(r'G:\Project\VideoMake\日语汉字学习\1\1.mp3')
+audio_clip = AudioSegment.from_file(rf'G:\Project\VideoMake\日语汉字学习\{audio_index}\audio.mp3')
 # image_a = ImageClip(r'H:\Resource\中国うさぎ立ち素材\1-1-12.png', transparent=True)
 # image_b = ImageClip(r'H:\Resource\中国うさぎ立ち素材\1-1-13.png', transparent=True)
 image_a = imread(r'H:\Resource\中国うさぎ立ち素材\1-1-12.png', )
@@ -39,5 +43,5 @@ image_clip = resize(image_clip, width=925)
 
 # video = CompositeVideoClip([video_clip,image_clip.set_position((2600, 810))])
 video = CompositeVideoClip([image_clip.set_position((1300, 405))], size=(1920, 1080))
-video = video.set_audio(AudioFileClip(r'G:\Project\VideoMake\日语汉字学习\1\1.mp3'))
-ffmpeg_write_video(video, r'G:\Project\VideoMake\日语汉字学习\1\1.mp4', fps=1000/interval_duration)
+video = video.set_audio(AudioFileClip(rf'G:\Project\VideoMake\日语汉字学习\{audio_index}\audio.mp3'))
+ffmpeg_write_video(video, rf'G:\Project\VideoMake\日语汉字学习\{audio_index}\audio.mp4', fps=1000/interval_duration)
