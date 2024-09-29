@@ -2,9 +2,9 @@ import numpy as np
 from manimlib import *
 
 import sys
+sys.path.insert(0, './')  # or sys.path.append('/path/to/application/app/folder')
 from parse import load_kanjis
 
-sys.path.insert(0, './')  # or sys.path.append('/path/to/application/app/folder')
 
 
 class VoteExample(Scene):

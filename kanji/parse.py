@@ -89,7 +89,7 @@ def apply_kanji(kanji):
 
 def load_kanjis():
     # 从文件里读取文本
-    with open('raw.md', 'r', encoding='utf8') as fp:
+    with open('./raw.md', 'r', encoding='utf8') as fp:
         txt = fp.readlines()
 
     # 删掉第一个#之前的所有内容

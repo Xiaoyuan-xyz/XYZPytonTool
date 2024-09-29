@@ -20,7 +20,7 @@ def classifying_data_scatter(x, y, jitter=0.6, s=4, c=None, *args, **kwargs):
     c : array-like or None, optional
         The color of the data points. If None, all points will have the same color (default is None).
     *args, **kwargs : additional keyword arguments
-        Additional arguments passed to plt.scatter for further customization of the plot.
+        Additional arguments passed to `plt.scatter` for further customization of the plot.
 
     Returns:
     -------
@@ -49,8 +49,8 @@ def classifying_data_scatter(x, y, jitter=0.6, s=4, c=None, *args, **kwargs):
         df['y'], y_labels = pd.factorize(df['y'])
     x_, y_ = df['x'].values, df['y'].values
 
-    x_jitter = jitter * np.random.random(len(x_))-jitter/2 if df['x'].dtypes.str.startswith('<i') else 0
-    y_jitter = jitter * np.random.random(len(y_))-jitter/2 if df['y'].dtypes.str.startswith('<i') else 0
+    x_jitter = jitter * np.random.random(len(x_)) - jitter / 2 if df['x'].dtypes.str.startswith('<i') else 0
+    y_jitter = jitter * np.random.random(len(y_)) - jitter / 2 if df['y'].dtypes.str.startswith('<i') else 0
 
     plt.scatter(x_ + x_jitter,
                 y_ + y_jitter, s=df['s'], c=df['c'], *args, **kwargs)
@@ -58,9 +58,8 @@ def classifying_data_scatter(x, y, jitter=0.6, s=4, c=None, *args, **kwargs):
         plt.xticks(range(len(x_labels)), x_labels)
     if y_labels is not None:
         plt.yticks(range(len(y_labels)), y_labels)
-    if c is not None:
+    if c is not None and len(c) > 0 and type(c[0]) in (int, float):
         plt.colorbar()
-
 
 
 if __name__ == '__main__':

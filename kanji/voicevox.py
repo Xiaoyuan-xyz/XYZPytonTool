@@ -7,7 +7,7 @@ import json
 
 from parse import words_display, load_kanjis
 
-save_path = './audio'
+save_path = './kanji/audio'
 
 
 def generate_voicevox(text, name, speaker=61):
@@ -26,7 +26,7 @@ def generate_voicevox(text, name, speaker=61):
 
     response = requests.post(url_audio_query, headers=headers, params=data)
     ret = json.loads(response.text)
-    kana = ret['kana']
+    kana = ret['kana'].replace('/', '-')
 
     response2 = requests.post(url_synthesis, headers=headers, params=data, json=ret)
 
