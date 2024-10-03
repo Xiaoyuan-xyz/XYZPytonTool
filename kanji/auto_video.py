@@ -8,7 +8,7 @@ from pydub import AudioSegment
 from imageio import imread
 import numpy as np
 
-audio_index = 7
+audio_index = 8
 
 # video_path = r"G:\Project\VideoMake\日语汉字学习\0\TextExample.mp4"
 # video_clip = VideoFileClip(video_path)
