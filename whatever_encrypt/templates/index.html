@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>帅言帅语</title>
+</head>
+
+<body>
+    <h1>帅言帅语工具</h1>
+
+    <form method="POST">
+        <label for="input_text">帅前:</label><br>
+        <textarea name="input_text" rows="4" cols="50">{{ input_text }}</textarea><br><br>
+
+        <label for="output_text">帅后:</label><br>
+        <textarea name="output_text" rows="4" cols="50">{{ output_text }}</textarea><br><br>
+
+        <input type="submit" name="action" value="encrypt"> <!-- 加密按钮 -->
+        <input type="submit" name="action" value="decrypt"> <!-- 解密按钮 -->
+    </form>
+</body>
+
+</html>

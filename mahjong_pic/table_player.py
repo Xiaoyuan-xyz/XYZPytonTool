@@ -3,10 +3,10 @@ import tkinter as tk
 from PIL import ImageTk
 
 from MahjongTable import MahjongTable
-from mahjong_pic.TenhouTable import TenhouTable
+from TenhouTable import TenhouTable
 
 table = TenhouTable()
-table.load_xml("./paipu/2022scc/scc20220106/2022010616gm-00a9-0000-d4d83e3e.xml")
+table.load_xml("./mahjong_pic/paipu/2022scc/scc20220106/2022010616gm-00a9-0000-d4d83e3e.xml")
 img_table = MahjongTable()
 
 root = tk.Tk()

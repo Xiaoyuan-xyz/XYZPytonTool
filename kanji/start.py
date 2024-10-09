@@ -154,7 +154,7 @@ class TextExample(Scene):
 
     def construct(self):
         # 关于Text全部用法，请见https://github.com/3b1b/manim/pull/680
-        self.texts = load_kanjis()  # [-1:]
+        self.texts = load_kanjis('./raw.md')  # [-1:]
         for text in self.texts:
             self.display_whole_kanji(text)
         # self.embed()

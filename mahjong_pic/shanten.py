@@ -88,8 +88,8 @@ def shanten_chiitoi(vec):
     return result
 
 
-suupai_index = read_index_file('index_s.txt')
-jihai_index = read_index_file('index_h.txt')
+suupai_index = read_index_file('./mahjong_pic/index_s.txt')
+jihai_index = read_index_file('./mahjong_pic/index_h.txt')
 
 pai_name = ['1m', '2m', '3m', '4m', '5m', '6m', '7m', '8m', '9m', '1p', '2p', '3p', '4p', '5p', '6p', '7p', '8p', '9p',
             '1s', '2s', '3s', '4s', '5s', '6s', '7s', '8s', '9s', '东', '南', '西', '北', '白', '发', '中']
@@ -210,7 +210,7 @@ def calc_13(mahjong):
         vec = mahjong
     assert sum(vec) == 13
 
-    total_yuukouhai, yuukouhai, shanten, _ = clac_youkouhai(vec)
+    total_yuukouhai, yuukouhai, shanten, _ = calc_youkouhai(vec)
     print(f'当前向听数：{shanten} 有效牌张数：{total_yuukouhai} {yuukouhai}')
     return yuukouhai
 
@@ -234,7 +234,7 @@ def calc_tenpai(mahjong):
             new_vec = vec.copy()
             new_vec[i] -= 1
             if calc_shanten(new_vec) == shanten:
-                total_yuukouhai, yuukouhai, _, _ = clac_youkouhai(new_vec)
+                total_yuukouhai, yuukouhai, _, _ = calc_youkouhai(new_vec)
                 print(f'     切{pai_name[i]} 有效牌张数：{total_yuukouhai} {yuukouhai}')
                 if total_yuukouhai > max_yuukouhai:
                     max_yuukouhai = total_yuukouhai
@@ -258,7 +258,7 @@ def calc_1shanten(mahjong):
             if calc_shanten(new_vec) == shanten:
                 print(f'切{pai_name[i]}进入一向听')
                 # 切掉一张进入一向听
-                total_yuukouhai, _, _, yuukouhai_index = clac_youkouhai(new_vec)
+                total_yuukouhai, _, _, yuukouhai_index = calc_youkouhai(new_vec)
                 total_score = 0  # 听牌机会
                 for i in yuukouhai_index:
                     new_new_vec = new_vec.copy()

@@ -52,7 +52,7 @@ def parse_single_kanji(lines):
     try:
         index = lines.index('')  # 原先一个空行变成空字符串了
     except ValueError as e:
-        print('I found a ValueError 可能是空行中包含空格 :', lines)
+        print('I found a ValueError 可能是空行中包含空格 或 缺少第二个[] :', lines)
         raise e
     kanji["left"] = parse_part(lines[1:index])
     kanji["right"] = parse_part(lines[index + 1:])
@@ -87,9 +87,9 @@ def apply_kanji(kanji):
     return name + '\n\n' + apply_part(kanji["left"]) + '\n' + apply_part(kanji["right"])
 
 
-def load_kanjis():
+def load_kanjis(path):
     # 从文件里读取文本
-    with open('./raw.md', 'r', encoding='utf8') as fp:
+    with open(path, 'r', encoding='utf8') as fp:
         txt = fp.readlines()
 
     # 删掉第一个#之前的所有内容
@@ -152,7 +152,7 @@ def words_display(string):
 
 
 if __name__ == '__main__':
-    for it in load_kanjis():
+    for it in load_kanjis('./kanji/raw.md'):
         print(words_display(it))
 
     # todo: 加载汉字后按自己的顺序排序

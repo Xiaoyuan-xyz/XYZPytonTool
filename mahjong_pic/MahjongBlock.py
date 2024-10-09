@@ -265,7 +265,7 @@ class MahjongBlockRender:
         return img
 
     def drawText(self, text, font, position=(0, 0), color=(0, 0, 0), minWidth=0, minHeight=0):
-        (width, height) = font.getsize(text)
+        (_, _, width, height) = font.getbbox(text)
         width = width if minWidth < width else minWidth
         height = height if minHeight < height else minHeight
         img = Image.new('RGBA', (width, height))
@@ -282,7 +282,7 @@ if __name__ == '__main__':
     rawStr = '7+'
 
     # |摸牌 10|副露|副露 |||文字|
-    outfilepath = r'H:\Life\Project\markdown\mahjong\麻将学习牌效率\assets'
+    outfilepath = r'H:\Life\Project\markdown\mahjong\79博客\assets'
     # outfilepath = r'D:\Life\Project\markdown\mahjong\何切记忆\assets'
     # outfilepath = r'D:\Life\Project\markdown\mahjong\绝对手顺\assets'
     while True:

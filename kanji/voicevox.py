@@ -36,6 +36,6 @@ def generate_voicevox(text, name, speaker=61):
 
 
 if __name__ == '__main__':
-    for i, it in enumerate(load_kanjis()):
+    for i, it in enumerate(load_kanjis('./kanji/raw.md')):
         for j, text in enumerate(words_display(it).split('/')):
             generate_voicevox(text, f'{i}_{j}_{text}')

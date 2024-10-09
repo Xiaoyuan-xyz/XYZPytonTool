@@ -109,7 +109,7 @@ class MahjongTable:
 
             # 东南西北四个字
             symbol = self.symbol[me]
-            (textWidth, textHeight) = FONT_SYMBOL.getsize(symbol)
+            (_, _, textWidth, textHeight) = FONT_SYMBOL.getbbox(symbol)
             # textWidth == FONT_SIZE_SYMBOL, textHeight比FONT_SIZE_SYMBOL稍大 好像是4:5
             symbolImg = Image.new('RGBA', (FONT_SIZE_SYMBOL, FONT_SIZE_SYMBOL))
             symbolDraw = ImageDraw.Draw(symbolImg)
@@ -122,7 +122,7 @@ class MahjongTable:
 
             # 点数
             tenbou = str(self.tenbou[i])
-            (textWidth, textHeight) = FONT_TENBOU.getsize(tenbou)
+            (_, _, textWidth, textHeight) = FONT_TENBOU.getbbox(tenbou)
             tenbouImg = Image.new('RGBA', (textWidth, textHeight))
             tenbouDraw = ImageDraw.Draw(tenbouImg)
             tenbouDraw.text((0, 0), tenbou, (0, 0, 0), font=FONT_TENBOU)
@@ -151,19 +151,19 @@ class MahjongTable:
 
         # 局数
         kyoku = '{}{}'.format(self.symbol[self.kyoku//4], self.kyoku % 4+1)
-        (kyokuWidth, kyokuHeight) = FONT_KYOKU.getsize(kyoku)
+        (_, _, kyokuWidth, kyokuHeight) = FONT_KYOKU.getbbox(kyoku)
         draw.text((SIZE//2-KYOKU_OFFSET[0]-kyokuWidth, CENTER_L +
                   KYOKU_OFFSET[1]+FONT_SIZE_KYOKU//2-kyokuHeight), kyoku, (0, 0, 0), font=FONT_KYOKU)
 
         # 本场
         honba = '{}本'.format(self.honba)
-        (honbaWidth, honbaHeight) = FONT_HONBA.getsize(honba)
+        (_, _, honbaWidth, honbaHeight) = FONT_HONBA.getbbox(honba)
         draw.text((SIZE//2+HONBA_OFFSET[0], CENTER_L +
                   HONBA_OFFSET[1]-honbaHeight), honba, (0, 0, 0), font=FONT_HONBA)
 
         # 场供
         riichi = '{}供'.format(self.riichibou)
-        (riichiWidth, riichiHeight) = FONT_HONBA.getsize(riichi)
+        (_, _, riichiWidth, riichiHeight) = FONT_HONBA.getbbox(riichi)
         draw.text((SIZE//2+RIICHI_OFFSET[0], CENTER_L + RIICHI_OFFSET[1] -
                   riichiHeight+FONT_SIZE_HONBA), riichi, (0, 0, 0), font=FONT_HONBA)
 
@@ -219,11 +219,12 @@ if __name__ == "__main__":
     table.fromEasyStr('(6,1,0,3,3z,419,201,75,305)(88m12346s123579p-4s,10+10-5_55z)(1z9s1m9s1p3z$5m9m,8p2m1p3p7m7z$2z4m5p4z,2z1z7z4z3z2s$3m5p5z1s9p,9p1s1m6z9s2p$7z9m2m7m)')
     table.fromEasyStr('(3,2,0,1,5m,224,142,184,450)(11334789m234p67s-1z,13+,13+,10+10-_978p)(6z5z3s3z6z8m$9s5z8p2p,9s1s1s5z4z7z$9p1p2p9p,3z4z5z4s7z2z$6m2s8p`9p,1s3z2z5z8s9s$7z1p5p2m4s)')
     table.fromEasyStr('(4,0,0,0,4m,,,,)(4778m1167p12388s-3m,10+10-55_5z)(4z1m1z9p5z2z$1s5s,1m9p2s6s1z5p$4s3z2m,4z2z9p`5z3z9m$2m6z3s,1z1m9s6z1s1p$5p8p8s)')
+    table.fromEasyStr('(0,0,1,0,1m,250,250,240,250)(666m234p56s77z10-_867p)(9p9s5z4z1p2s$1s9m8m2m5z8s$3p1p1z,4z1p1s8p8m9m$6p5z6z8m1s7s$9p2p4s,2z3z9s5z9p1m$1z8p9m3s4s6s$7m6z_2p7z,3z4z7z9m3z1p$6z3s8p1z2z1z$8m2z4s)')
     img = table.generateImg()
     img.show()
 
-    outfilepath = r'D:\Life\Project\markdown\mahjong\79博客\assets'
+    outfilepath = r'H:\Life\Project\markdown\mahjong\79博客\assets'
     import os
-    outpath = os.path.join(outfilepath, 'table9'+'.png')
+    outpath = os.path.join(outfilepath, 'table10'+'.png')
     img.save(outpath)
 

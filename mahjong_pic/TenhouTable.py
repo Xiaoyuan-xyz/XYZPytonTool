@@ -4,8 +4,8 @@ import xml.etree.ElementTree as ET
 
 from tqdm import tqdm
 
-from mahjong_pic.mahjong_series import MahjongSeries
-from mahjong_pic.shanten import calc_tenpai, clac_youkouhai, tenhou_to_vector
+from mahjong_series import MahjongSeries
+from shanten import calc_tenpai, calc_youkouhai, tenhou_to_vector
 
 
 def int_list(string):
