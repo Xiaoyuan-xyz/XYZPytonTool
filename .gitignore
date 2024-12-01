@@ -156,5 +156,10 @@ mahjong_pic/index_h.txt
 mahjong_pic/index_s.txt
 mahjong_pic/paipu
 *.ipynb
+*.xlsx
+*.pkl
+*.png
+willdel*
+temp_*
 lang/data
 word_cloud

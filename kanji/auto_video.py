@@ -14,7 +14,7 @@ from moviepy.video.io.ffmpeg_writer import ffmpeg_write_video
 from pydub import AudioSegment
 from imageio import imread
 
-audio_index = 12
+audio_index = 14
 
 # video_path = r"G:\Project\VideoMake\日语汉字学习\0\TextExample.mp4"
 # video_clip = VideoFileClip(video_path)
