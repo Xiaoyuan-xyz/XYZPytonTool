@@ -69,12 +69,12 @@ class TextExample(Scene):
 
             if not is_combine and romas[i - total_skip].startswith('（'):
                 is_combine = True
-                if romas[i][1] in "123456789":  # 跳过的长度
-                    combine_len = int(romas[i][1])
-                    combine_word = romas[i][2:-1]
+                if romas[i - total_skip][1] in "123456789":  # 跳过的长度
+                    combine_len = int(romas[i - total_skip][1])
+                    combine_word = romas[i - total_skip][2:-1]
                 else:
                     combine_len = 2
-                    combine_word = romas[i][1:-1]
+                    combine_word = romas[i - total_skip][1:-1]
                 total_skip += combine_len - 1
                 end_i = i + combine_len - 1
                 start_position = position
@@ -154,7 +154,8 @@ class TextExample(Scene):
 
     def construct(self):
         # 关于Text全部用法，请见https://github.com/3b1b/manim/pull/680
-        self.texts = load_kanjis('./raw.md')  # [-1:]
+        path = './raw.md' if  os.path.exists('./raw.md') else './kanji/raw.md'
+        self.texts = load_kanjis(path)  # [-1:]
         for text in self.texts:
             self.display_whole_kanji(text)
         # self.embed()
@@ -182,3 +183,13 @@ class TextExample(Scene):
         self.play(Write(text3))
         self.play(MoveToTarget(text3))
         self.wait(3)
+
+
+class T0(TextExample):
+    def construct(self):
+        path = './raw.md' if  os.path.exists('./raw.md') else './kanji/raw.md'
+        self.texts = load_kanjis(path)
+        self.display_whole_kanji(self.texts[0], need_fade=False)
+
+if __name__ == '__main__':
+    TextExample().construct()

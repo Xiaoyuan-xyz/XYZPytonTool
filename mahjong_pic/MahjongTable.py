@@ -220,11 +220,13 @@ if __name__ == "__main__":
     table.fromEasyStr('(3,2,0,1,5m,224,142,184,450)(11334789m234p67s-1z,13+,13+,10+10-_978p)(6z5z3s3z6z8m$9s5z8p2p,9s1s1s5z4z7z$9p1p2p9p,3z4z5z4s7z2z$6m2s8p`9p,1s3z2z5z8s9s$7z1p5p2m4s)')
     table.fromEasyStr('(4,0,0,0,4m,,,,)(4778m1167p12388s-3m,10+10-55_5z)(4z1m1z9p5z2z$1s5s,1m9p2s6s1z5p$4s3z2m,4z2z9p`5z3z9m$2m6z3s,1z1m9s6z1s1p$5p8p8s)')
     table.fromEasyStr('(0,0,1,0,1m,250,250,240,250)(666m234p56s77z10-_867p)(9p9s5z4z1p2s$1s9m8m2m5z8s$3p1p1z,4z1p1s8p8m9m$6p5z6z8m1s7s$9p2p4s,2z3z9s5z9p1m$1z8p9m3s4s6s$7m6z_2p7z,3z4z7z9m3z1p$6z3s8p1z2z1z$8m2z4s)')
+    table.fromEasyStr('(0,0,1,1,5m,210,210,210,360)(23789m466789p44z-5p,13+,10+10-_456p,13+)(1p5z6s1p8s2s$1s9p7z,4z6z3z6s2p1m$7z9m,2z1m9m6z6z9s$7s3z1z5s,2z9s3z8s9p9m$3p4m2m_5s)')
+    table.fromEasyStr('(5,2,0,3,9p,462,351,83,104)(23888m56789p666z-6p,7+10-77_7z-_321p,13+,13+)(3z5z1s5z1z5m$2p4s7z,2m6m5s5m9m5z$1s3z6s2z,1p3z2m2m8s4z$2z7p2s1z,4z1z5z1m9m1p$3s4z9m8s)')
     img = table.generateImg()
     img.show()
 
     outfilepath = r'H:\Life\Project\markdown\mahjong\79博客\assets'
     import os
-    outpath = os.path.join(outfilepath, 'table10'+'.png')
+    outpath = os.path.join(outfilepath, 'table18'+'.png')
     img.save(outpath)
 
