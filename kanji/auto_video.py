@@ -26,8 +26,13 @@ volume_threshold = -35
 volume_threshold_low = -40
 volume_threshold_high = -30
 
+
+
+# audio_clip = AudioSegment.from_file(
+#     rf"G:\Project\VideoMake\日语语法\提示助词\音频.mp3"
+# )
 audio_clip = AudioSegment.from_file(
-    rf"G:\Project\VideoMake\日语汉字\日期\音频.mp3"
+    rf"G:\Program\PytonTool\kanji\videos\output_audio.mp3"
 )
 
 # image_a = ImageClip(r'H:\Resource\中国うさぎ立ち素材\1-1-12.png', transparent=True)
@@ -83,12 +88,25 @@ image_clip = resize(image_clip, width=925)
 
 # video = CompositeVideoClip([video_clip,image_clip.set_position((2600, 810))])
 video = CompositeVideoClip([image_clip.set_position((1300, 405))], size=(1920, 1080))
+
+
+# video = video.set_audio(
+#     AudioFileClip(rf"G:\Project\VideoMake\日语语法\提示助词\音频.mp3")
+# )
+
+# ffmpeg_write_video(
+#     video,
+#     rf"G:\Project\VideoMake\日语语法\提示助词\音频.mp4",
+#     fps=1000 / interval_duration,
+# )
+
 video = video.set_audio(
-    AudioFileClip(rf"G:\Project\VideoMake\日语汉字\日期\音频.mp3")
+    AudioFileClip(rf"G:\Program\PytonTool\kanji\videos\output_audio.mp3")
 )
+
 ffmpeg_write_video(
     video,
-    rf"G:\Project\VideoMake\日语汉字\日期\音频.mp4",
+    rf"G:\Program\PytonTool\kanji\videos\output_audio.mp4",
     fps=1000 / interval_duration,
 )
 

@@ -1,3 +1,59 @@
-conda activate manim
+call G:\Software\anaconda3\Scripts\activate.bat manim
+
 cd G:\Program\PytonTool\kanji
-manimgl start.py TextExample --uhd -w
+manimgl start.py T0 --uhd -w -s
+manimgl start.py T1 --uhd -w -s
+manimgl start.py T2 --uhd -w -s
+manimgl start.py T3 --uhd -w -s
+manimgl start.py T4 --uhd -w -s
+manimgl start.py T5 --uhd -w -s
+manimgl start.py T6 --uhd -w -s
+manimgl start.py T7 --uhd -w -s
+manimgl start.py T8 --uhd -w -s
+manimgl start.py T9 --uhd -w -s
+manimgl start.py T10 --uhd -w -s
+manimgl start.py T11 --uhd -w -s
+manimgl start.py T12 --uhd -w -s
+manimgl start.py T13 --uhd -w -s
+manimgl start.py T14 --uhd -w -s
+manimgl start.py T15 --uhd -w -s
+manimgl start.py T16 --uhd -w -s
+manimgl start.py T17 --uhd -w -s
+manimgl start.py T18 --uhd -w -s
+manimgl start.py T19 --uhd -w -s
+manimgl start.py T20 --uhd -w -s
+manimgl start.py T21 --uhd -w -s
+manimgl start.py T22 --uhd -w -s
+manimgl start.py T23 --uhd -w -s
+manimgl start.py T24 --uhd -w -s
+manimgl start.py T25 --uhd -w -s
+manimgl start.py T26 --uhd -w -s
+manimgl start.py T27 --uhd -w -s
+manimgl start.py T28 --uhd -w -s
+manimgl start.py T29 --uhd -w -s
+manimgl start.py T30 --uhd -w -s
+manimgl start.py T31 --uhd -w -s
+manimgl start.py T32 --uhd -w -s
+manimgl start.py T33 --uhd -w -s
+manimgl start.py T34 --uhd -w -s
+manimgl start.py T35 --uhd -w -s
+manimgl start.py T36 --uhd -w -s
+manimgl start.py T37 --uhd -w -s
+manimgl start.py T38 --uhd -w -s
+manimgl start.py T39 --uhd -w -s
+manimgl start.py T40 --uhd -w -s
+manimgl start.py T41 --uhd -w -s
+manimgl start.py T42 --uhd -w -s
+manimgl start.py T43 --uhd -w -s
+manimgl start.py T44 --uhd -w -s
+manimgl start.py T45 --uhd -w -s
+manimgl start.py T46 --uhd -w -s
+manimgl start.py T47 --uhd -w -s
+manimgl start.py T48 --uhd -w -s
+manimgl start.py T49 --uhd -w -s
+manimgl start.py T50 --uhd -w -s
+manimgl start.py T51 --uhd -w -s
+manimgl start.py T52 --uhd -w -s
+manimgl start.py T53 --uhd -w -s
+manimgl start.py T54 --uhd -w -s
+manimgl start.py T55 --uhd -w -s

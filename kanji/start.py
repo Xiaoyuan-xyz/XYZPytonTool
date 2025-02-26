@@ -2,9 +2,9 @@ import numpy as np
 from manimlib import *
 
 import sys
-sys.path.insert(0, './')  # or sys.path.append('/path/to/application/app/folder')
-from parse import load_kanjis
 
+sys.path.insert(0, "./")  # or sys.path.append('/path/to/application/app/folder')
+from parse import load_kanjis
 
 
 class VoteExample(Scene):
@@ -17,11 +17,14 @@ class VoteExample(Scene):
             # 坐标系将会伸缩来匹配指定的height和width
             height=6,
             width=10,
-            x_axis_config={'include_numbers': False,
-                           'decimal_number_config': {'num_decimal_places': 0}},
-            y_axis_config={'include_numbers': False,
-                           'decimal_number_config': {'num_decimal_places': 2}},
-
+            x_axis_config={
+                "include_numbers": False,
+                "decimal_number_config": {"num_decimal_places": 0},
+            },
+            y_axis_config={
+                "include_numbers": False,
+                "decimal_number_config": {"num_decimal_places": 2},
+            },
         )
         axes.add_coordinate_labels()
         self.play(Write(axes))
@@ -59,7 +62,7 @@ class TextExample(Scene):
         # 在指定位置绘制单词
         l = len(word)
         mobs = []
-        romas = roma.split('　')
+        romas = roma.split("　")
         is_combine = False  # 多个字对一个读音
         total_skip = 0
         for i in range(l):
@@ -67,7 +70,7 @@ class TextExample(Scene):
             kj.move_to(position)
             mobs.append(kj)
 
-            if not is_combine and romas[i - total_skip].startswith('（'):
+            if not is_combine and romas[i - total_skip].startswith("（"):
                 is_combine = True
                 if romas[i - total_skip][1] in "123456789":  # 跳过的长度
                     combine_len = int(romas[i - total_skip][1])
@@ -80,10 +83,10 @@ class TextExample(Scene):
                 start_position = position
 
             if not is_combine:  # 单字模式
-                rm = Text(romas[i - total_skip],
-                          font=self.font, font_size=self.rms)
-                rm.move_to(position + self.romaji_space)
-                mobs.append(rm)
+                if len(romas[i - total_skip]) > 0:
+                    rm = Text(romas[i - total_skip], font=self.font, font_size=self.rms)
+                    rm.move_to(position + self.romaji_space)
+                    mobs.append(rm)
 
             if is_combine and i == end_i:  # 组合模式
                 is_combine = False
@@ -118,15 +121,14 @@ class TextExample(Scene):
         start_position = position  # 每行的开始位置
         for text in text_lines:
             text: str
-            if text.startswith('['):
+            if text.startswith("["):
                 start_position += self.hatsuon_come_up
-                hatsuon = self.write_hatsuon(
-                    text, start_position - self.tab_length)
+                hatsuon = self.write_hatsuon(text, start_position - self.tab_length)
                 all_mob.append(hatsuon)
             else:
-                kj_part, rm_part = text.split('：')
-                kj_part = kj_part.split('/')
-                rm_part = rm_part.split('/')
+                kj_part, rm_part = text.split("：")
+                kj_part = kj_part.split("/")
+                rm_part = rm_part.split("/")
                 position = start_position
                 for word, roma in zip(kj_part, rm_part):
                     try:
@@ -140,7 +142,7 @@ class TextExample(Scene):
         return all_mob
 
     def display_whole_kanji(self, text, need_fade=True):
-        parts = text.split('\n\n')
+        parts = text.split("\n\n")
         all_mobs = []
         all_mobs.append(self.write_kanji(parts[0]))  # 中心汉字
         all_mobs += self.write_para(parts[1], self.left_up.copy())  # 左半部分
@@ -154,7 +156,7 @@ class TextExample(Scene):
 
     def construct(self):
         # 关于Text全部用法，请见https://github.com/3b1b/manim/pull/680
-        path = './raw.md' if  os.path.exists('./raw.md') else './kanji/raw.md'
+        path = "./raw.md" if os.path.exists("./raw.md") else "./kanji/raw.md"
         self.texts = load_kanjis(path)  # [-1:]
         for text in self.texts:
             self.display_whole_kanji(text)
@@ -185,11 +187,251 @@ class TextExample(Scene):
         self.wait(3)
 
 
-class T0(TextExample):
-    def construct(self):
-        path = './raw.md' if  os.path.exists('./raw.md') else './kanji/raw.md'
+class T(TextExample):
+    def construct_by_index(self, index=0):
+        path = "./raw.md" if os.path.exists("./raw.md") else "./kanji/raw.md"
         self.texts = load_kanjis(path)
-        self.display_whole_kanji(self.texts[0], need_fade=False)
+        self.display_whole_kanji(self.texts[index], need_fade=False)
 
-if __name__ == '__main__':
-    TextExample().construct()
+
+class T0(T):
+    def construct(self):
+        self.construct_by_index(0)
+
+
+class T1(T):
+    def construct(self):
+        self.construct_by_index(1)
+
+
+class T2(T):
+    def construct(self):
+        self.construct_by_index(2)
+
+
+class T3(T):
+    def construct(self):
+        self.construct_by_index(3)
+
+
+class T4(T):
+    def construct(self):
+        self.construct_by_index(4)
+
+
+class T5(T):
+    def construct(self):
+        self.construct_by_index(5)
+
+
+class T6(T):
+    def construct(self):
+        self.construct_by_index(6)
+
+
+class T7(T):
+    def construct(self):
+        self.construct_by_index(7)
+
+
+class T8(T):
+    def construct(self):
+        self.construct_by_index(8)
+
+
+class T9(T):
+    def construct(self):
+        self.construct_by_index(9)
+
+
+class T10(T):
+    def construct(self):
+        self.construct_by_index(10)
+
+
+class T11(T):
+    def construct(self):
+        self.construct_by_index(11)
+
+
+class T12(T):
+    def construct(self):
+        self.construct_by_index(12)
+
+
+class T13(T):
+    def construct(self):
+        self.construct_by_index(13)
+
+
+class T14(T):
+    def construct(self):
+        self.construct_by_index(14)
+
+
+class T15(T):
+    def construct(self):
+        self.construct_by_index(15)
+
+
+class T16(T):
+    def construct(self):
+        self.construct_by_index(16)
+
+
+class T17(T):
+    def construct(self):
+        self.construct_by_index(17)
+
+
+class T18(T):
+    def construct(self):
+        self.construct_by_index(18)
+
+
+class T19(T):
+    def construct(self):
+        self.construct_by_index(19)
+
+
+class T20(T):
+    def construct(self):
+        self.construct_by_index(20)
+
+
+class T21(T):
+    def construct(self):
+        self.construct_by_index(21)
+
+
+class T22(T):
+    def construct(self):
+        self.construct_by_index(22)
+
+
+class T23(T):
+    def construct(self):
+        self.construct_by_index(23)
+
+
+class T24(T):
+    def construct(self):
+        self.construct_by_index(24)
+
+
+class T25(T):
+    def construct(self):
+        self.construct_by_index(25)
+
+
+class T26(T):
+
+    def construct(self):
+        self.construct_by_index(26)
+
+
+class T27(T):
+    def construct(self):
+        self.construct_by_index(27)
+
+
+class T28(T):
+    def construct(self):
+        self.construct_by_index(28)
+
+
+class T29(T):
+    def construct(self):
+        self.construct_by_index(29)
+
+
+class T30(T):
+    def construct(self):
+        self.construct_by_index(30)
+
+
+class T31(T):
+    def construct(self):
+        self.construct_by_index(31)
+
+
+class T32(T):
+    def construct(self):
+        self.construct_by_index(32)
+
+class T33(T):
+    def construct(self):
+        self.construct_by_index(33)
+class T34(T):
+    def construct(self):
+        self.construct_by_index(34)
+class T35(T):
+    def construct(self):
+        self.construct_by_index(35)
+class T36(T):
+    def construct(self):
+        self.construct_by_index(36)
+class T37(T):
+    def construct(self):
+        self.construct_by_index(37)
+class T38(T):
+    def construct(self):
+        self.construct_by_index(38)
+class T39(T):
+    def construct(self):
+        self.construct_by_index(39)
+class T40(T):
+    def construct(self):
+        self.construct_by_index(40)
+class T41(T):
+    def construct(self):
+        self.construct_by_index(41)
+class T42(T):
+    def construct(self):
+        self.construct_by_index(42)
+class T43(T):
+    def construct(self):
+        self.construct_by_index(43)
+class T44(T):
+    def construct(self):
+        self.construct_by_index(44)
+class T45(T):
+    def construct(self):
+        self.construct_by_index(45)
+class T46(T):
+    def construct(self):
+        self.construct_by_index(46)
+class T47(T):
+    def construct(self):
+        self.construct_by_index(47)
+class T48(T):
+    def construct(self):
+        self.construct_by_index(48)
+class T49(T):
+    def construct(self):
+        self.construct_by_index(49)
+class T50(T):
+    def construct(self):
+        self.construct_by_index(50)
+class T51(T):
+    def construct(self):
+        self.construct_by_index(51)
+class T52(T):
+    def construct(self):
+        self.construct_by_index(52)
+class T53(T):
+    def construct(self):
+        self.construct_by_index(53)
+class T54(T):
+    def construct(self):
+        self.construct_by_index(54)
+class T55(T):
+    def construct(self):
+        self.construct_by_index(55)
+
+
+
+
+
+if __name__ == "__main__":
+    T2().construct()
