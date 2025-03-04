@@ -1,3 +1,5 @@
+# 本文件给定kanjis 通过常用汉字表生成raw.md
+
 import pandas as pd
 from tqdm import tqdm
 import pykakasi
@@ -311,7 +313,7 @@ def find_jukuji(ji):
 
 if __name__ == "__main__":
 
-    kanjis = "分粉紛雰盆噴墳憤奮本奔門根墾懇恨痕肯恩任妊忍認人刃仁"
+    kanjis = "広鉱荒慌光皇黄狂況壮荘装粧状窓創双爽霜床亡忘望妄網王旺往"
 
     df = pd.read_excel("./kanji/database7.xlsx")
     kanji_dicts = create_kanji_dicts(df)
@@ -333,7 +335,7 @@ if __name__ == "__main__":
                 if "惯用" in on:
                     raw_text += "[慣用]"
                 raw_text += f'　{on["音读"]}\n'
-                lici = on["例词"].split("、")
+                lici = on["例词"].split("、") if isinstance(on["例词"], str) else []
                 for li in lici:
                     raw_text += f"{li}　"
                     result = kks.convert(li)
@@ -348,7 +350,7 @@ if __name__ == "__main__":
                 for li in lici:
                     raw_text += f"{li}　"
                     result = kks.convert(li)
-                    result = "　".join([it["hira"] for it in result])
+                    result = "".join([it["hira"] for it in result])
 
                     # 如果末尾几位一样就顺便替换了
                     min_len = min(len(li), len(result))
