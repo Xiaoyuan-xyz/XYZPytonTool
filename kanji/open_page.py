@@ -2,8 +2,8 @@
 
 import webbrowser
 
-kanjis = "広鉱荒慌光皇黄狂況壮荘装粧状窓双創爽霜床亡忘望妄網王旺往"
-urls = [f'https://www.weblio.jp/content/{it}' for it in kanjis]
+kanjis = "悪依遺一右易疫益怨遠音下化仮夏家華牙画回会絵解外街格楽滑間眼気期吉客脚九久宮去拠虚御漁京供強郷境競仰業極金勤兄形恵経月建嫌献権験懸元言厳己庫後口工功甲行皇紅香貢黄興合今砂再塞歳財作冊刹殺雑惨子仕施示次自児事治執質蛇若寂主守宗拾修就衆十柔重従祝出旬緒女如除象上情色食織臣神人仁図数井世正生成西声姓性青政星省清盛精静請石赤昔切節説然素早相曽装想贈率存太対体大代台旦団男壇地茶着中丁直通弟定殿都土度豆登頭道読内南日納白拍博鉢発罰反伴判板煩眉泌病貧不夫富武封風物分文聞平兵米便歩奉法亡坊望暴謀木凡幕末万無名命明冥模妄耗目役由唯有遊立律流留糧力緑礼鈴霊露和"
+urls = [f'https://www.weblio.jp/content/{it}?dictCode=SGKDJ' for it in kanjis]
 
 for url in urls:
     webbrowser.open(url)

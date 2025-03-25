@@ -40,7 +40,7 @@ class TextExample(Scene):
         self.kjs = 51  # kanji size
         self.rms = 21  # romaji size
         self.bks = 200  # big kanji size
-        self.font = "UD Digi Kyokasho NK-R"
+        self.font = "UD Digi Kyokasho NK"
         self.big_kanji_scale = 0.35
         self.big_kanji_shift_up = np.array([-0.35, 3.45, 0])
 
@@ -434,4 +434,4 @@ class T55(T):
 
 
 if __name__ == "__main__":
-    T2().construct()
+    T0().construct()

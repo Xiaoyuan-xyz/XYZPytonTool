@@ -3,6 +3,7 @@
 import pandas as pd
 from tqdm import tqdm
 import pykakasi
+import os
 
 
 def create_kanji_dicts(df):
@@ -311,10 +312,7 @@ def find_jukuji(ji):
     return None if ji not in jukuji else jukuji[ji]
 
 
-if __name__ == "__main__":
-
-    kanjis = "広鉱荒慌光皇黄狂況壮荘装粧状窓創双爽霜床亡忘望妄網王旺往"
-
+def generate_raw(kanjis, path="./kanji/raw.md"):
     df = pd.read_excel("./kanji/database7.xlsx")
     kanji_dicts = create_kanji_dicts(df)
     data_dict = {item["字"]: item for item in kanji_dicts}
@@ -333,7 +331,7 @@ if __name__ == "__main__":
                 if "汉音" in on:
                     raw_text += "[漢]"
                 if "惯用" in on:
-                    raw_text += "[慣用]"
+                    raw_text += "[慣]"
                 raw_text += f'　{on["音读"]}\n'
                 lici = on["例词"].split("、") if isinstance(on["例词"], str) else []
                 for li in lici:
@@ -375,5 +373,11 @@ if __name__ == "__main__":
                 raw_text += f"{j[0]}　{j[1]}\n"
         raw_text += "\n"
 
-    with open("./kanji/raw.md", "a", encoding="utf-8") as f:
+    if not os.path.exists(os.path.dirname(path)):
+        os.makedirs(os.path.dirname(path))
+    with open(path, "a", encoding="utf-8") as f:
         f.write(raw_text)
+
+
+if __name__ == "__main__":
+    generate_raw("谷穀酷竹逐築着祝嘱触束属叔淑塾熟辱酢蹴宿粛族速足促俗屋")
