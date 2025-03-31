@@ -1,9 +1,10 @@
 # 读html 然后生成成图片
 
-from selenium import webdriver
-from selenium.webdriver.chrome.options import Options
 import time
 import urllib
+
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
 html_content_prefix = """
 <!DOCTYPE html>
@@ -15,9 +16,9 @@ html_content_prefix = """
     <style>
         body {
             background-color: black;  /* 背景色为黑色 */
-            font-family: "UD デジタル 教科書体 N", sans-serif;  /* 字体 */
+            font-family: "Georgia", "UD デジタル 教科書体 N", sans-serif;  /* 字体 */
             color: white;  /* 字体颜色为白色 */
-            font-size: 65px;  /* 设置字体大小 */
+            font-size: 40px;  /* 设置字体大小 */
             margin: 0;
             padding: 50px;
         }
@@ -32,10 +33,15 @@ html_content_prefix = """
             color: lightblue;
         }
 
+        .zh {
+            font-family: "思源宋体 CN";
+            font-size: 36px;
+        }
+
         span {
             white-space: nowrap; // 禁止span内换行
         }
-        
+
         ruby {
             white-space: nowrap;
         }
@@ -44,7 +50,7 @@ html_content_prefix = """
             text-indent: -2em;
             margin-left: 2em;
             margin-top: 0;
-            margin-bottom: 0;
+            margin-bottom: 3px;
         }
 
     </style>
@@ -59,43 +65,42 @@ html_content_suffix = """
 <!---->
 """
 
+
 class HtmlToPic:
-    def __init__(self):
-        pass
-
-        # 配置WebDriver（Chrome浏览器
+    def __init__(self, headless=False):
         chrome_options = Options()
-        # chrome_options.add_argument('--headless')  # 无头模式，不显示浏览器界面
+        if headless:
+            chrome_options.add_argument("--headless")
 
-        # 初始化WebDriver
         self.driver = webdriver.Chrome(options=chrome_options)
         self.set_window_size(1920, 1080)
+
     def set_window_size(self, width, height):
-        self.driver.set_window_size((width*2+42)//3, (height*2+438)//3)
+        self.driver.set_window_size((width * 2 + 42) // 3, (height * 2 + 438) // 3)
 
     def generate_pic(self, html_content, path):
         html_content = html_content_prefix + html_content + html_content_suffix
 
-        # 将HTML内容载入到浏览器
-        self.driver.get("data:text/html;charset=utf-8," + urllib.parse.quote(html_content))
+        self.driver.get(
+            "data:text/html;charset=utf-8," + urllib.parse.quote(html_content)
+        )  # urllib.parse.quote防止某些字符转义上出问题
 
-        # 等待页面渲染完成
         time.sleep(1)
 
-        # 截图并保存
         self.driver.save_screenshot(path)
-    
+
     def __del__(self):
         self.driver.quit()
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     html_to_pic = HtmlToPic()
     html = """
-<p>眺：<span style="opacity:0.3;"><ruby>眺望<rt>ちょうぼう</rt></ruby></span> </p>
-<p>挑：<span><ruby>挑戦<rt>ちょうせん</rt></ruby></span> </p>
-<p>跳：<span style="opacity:0.6;"><ruby>跳躍<rt>ちょうやく</rt></ruby></span> </p>
-<p>彫：<span class="highlight"><span><ruby>彫刻<rt>ちょうこく</rt></ruby></span></span> </p>
-<p>調：<span><ruby>調子<rt>ちょうし</rt></ruby></span> </p>
+<p><span class="highlight">バイク （bike） ①	</span>《名》<br/><span class="zh">自行车；摩托车</span></p>
+<p>バス[bus] （bus） ①	《名》<br/><span class="zh">巴士，公交车</span></p>
+<p>バター （butter） ①	《名》<br/><span class="zh">黄油</span></p>
+<p>バナナ （banana） ①	《名》<br/><span class="zh">香蕉</span></p>
+<p>パン （(葡) pão） ①	《名》<br/><span class="zh">面包</span></p>
 """
     html_to_pic.generate_pic(html, "./kanji_new/test.png")
     time.sleep(5)

@@ -3,3 +3,5 @@
 *.srt
 
 sort_ankis.json
+
+out/
