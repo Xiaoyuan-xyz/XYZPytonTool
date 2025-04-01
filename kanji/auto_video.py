@@ -67,4 +67,3 @@ def create_video_clip(audio_path=rf"G:\Program\PytonTool\kanji\videos\output_aud
 
 if __name__ == "__main__":
     create_video_clip()
-    

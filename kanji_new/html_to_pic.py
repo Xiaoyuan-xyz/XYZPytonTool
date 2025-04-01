@@ -18,7 +18,7 @@ html_content_prefix = """
             background-color: black;  /* 背景色为黑色 */
             font-family: "Georgia", "UD デジタル 教科書体 N", sans-serif;  /* 字体 */
             color: white;  /* 字体颜色为白色 */
-            font-size: 40px;  /* 设置字体大小 */
+            font-size: 45px;  /* 设置字体大小 */
             margin: 0;
             padding: 50px;
         }
@@ -35,7 +35,7 @@ html_content_prefix = """
 
         .zh {
             font-family: "思源宋体 CN";
-            font-size: 36px;
+            font-size: 45px;
         }
 
         span {
@@ -96,11 +96,7 @@ class HtmlToPic:
 if __name__ == "__main__":
     html_to_pic = HtmlToPic()
     html = """
-<p><span class="highlight">バイク （bike） ①	</span>《名》<br/><span class="zh">自行车；摩托车</span></p>
-<p>バス[bus] （bus） ①	《名》<br/><span class="zh">巴士，公交车</span></p>
-<p>バター （butter） ①	《名》<br/><span class="zh">黄油</span></p>
-<p>バナナ （banana） ①	《名》<br/><span class="zh">香蕉</span></p>
-<p>パン （(葡) pão） ①	《名》<br/><span class="zh">面包</span></p>
+<p>亡 <span class="zh">明宕三合陽平陽</span> <span>（漢）ボウ</span> <span>（呉）モウ</span> <br/><span><ruby>死亡<rt>しぼう</rt></ruby></span> <span><ruby>亡者<rt>もうじゃ</rt></ruby></span> <p>忘 <span class="zh">明宕三合陽去漾</span> <span>（漢）ボウ</span> <br/><span class="highlight"><span><ruby>忘却<rt>ぼうきゃく</rt></ruby></span> </span><p>望 <span class="zh">明宕三合陽去漾</span> <span>（漢）ボウ</span> <span>（呉）モウ</span> <br/><span><ruby>希望<rt>きぼう</rt></ruby></span> <span><ruby>本望<rt>ほんもう</rt></ruby></span> <p>妄 <span class="zh">明宕三合陽去漾</span> <span>（漢）ボウ</span> <span>（呉）モウ</span> <br/><span><ruby>妄想<rt>もうそう</rt></ruby></span> <span><ruby>妄言<rt>ぼうげん</rt></ruby></span> <span><ruby>妄言<rt>もうげん</rt></ruby></span>
 """
     html_to_pic.generate_pic(html, "./kanji_new/test.png")
     time.sleep(5)

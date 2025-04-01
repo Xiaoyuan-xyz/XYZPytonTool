@@ -107,7 +107,7 @@ def extend_audio(file_path, file_out_path, target_duration_ms=1500):
     return len(audio_with_silence)
 
 
-def extend_all_audio():
+def extend_all_audio(target_duration_ms=1500):
     """
     将wav_raw_path中的所有音频延长到1.5秒 保存到wav_path中
     """
@@ -116,4 +116,4 @@ def extend_all_audio():
 
     for filename in tqdm(os.listdir(wav_raw_path)):
         if filename.endswith('.wav'):
-            extend_audio(os.path.join(wav_raw_path, filename), os.path.join(wav_path, filename))
+            extend_audio(os.path.join(wav_raw_path, filename), os.path.join(wav_path, filename), target_duration_ms)
