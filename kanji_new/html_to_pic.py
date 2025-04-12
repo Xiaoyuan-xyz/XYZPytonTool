@@ -18,7 +18,7 @@ html_content_prefix = """
             background-color: black;  /* 背景色为黑色 */
             font-family: "Georgia", "UD デジタル 教科書体 N", sans-serif;  /* 字体 */
             color: white;  /* 字体颜色为白色 */
-            font-size: 45px;  /* 设置字体大小 */
+            font-size: 57px;  /* 设置字体大小 */
             margin: 0;
             padding: 50px;
         }
@@ -96,7 +96,11 @@ class HtmlToPic:
 if __name__ == "__main__":
     html_to_pic = HtmlToPic()
     html = """
-<p>亡 <span class="zh">明宕三合陽平陽</span> <span>（漢）ボウ</span> <span>（呉）モウ</span> <br/><span><ruby>死亡<rt>しぼう</rt></ruby></span> <span><ruby>亡者<rt>もうじゃ</rt></ruby></span> <p>忘 <span class="zh">明宕三合陽去漾</span> <span>（漢）ボウ</span> <br/><span class="highlight"><span><ruby>忘却<rt>ぼうきゃく</rt></ruby></span> </span><p>望 <span class="zh">明宕三合陽去漾</span> <span>（漢）ボウ</span> <span>（呉）モウ</span> <br/><span><ruby>希望<rt>きぼう</rt></ruby></span> <span><ruby>本望<rt>ほんもう</rt></ruby></span> <p>妄 <span class="zh">明宕三合陽去漾</span> <span>（漢）ボウ</span> <span>（呉）モウ</span> <br/><span><ruby>妄想<rt>もうそう</rt></ruby></span> <span><ruby>妄言<rt>ぼうげん</rt></ruby></span> <span><ruby>妄言<rt>もうげん</rt></ruby></span>
+<p><span><ruby>自分<rt>じぶん</rt></ruby></span> <span><ruby>問題<rt>もんだい</rt></ruby></span> <span><ruby>準備<rt>じゅんび</rt></ruby></span> <span><ruby>大丈夫<rt>だいじょうぶ</rt></ruby></span> <span><ruby>僕<rt>ぼく</rt></ruby></span> </p>
+<p><span><ruby>全部<rt>ぜんぶ</rt></ruby></span> <span><ruby>邪魔<rt>じゃま</rt></ruby></span> <span><ruby>時代<rt>じだい</rt></ruby></span> <span><ruby>残念<rt>ざんねん</rt></ruby></span> <span><ruby>現在<rt>げんざい</rt></ruby></span> </p>
+<p><span><ruby>無駄<rt>むだ</rt></ruby></span> <span><ruby>随分<rt>ずいぶん</rt></ruby></span> <span><ruby>技術<rt>ぎじゅつ</rt></ruby></span> <span><ruby>道具<rt>どうぐ</rt></ruby></span> <span><ruby>現場<rt>げんば</rt></ruby></span> </p>
+<p><span class="highlight"><span><ruby>大学<rt>だいがく</rt></ruby></span></span> <span><ruby>絶望<rt>ぜつぼう</rt></ruby></span> <span><ruby>堂々<rt>どうどう</rt></ruby></span> <span><ruby>材料<rt>ざいりょう</rt></ruby></span> <span><ruby>同情<rt>どうじょう</rt></ruby></span> </p>
+<p><span><ruby>前後<rt>ぜんご</rt></ruby></span> <span><ruby>護衛<rt>ごえい</rt></ruby></span> <span><ruby>旦那<rt>だんな</rt></ruby></span> <span><ruby>矛盾<rt>むじゅん</rt></ruby></span> <span><ruby>番号<rt>ばんごう</rt></ruby></span> </p>
 """
     html_to_pic.generate_pic(html, "./kanji_new/test.png")
     time.sleep(5)

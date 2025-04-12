@@ -23,6 +23,43 @@ wav_path = "./out/wav"
 err_path = "./out/err.txt"
 
 
+def htmlpack_process_pic(htmlpack_list):
+    """
+    传入一个HtmlPack列表
+    生成其相应的图片
+    """
+    h2p = HtmlToPic()
+    if not os.path.exists(png_path):
+        os.makedirs(png_path)
+    for i in tqdm(range(len(htmlpack_list))):
+        pack = htmlpack_list[i]
+        # 生成图片 命名为 index_单词_假名表记.png
+        h2p.generate_pic(
+            pack["html"], f"{png_path}/{i:04d}_{pack['word']}_{pack['read']}.png"
+        )
+
+def htmlpack_process_wav(htmlpack_list):
+    """
+    传入一个HtmlPack列表
+    生成其相应的音频
+    """
+    if not os.path.exists(wav_raw_path):  # voicevox直接生成的音频
+        os.makedirs(wav_raw_path)
+    for i in tqdm(range(len(htmlpack_list))):
+        pack = htmlpack_list[i]
+        # 生成音频 命名为 index_单词_假名表记.wav
+        check, voicevox_read = generate_voicevox_check(
+            pack["word"],
+            pack["read"],
+            f"{wav_raw_path}/{i:04d}_{pack['word']}_{pack['read']}.wav",
+        )
+        if not check:  # not check表示读音不同
+            err_msg = f"可能的错误: {i:04d} {pack['word']} => {voicevox_read} 其与 {pack['read']} 不同"
+            # print(err_msg)
+            with open(err_path, "a", encoding="utf-8") as f:
+                # err.txt的格式是 index 单词 假名表记
+                f.write(f"{i:04d}\t{pack['word']}\t{pack['read']}\t{voicevox_read}\n")
+
 def htmlpack_process(htmlpack_list):
     """
     传入一个HtmlPack列表
