@@ -159,6 +159,7 @@ mahjong_pic/paipu
 *.xlsx
 *.pkl
 *.png
+*.mp4
 willdel*
 temp_*
 lang/data

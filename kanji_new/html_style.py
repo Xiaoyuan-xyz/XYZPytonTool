@@ -23,19 +23,25 @@ wav_path = "./out/wav"
 err_path = "./out/err.txt"
 
 
-def htmlpack_process_pic(htmlpack_list):
+def htmlpack_process_pic(htmlpack_list, *args, **kwargs):
     """
     传入一个HtmlPack列表
     生成其相应的图片
     """
-    h2p = HtmlToPic()
+    h2p = HtmlToPic(*args, **kwargs)
     if not os.path.exists(png_path):
         os.makedirs(png_path)
     for i in tqdm(range(len(htmlpack_list))):
         pack = htmlpack_list[i]
+        word = pack["word"]
+        read = pack["read"]
+        if word is not None:
+            word = word.replace("\n", "")
+        if read is not None:
+            read = read.replace("\n", "")
         # 生成图片 命名为 index_单词_假名表记.png
         h2p.generate_pic(
-            pack["html"], f"{png_path}/{i:04d}_{pack['word']}_{pack['read']}.png"
+            pack["html"], f"{png_path}/{i:04d}_{word}_{read}.png"
         )
 
 def htmlpack_process_wav(htmlpack_list):
@@ -120,11 +126,12 @@ def replace_err():
                 break
 
 
-def extend_audio(file_path, file_out_path, target_duration_ms=1500):
+def extend_audio(file_path, file_out_path, target_duration_ms=1500, is_append=False):
     """
     将音频延长到1.5秒 保存到wav_path中
     如果超过了 则不做任何处理
     返回输出音频的时长 单位毫秒
+    如果is_append 则强制附加target_duration_ms长度的静音
     """
 
     audio = AudioSegment.from_file(file_path)
@@ -132,7 +139,11 @@ def extend_audio(file_path, file_out_path, target_duration_ms=1500):
     current_duration = len(audio)
 
     # 如果音频时长小于目标时长 增加一段静音
-    if current_duration < target_duration_ms:
+    if is_append:
+        silence_duration = target_duration_ms
+        silence = AudioSegment.silent(duration=silence_duration)
+        audio_with_silence = audio + silence
+    elif current_duration < target_duration_ms:
         silence_duration = target_duration_ms - current_duration
         silence = AudioSegment.silent(duration=silence_duration)
         audio_with_silence = audio + silence
@@ -144,7 +155,7 @@ def extend_audio(file_path, file_out_path, target_duration_ms=1500):
     return len(audio_with_silence)
 
 
-def extend_all_audio(target_duration_ms=1500):
+def extend_all_audio(target_duration_ms=1500, is_append=False):
     """
     将wav_raw_path中的所有音频延长到1.5秒 保存到wav_path中
     """
@@ -153,4 +164,4 @@ def extend_all_audio(target_duration_ms=1500):
 
     for filename in tqdm(os.listdir(wav_raw_path)):
         if filename.endswith('.wav'):
-            extend_audio(os.path.join(wav_raw_path, filename), os.path.join(wav_path, filename), target_duration_ms)
+            extend_audio(os.path.join(wav_raw_path, filename), os.path.join(wav_path, filename), target_duration_ms, is_append)

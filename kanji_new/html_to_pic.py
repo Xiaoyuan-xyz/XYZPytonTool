@@ -14,11 +14,14 @@ html_content_prefix = """
     <meta name="viewport" content="width=1920, height=1080, initial-scale=0.5">
     <title>Japanese Vocabulary</title>
     <style>
+"""
+
+default_style = """
         body {
             background-color: black;  /* 背景色为黑色 */
             font-family: "Georgia", "UD デジタル 教科書体 N", sans-serif;  /* 字体 */
             color: white;  /* 字体颜色为白色 */
-            font-size: 57px;  /* 设置字体大小 */
+            font-size: 45px;  /* 设置字体大小 */
             margin: 0;
             padding: 50px;
         }
@@ -52,7 +55,9 @@ html_content_prefix = """
             margin-top: 0;
             margin-bottom: 3px;
         }
+"""
 
+html_content_middle = """
     </style>
 </head>
 <body>
@@ -67,19 +72,20 @@ html_content_suffix = """
 
 
 class HtmlToPic:
-    def __init__(self, headless=False):
+    def __init__(self, style=default_style, headless=False):
         chrome_options = Options()
         if headless:
             chrome_options.add_argument("--headless")
 
         self.driver = webdriver.Chrome(options=chrome_options)
         self.set_window_size(1920, 1080)
+        self.style = style
 
     def set_window_size(self, width, height):
         self.driver.set_window_size((width * 2 + 42) // 3, (height * 2 + 438) // 3)
 
     def generate_pic(self, html_content, path):
-        html_content = html_content_prefix + html_content + html_content_suffix
+        html_content = html_content_prefix + self.style + html_content_middle + html_content + html_content_suffix
 
         self.driver.get(
             "data:text/html;charset=utf-8," + urllib.parse.quote(html_content)
@@ -94,13 +100,57 @@ class HtmlToPic:
 
 
 if __name__ == "__main__":
-    html_to_pic = HtmlToPic()
+
+    style = """
+        body {
+            background-color: black;  /* 背景色为黑色 */
+            font-family: "Georgia", "UD デジタル 教科書体 N", sans-serif;  /* 字体 */
+            color: white;  /* 字体颜色为白色 */
+            font-size: 40px;  /* 设置字体大小 */
+            margin: 0;
+            padding: 40px;
+        }
+
+        .content {
+            width: 1000px;
+            height: 640px;
+            overflow: hidden;
+        }
+
+        .highlight {
+            color: lightblue;
+        }
+
+        .zh {
+            font-family: "思源宋体 CN";
+            font-size: 26px;
+        }
+
+        p {
+            text-indent: -2em;
+            margin-left: 2em;
+            margin-top: 0;
+            margin-bottom: 3px;
+        }
+"""
+
+    html_to_pic = HtmlToPic(style)
     html = """
-<p><span><ruby>自分<rt>じぶん</rt></ruby></span> <span><ruby>問題<rt>もんだい</rt></ruby></span> <span><ruby>準備<rt>じゅんび</rt></ruby></span> <span><ruby>大丈夫<rt>だいじょうぶ</rt></ruby></span> <span><ruby>僕<rt>ぼく</rt></ruby></span> </p>
-<p><span><ruby>全部<rt>ぜんぶ</rt></ruby></span> <span><ruby>邪魔<rt>じゃま</rt></ruby></span> <span><ruby>時代<rt>じだい</rt></ruby></span> <span><ruby>残念<rt>ざんねん</rt></ruby></span> <span><ruby>現在<rt>げんざい</rt></ruby></span> </p>
-<p><span><ruby>無駄<rt>むだ</rt></ruby></span> <span><ruby>随分<rt>ずいぶん</rt></ruby></span> <span><ruby>技術<rt>ぎじゅつ</rt></ruby></span> <span><ruby>道具<rt>どうぐ</rt></ruby></span> <span><ruby>現場<rt>げんば</rt></ruby></span> </p>
-<p><span class="highlight"><span><ruby>大学<rt>だいがく</rt></ruby></span></span> <span><ruby>絶望<rt>ぜつぼう</rt></ruby></span> <span><ruby>堂々<rt>どうどう</rt></ruby></span> <span><ruby>材料<rt>ざいりょう</rt></ruby></span> <span><ruby>同情<rt>どうじょう</rt></ruby></span> </p>
-<p><span><ruby>前後<rt>ぜんご</rt></ruby></span> <span><ruby>護衛<rt>ごえい</rt></ruby></span> <span><ruby>旦那<rt>だんな</rt></ruby></span> <span><ruby>矛盾<rt>むじゅん</rt></ruby></span> <span><ruby>番号<rt>ばんごう</rt></ruby></span> </p>
+<p><span>　　～て</span>
+<br/>
+<p><span class="zh"><b></b></span></p>
+<p><span class="zh"><b>同时进行</b></span></p>
+<p><span class="highlight">　　書を見て漢字を覚えます。</span></p>
+<p><span class="zh">　　看着词典背汉字。</span></p>
+<p><span class="zh"><b>相继发生</b></span></p>
+<p><span class="highlight">　　昨日の夜は６時に帰って、ご飯を作りました。</span></p>
+<p><span class="zh">　　昨晚六点回家，然后做了饭。</span></p>
+<p><span class="zh"><b>方法手段</b></span></p>
+<p><span class="highlight">　　バスに乗って海へ行きました。</span></p>
+<p><span class="zh">　　坐公共汽车去了海边</span></p>
+<p><span class="zh"><b>原因</b></span></p>
+<p><span class="highlight">　　財布をなくして困りました。</span></p>
+<p><span class="zh">　　钱包没了，很苦恼。</span></p>
 """
     html_to_pic.generate_pic(html, "./kanji_new/test.png")
     time.sleep(5)

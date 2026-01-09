@@ -31,6 +31,9 @@ def create_video_clip(
         image_313 = imread(r"H:\Resource\中国うさぎ立ち素材\1-3-13.png")
         image_412 = imread(r"H:\Resource\中国うさぎ立ち素材\1-4-12.png")  # 闭眼 张嘴
         image_413 = imread(r"H:\Resource\中国うさぎ立ち素材\1-4-13.png")  # 闭眼 闭嘴
+        
+        set_width = 925 # 925 * 1073
+        set_position = (1300, 405)
 
     else:
         image_112 = imread(r"H:\Resource\ずんだもん\1-1-2.png")  # 睁眼 张嘴
@@ -41,6 +44,9 @@ def create_video_clip(
         image_313 = imread(r"H:\Resource\ずんだもん\3-5-2.png")
         image_412 = imread(r"H:\Resource\ずんだもん\3-1-2.png")  # 闭眼 张嘴
         image_413 = imread(r"H:\Resource\ずんだもん\3-5-2.png")  # 闭眼 闭嘴
+        
+        set_width = 832 # 832 * 1249
+        set_position = (1360, 270)
 
     images = [
         image_112,
@@ -83,10 +89,10 @@ def create_video_clip(
     frames = [images[i] for i in frames]
 
     image_clip = ImageSequenceClip(frames, fps=1000 / interval_duration)
-    image_clip = resize(image_clip, width=925)
+    image_clip = resize(image_clip, width=set_width)
 
     video = CompositeVideoClip(
-        [image_clip.set_position((1300, 405))], size=(1920, 1080)
+        [image_clip.set_position(set_position)], size=(1920, 1080)
     )
     video = video.set_audio(AudioFileClip(audio_path))
     ffmpeg_write_video(video, video_path, fps=1000 / interval_duration)
@@ -94,8 +100,8 @@ def create_video_clip(
 
 if __name__ == "__main__":
     create_video_clip(
-        # r'G:\Project\VideoMake\日语汉字\上声入声字\output_audio.mp3',
-        # r'G:\Project\VideoMake\日语汉字\上声入声字\output_audio.mp4',
+        r'C:\This\VideoMake\日语语法速刷\蓝宝书N4 3\usg.mp3',
+        r'C:\This\VideoMake\日语语法速刷\蓝宝书N4 3\usg.mp4',
     )
 
 #todo 给眨眼加入一定的随机性

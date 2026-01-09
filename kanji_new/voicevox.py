@@ -80,6 +80,7 @@ def save_audio(content, path):
     """
     保存音频文件
     """
+    path = path.replace("\n", "")
     with open(path, "wb") as f:
         f.write(content)
 
@@ -101,6 +102,8 @@ def check_voicevox(text, kana):
     返回初步检查生成的读音是否一致 以及text_to_accent(text)的返回结果
     """
     ret_audio_query = text_to_accent(text)
+    if kana is None:
+        return True, ret_audio_query
     aquestalk = ret_audio_query["kana"]
     aquestalk = aquestalk.replace("/", "")
     aquestalk = aquestalk.replace("、", "")
@@ -113,6 +116,7 @@ def check_voicevox(text, kana):
         aquestalk = aquestalk.replace(k, v)
         kana = kana.replace(k, v)
     return aquestalk == kana, ret_audio_query
+
 
 
 def generate_voicevox(text, path, aquestalk=None):
