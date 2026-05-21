@@ -1,84 +1,53 @@
-# 这个文件读excel表，配套地生成html，保存图片和生成音频
+# 读取 Excel 语法表，生成每一句例文对应的学习卡片图片和配音素材。
+#
+# 当前脚本仍然以 Excel 作为人工编辑入口：
+# 1. load_grammars_from_excel() 只负责把 Excel 转成结构化数据。
+# 2. build_htmlpacks() 只负责把结构化数据转成 HtmlPack。
+# 3. main() 只负责按开关编排“生成图片 / 生成音频 / 补静音”流程。
+#
+# 这样后续要增加 Markdown/YAML/JSON 中间格式时，不需要改动渲染和配音部分。
+
 import pandas as pd
-from html_style import *
-from voicevox import *
+
+from html_style import (
+    extend_all_audio,
+    htmlpack_process_pic,
+    htmlpack_process_wav,
+)
 
 
-df = pd.read_excel(r'H:\Life\Project\markdown\语言\日本語\蓝宝书.xlsx', sheet_name="new2")
+# ===== 用户配置区 =====
 
-grammers = []
-for i in range(len(df)):
-    row = df.iloc[i]
-    if str(row['章节']) != 'nan':
-        grammers.append({
-            'chapter': row['章节'],
-            'content': []
-        })
-    if str(row['语法点']) != 'nan':
-        grammers[-1]['content'].append({
-            'point': row['语法点'],
-            'content': [],
-        })
-    if str(row['小项']) != 'nan':
-        grammers[-1]['content'][-1]['content'].append({
-            'item': row['小项'],
-            'content': [],
-        })
-    if str(row['例文']) != 'nan':
-        grammers[-1]['content'][-1]['content'][-1]['content'].append({
-            'sentence': row['例文'].replace('/', ''),
-            'chinese': row['翻译'],
-            'ps': row['解说']
-        })
+INPUT_EXCEL_PATH = r"H:\Life\Project\markdown\语言\日本語\蓝宝书.xlsx"
+SHEET_NAME = "new2"
+
+# 第一轮建议先只生成图片；确认排版后再打开 GENERATE_WAV。
+GENERATE_PICTURES = False
+GENERATE_WAV = False
+EXTEND_WAV = True
+
+# 如果 EXTEND_WAV=True：
+# - is_append=True 表示无论原音频多长，都追加一段静音。
+# - is_append=False 表示只把短音频补到目标时长。
+EXTEND_TARGET_DURATION_MS = 2000
+EXTEND_IS_APPEND = True
 
 
-all_display_list = []
-for chapter in grammers:
-    for point in chapter['content']:
-        for item in point['content']:
-            if len(item['content']) == 0:
-                continue
-            html_part = []
-            now_index = -1 # 用于在内部标定要高亮的部分 不对外暴露
-            display_list = []
-    
-            html_part.append(f'<p><span class="zh">　　{chapter["chapter"] }</span>\n')
-            now_index += 1
-            html_part.append(f'<span class="zh">　　{point["point"] }</span>\n')
-            now_index += 1
-            html_part.append(f'<span class="zh">　　{item["item"] }</span></p>\n')
-            now_index += 1
-            if str(item['content'][0]['ps']) != 'nan':
-                html_part.append(f'<span class="zh">{item["content"][0]["ps"] }</span></p>\n')
-                now_index += 1
-            html_part.append(f'<br/>\n')
-            now_index += 1
-            for sentence in item['content']:
-                html_part.append(f'<p><span class="highlight">{sentence["sentence"] }</span></p>\n')
-                now_index += 1
-                html_part.append(f'<p><span class="zh">{sentence["chinese"] }</span></p>\n')
-                now_index += 1
-
-                display_list.append({
-                    'index': now_index,
-                    'word': sentence["sentence"],
-                    'read': None
-                })
+COLUMN_CHAPTER = "章节"
+COLUMN_POINT = "语法点"
+COLUMN_ITEM = "小项"
+COLUMN_SENTENCE = "例文"
+COLUMN_TRANSLATION = "翻译"
+COLUMN_NOTE = "解说"
+COLUMN_READING = "读音"
 
 
-            for i1 in range(len(display_list)):
-                index = display_list[i1]['index']
-                display_list[i1]['html'] = ''.join(html_part[:index]) + html_part[index] + ''.join(html_part[index+1:])
-
-            all_display_list.extend(display_list)
-
-
-style = """
+STYLE = """
         body {
-            background-color: black;  /* 背景色为黑色 */
-            font-family: "Georgia", "UD デジタル 教科書体 N", sans-serif;  /* 字体 */
-            color: white;  /* 字体颜色为白色 */
-            font-size: 38px;  /* 设置字体大小 */
+            background-color: black;
+            font-family: "Georgia", "UD デジタル 教科書体 N", sans-serif;
+            color: white;
+            font-size: 38px;
             margin: 0;
             padding: 38px;
         }
@@ -107,8 +76,146 @@ style = """
 """
 
 
-htmlpack_process_pic(all_display_list, style=style)
-1/0
-htmlpack_process_wav(all_display_list)
+def has_value(value):
+    """判断 Excel 单元格是否有内容。pandas 会把空单元格读成 NaN。"""
+    return str(value) != "nan"
 
-extend_all_audio(target_duration_ms=2000, is_append=True)
+
+def get_optional_cell(row, column_name, default=None):
+    """读取可选列；列不存在或单元格为空时返回 default。"""
+    if column_name not in row.index:
+        return default
+    value = row[column_name]
+    if not has_value(value):
+        return default
+    return value
+
+
+def load_grammars_from_excel(excel_path=INPUT_EXCEL_PATH, sheet_name=SHEET_NAME):
+    """读取语法 Excel，并转成章节/语法点/小项/例文的层级结构。"""
+    df = pd.read_excel(excel_path, sheet_name=sheet_name)
+
+    grammars = []
+    for i in range(len(df)):
+        row = df.iloc[i]
+
+        if has_value(row[COLUMN_CHAPTER]):
+            grammars.append(
+                {
+                    "chapter": row[COLUMN_CHAPTER],
+                    "content": [],
+                }
+            )
+
+        if has_value(row[COLUMN_POINT]):
+            grammars[-1]["content"].append(
+                {
+                    "point": row[COLUMN_POINT],
+                    "content": [],
+                }
+            )
+
+        if has_value(row[COLUMN_ITEM]):
+            grammars[-1]["content"][-1]["content"].append(
+                {
+                    "item": row[COLUMN_ITEM],
+                    "content": [],
+                }
+            )
+
+        if has_value(row[COLUMN_SENTENCE]):
+            grammars[-1]["content"][-1]["content"][-1]["content"].append(
+                {
+                    "sentence": row[COLUMN_SENTENCE].replace("/", ""),
+                    "chinese": row[COLUMN_TRANSLATION],
+                    "ps": row[COLUMN_NOTE],
+                    "read": get_optional_cell(row, COLUMN_READING),
+                }
+            )
+
+    return grammars
+
+
+def build_htmlpacks(grammars):
+    """
+    把语法层级结构转成 HtmlPack 列表。
+
+    每个 HtmlPack 对应一个画面和一段配音：
+    {
+        "word": "要配音的日语例句",
+        "read": "假名读音标注；Excel 没有填写读音时为 None",
+        "html": "用于截图的 HTML 片段",
+    }
+    """
+    all_display_list = []
+
+    for chapter in grammars:
+        for point in chapter["content"]:
+            for item in point["content"]:
+                if len(item["content"]) == 0:
+                    continue
+
+                html_part = []
+                display_list = []
+                now_index = -1  # 标记当前 HTML 片段索引，用来生成“逐句高亮”的画面。
+
+                html_part.append(f'<p><span class="zh">　　{chapter["chapter"]}</span>\n')
+                now_index += 1
+                html_part.append(f'<span class="zh">　　{point["point"]}</span>\n')
+                now_index += 1
+                html_part.append(f'<span class="zh">　　{item["item"]}</span></p>\n')
+                now_index += 1
+
+                if has_value(item["content"][0]["ps"]):
+                    html_part.append(f'<span class="zh">{item["content"][0]["ps"]}</span></p>\n')
+                    now_index += 1
+
+                html_part.append("<br/>\n")
+                now_index += 1
+
+                for sentence in item["content"]:
+                    html_part.append(f'<p><span class="highlight">{sentence["sentence"]}</span></p>\n')
+                    now_index += 1
+                    html_part.append(f'<p><span class="zh">{sentence["chinese"]}</span></p>\n')
+                    now_index += 1
+
+                    display_list.append(
+                        {
+                            "index": now_index,
+                            "word": sentence["sentence"],
+                            "read": sentence["read"],
+                        }
+                    )
+
+                for display_item in display_list:
+                    index = display_item["index"]
+                    display_item["html"] = (
+                        "".join(html_part[:index])
+                        + html_part[index]
+                        + "".join(html_part[index + 1 :])
+                    )
+
+                all_display_list.extend(display_list)
+
+    return all_display_list
+
+
+def main():
+    grammars = load_grammars_from_excel()
+    htmlpacks = build_htmlpacks(grammars)
+
+    if GENERATE_PICTURES:
+        htmlpack_process_pic(htmlpacks, style=STYLE)
+
+    if GENERATE_WAV:
+        htmlpack_process_wav(htmlpacks)
+
+    if EXTEND_WAV:
+        extend_all_audio(
+            target_duration_ms=EXTEND_TARGET_DURATION_MS,
+            is_append=EXTEND_IS_APPEND,
+        )
+
+
+if __name__ == "__main__":
+    main()

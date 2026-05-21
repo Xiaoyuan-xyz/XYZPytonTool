@@ -1,4 +1,9 @@
-# 约定HtmlPack 生成图片和音频
+# 约定 HtmlPack，并提供从 HtmlPack 批量生成图片/音频的工具函数。
+#
+# 这个文件尽量只处理“已经准备好的 HtmlPack”：
+# - 不关心 HtmlPack 是从 Excel、Markdown 还是其他格式读取来的。
+# - 不关心最终视频怎么合成。
+# - 只负责把 HtmlPack 落地成 png、wav_raw、wav 和 err.txt。
 
 import os
 
@@ -8,8 +13,12 @@ from tqdm import tqdm
 from voicevox import generate_voicevox, generate_voicevox_check
 
 """
-每一个如下的字典 生成一张图片 给出一段音频
-如下的字典叫做一个HtmlPack
+每一个如下的字典生成一张图片，并给出一段音频。
+如下的字典叫做一个 HtmlPack。
+
+HtmlPack 是当前流程中最重要的中间格式。上游只要能生成这个结构，
+下游就可以复用同一套图片和配音生成逻辑。
+
 {
     "word": "这是要生成的单词"
     "read": "这是提供给voicevox的假名表记 用于初步检查读音"
@@ -25,8 +34,13 @@ err_path = "./out/err.txt"
 
 def htmlpack_process_pic(htmlpack_list, *args, **kwargs):
     """
-    传入一个HtmlPack列表
-    生成其相应的图片
+    传入一个 HtmlPack 列表，生成对应图片。
+
+    输出文件名格式：
+    index_word_read.png
+
+    注意：当前文件名仍包含原文，方便人工检查；如果之后遇到文件名过长
+    或非法字符问题，可以改成 index.png + manifest.json 的方式。
     """
     h2p = HtmlToPic(*args, **kwargs)
     if not os.path.exists(png_path):
@@ -46,8 +60,10 @@ def htmlpack_process_pic(htmlpack_list, *args, **kwargs):
 
 def htmlpack_process_wav(htmlpack_list):
     """
-    传入一个HtmlPack列表
-    生成其相应的音频
+    传入一个 HtmlPack 列表，生成对应原始音频。
+
+    如果 pack["read"] 不为空，会将人工标注读音和 VOICEVOX 推断读音做
+    初步比较；不一致的项目会写入 err.txt，交给用户人工校对。
     """
     if not os.path.exists(wav_raw_path):  # voicevox直接生成的音频
         os.makedirs(wav_raw_path)
@@ -68,8 +84,10 @@ def htmlpack_process_wav(htmlpack_list):
 
 def htmlpack_process(htmlpack_list):
     """
-    传入一个HtmlPack列表
-    生成其相应的图片和音频 以及一个初步检查错误的err.txt
+    传入一个 HtmlPack 列表，同时生成图片和原始音频。
+
+    这个函数适合确认流程稳定后使用。调试阶段建议分别调用
+    htmlpack_process_pic() 和 htmlpack_process_wav()，这样更容易定位问题。
     """
     h2p = HtmlToPic()
 
@@ -100,9 +118,12 @@ def htmlpack_process(htmlpack_list):
 
 def replace_err():
     """
-    读取修改后的err.txt 使用其中的AquesTalk風記法字符串生成音频并替换原音频
-    err.txt的格式应当是 index 单词 假名表记 AquesTalk風記法
-    中间用制表符隔开
+    读取人工校对后的 err.txt，使用其中的 AquesTalk 风记法重新生成音频。
+
+    err.txt 的格式应当是：
+    index<TAB>单词<TAB>假名表记<TAB>AquesTalk风记法
+
+    中间必须用制表符隔开。
     """
     with open(err_path, "r", encoding="utf-8") as f:
         err_word = f.readlines()
@@ -128,10 +149,12 @@ def replace_err():
 
 def extend_audio(file_path, file_out_path, target_duration_ms=1500, is_append=False):
     """
-    将音频延长到1.5秒 保存到wav_path中
-    如果超过了 则不做任何处理
-    返回输出音频的时长 单位毫秒
-    如果is_append 则强制附加target_duration_ms长度的静音
+    将单个音频补静音后保存。
+
+    - is_append=False：只把短于 target_duration_ms 的音频补到目标时长。
+    - is_append=True：无论原音频多长，都额外追加 target_duration_ms 的静音。
+
+    返回输出音频的时长，单位毫秒。
     """
 
     audio = AudioSegment.from_file(file_path)
@@ -157,7 +180,7 @@ def extend_audio(file_path, file_out_path, target_duration_ms=1500, is_append=Fa
 
 def extend_all_audio(target_duration_ms=1500, is_append=False):
     """
-    将wav_raw_path中的所有音频延长到1.5秒 保存到wav_path中
+    将 wav_raw_path 中的所有 wav 音频补静音后保存到 wav_path。
     """
     if not os.path.exists(wav_path):
         os.makedirs(wav_path)
