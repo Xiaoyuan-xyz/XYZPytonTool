@@ -1,4 +1,4 @@
-"""HtmlPack 规范。
+"""HtmlPack 规范
 
 HtmlPack 是本项目最核心的中间格式：
 上游可以来自语法 Excel、单词 Excel、汉字表、JSON 或 notebook；
@@ -33,7 +33,7 @@ class HtmlPack:
     def to_legacy_dict(self) -> dict[str, Any]:
         """转换成旧版 html_style.py 期望的 dict 结构。"""
         data = asdict(self)
-        data["word"] = self.speak
+        data["word"] = self.speak # 旧代码中叫 word
         return data
 
 

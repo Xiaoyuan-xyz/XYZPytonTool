@@ -1,9 +1,4 @@
-# 约定 HtmlPack，并提供从 HtmlPack 批量生成图片/音频的工具函数。
-#
-# 这个文件尽量只处理“已经准备好的 HtmlPack”：
-# - 不关心 HtmlPack 是从 Excel、Markdown 还是其他格式读取来的。
-# - 不关心最终视频怎么合成。
-# - 只负责把 HtmlPack 落地成 png、wav_raw、wav 和 err.txt。
+# 这个文件接收HtmlPack 从中批量生成图片和音频 不关心其内容和格式 以及最终视频的合成
 
 import os
 
@@ -12,20 +7,6 @@ from html_to_pic import HtmlToPic
 from pydub import AudioSegment
 from tqdm import tqdm
 from voicevox import generate_voicevox, generate_voicevox_check
-
-"""
-每一个如下的字典生成一张图片，并给出一段音频。
-如下的字典叫做一个 HtmlPack。
-
-HtmlPack 是当前流程中最重要的中间格式。上游只要能生成这个结构，
-下游就可以复用同一套图片和配音生成逻辑。
-
-{
-    "word": "这是要生成的单词"
-    "read": "这是提供给voicevox的假名表记 用于初步检查读音"
-    "html": "这是要生成的图片的html代码"
-}
-"""
 
 png_path = "./out/png"
 wav_raw_path = "./out/wav_raw"

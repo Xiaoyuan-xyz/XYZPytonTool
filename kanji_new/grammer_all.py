@@ -1,11 +1,8 @@
-# 读取 Excel 语法表，生成每一句例文对应的学习卡片图片和配音素材。
+# 本文件读取Excel文法文件 生成html图片和音频
 #
-# 当前脚本仍然以 Excel 作为人工编辑入口：
-# 1. load_grammars_from_excel() 只负责把 Excel 转成结构化数据。
-# 2. build_htmlpacks() 只负责把结构化数据转成 HtmlPack。
-# 3. main() 只负责按开关编排“生成图片 / 生成音频 / 补静音”流程。
-#
-# 这样后续要增加 Markdown/YAML/JSON 中间格式时，不需要改动渲染和配音部分。
+# 1. load_grammars_from_excel() 负责将 Excel 转成层次化的字典
+# 2. build_htmlpacks() 把层次化的字典转成 HtmlPack。
+# 3. main() 主入口
 
 import pandas as pd
 
@@ -20,13 +17,14 @@ from template_renderer import render_template
 
 # ===== 用户配置区 =====
 
+# 要解析的excel
 INPUT_EXCEL_PATH = r"H:\Life\Project\markdown\语言\日本語\蓝宝书.xlsx"
+# 读取的sheet
 SHEET_NAME = "new2"
 
-# 第一轮建议先只生成图片；确认排版后再打开 GENERATE_WAV。
-GENERATE_PICTURES = True
-GENERATE_WAV = True
-EXTEND_WAV = True
+GENERATE_PICTURES = True # 生成html图片
+GENERATE_WAV = True # 生成音频
+EXTEND_WAV = True # 扩张音频
 
 # 如果 EXTEND_WAV=True：
 # - is_append=True 表示无论原音频多长，都追加一段静音。
@@ -79,12 +77,12 @@ STYLE = """
 
 
 def has_value(value):
-    """判断 Excel 单元格是否有内容。pandas 会把空单元格读成 NaN。"""
+    """判断Excel单元格是否有内容pandas会把空单元格读成 NaN。"""
     return str(value) != "nan"
 
 
 def get_optional_cell(row, column_name, default=None):
-    """读取可选列；列不存在或单元格为空时返回 default。"""
+    """读取可选列 列不存在或单元格为空时返回default"""
     if column_name not in row.index:
         return default
     value = row[column_name]
@@ -94,7 +92,7 @@ def get_optional_cell(row, column_name, default=None):
 
 
 def load_grammars_from_excel(excel_path=INPUT_EXCEL_PATH, sheet_name=SHEET_NAME):
-    """读取语法 Excel，并转成章节/语法点/小项/例文的层级结构。"""
+    """读取语法 Excel 并转成章节/语法点/小项/例文的层级结构"""
     df = pd.read_excel(excel_path, sheet_name=sheet_name)
 
     grammars = []
@@ -140,14 +138,7 @@ def load_grammars_from_excel(excel_path=INPUT_EXCEL_PATH, sheet_name=SHEET_NAME)
 
 def build_htmlpacks(grammars):
     """
-    把语法层级结构转成 HtmlPack 列表。
-
-    每个 HtmlPack 对应一个画面和一段配音：
-    {
-        "word": "要配音的日语例句",
-        "read": "假名读音标注；Excel 没有填写读音时为 None",
-        "html": "用于截图的 HTML 片段",
-    }
+    把语法层级结构转成 HtmlPack 列表
     """
     htmlpacks = []
 
