@@ -9,11 +9,13 @@
 
 import pandas as pd
 
+from htmlpack import HtmlPack
 from html_style import (
     extend_all_audio,
     htmlpack_process_pic,
     htmlpack_process_wav,
 )
+from template_renderer import render_template
 
 
 # ===== 用户配置区 =====
@@ -22,8 +24,8 @@ INPUT_EXCEL_PATH = r"H:\Life\Project\markdown\语言\日本語\蓝宝书.xlsx"
 SHEET_NAME = "new2"
 
 # 第一轮建议先只生成图片；确认排版后再打开 GENERATE_WAV。
-GENERATE_PICTURES = False
-GENERATE_WAV = False
+GENERATE_PICTURES = True
+GENERATE_WAV = True
 EXTEND_WAV = True
 
 # 如果 EXTEND_WAV=True：
@@ -98,7 +100,7 @@ def load_grammars_from_excel(excel_path=INPUT_EXCEL_PATH, sheet_name=SHEET_NAME)
     grammars = []
     for i in range(len(df)):
         row = df.iloc[i]
-
+        
         if has_value(row[COLUMN_CHAPTER]):
             grammars.append(
                 {
@@ -147,7 +149,7 @@ def build_htmlpacks(grammars):
         "html": "用于截图的 HTML 片段",
     }
     """
-    all_display_list = []
+    htmlpacks = []
 
     for chapter in grammars:
         for point in chapter["content"]:
@@ -155,49 +157,39 @@ def build_htmlpacks(grammars):
                 if len(item["content"]) == 0:
                     continue
 
-                html_part = []
-                display_list = []
-                now_index = -1  # 标记当前 HTML 片段索引，用来生成“逐句高亮”的画面。
+                examples = item["content"]
+                note = examples[0]["ps"] if has_value(examples[0]["ps"]) else None
 
-                html_part.append(f'<p><span class="zh">　　{chapter["chapter"]}</span>\n')
-                now_index += 1
-                html_part.append(f'<span class="zh">　　{point["point"]}</span>\n')
-                now_index += 1
-                html_part.append(f'<span class="zh">　　{item["item"]}</span></p>\n')
-                now_index += 1
-
-                if has_value(item["content"][0]["ps"]):
-                    html_part.append(f'<span class="zh">{item["content"][0]["ps"]}</span></p>\n')
-                    now_index += 1
-
-                html_part.append("<br/>\n")
-                now_index += 1
-
-                for sentence in item["content"]:
-                    html_part.append(f'<p><span class="highlight">{sentence["sentence"]}</span></p>\n')
-                    now_index += 1
-                    html_part.append(f'<p><span class="zh">{sentence["chinese"]}</span></p>\n')
-                    now_index += 1
-
-                    display_list.append(
+                for active_index, sentence in enumerate(examples):
+                    html = render_template(
+                        "grammar_examples.html",
                         {
-                            "index": now_index,
-                            "word": sentence["sentence"],
-                            "read": sentence["read"],
-                        }
+                            "chapter": chapter["chapter"],
+                            "point": point["point"],
+                            "item": item["item"],
+                            "note": note,
+                            "examples": examples,
+                            "active_index": active_index,
+                        },
                     )
 
-                for display_item in display_list:
-                    index = display_item["index"]
-                    display_item["html"] = (
-                        "".join(html_part[:index])
-                        + html_part[index]
-                        + "".join(html_part[index + 1 :])
+                    htmlpacks.append(
+                        HtmlPack(
+                            id=f"{len(htmlpacks):04d}",
+                            speak=sentence["sentence"],
+                            read=sentence["read"],
+                            html=html,
+                            meta={
+                                "source_type": "grammar_examples",
+                                "chapter": chapter["chapter"],
+                                "point": point["point"],
+                                "item": item["item"],
+                                "template": "grammar_examples.html",
+                            },
+                        )
                     )
 
-                all_display_list.extend(display_list)
-
-    return all_display_list
+    return htmlpacks
 
 
 def main():

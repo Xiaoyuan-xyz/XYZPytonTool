@@ -7,6 +7,7 @@
 
 import os
 
+from htmlpack import ensure_htmlpack_dict
 from html_to_pic import HtmlToPic
 from pydub import AudioSegment
 from tqdm import tqdm
@@ -46,7 +47,7 @@ def htmlpack_process_pic(htmlpack_list, *args, **kwargs):
     if not os.path.exists(png_path):
         os.makedirs(png_path)
     for i in tqdm(range(len(htmlpack_list))):
-        pack = htmlpack_list[i]
+        pack = ensure_htmlpack_dict(htmlpack_list[i])
         word = pack["word"]
         read = pack["read"]
         if word is not None:
@@ -68,7 +69,7 @@ def htmlpack_process_wav(htmlpack_list):
     if not os.path.exists(wav_raw_path):  # voicevox直接生成的音频
         os.makedirs(wav_raw_path)
     for i in tqdm(range(len(htmlpack_list))):
-        pack = htmlpack_list[i]
+        pack = ensure_htmlpack_dict(htmlpack_list[i])
         # 生成音频 命名为 index_单词_假名表记.wav
         check, voicevox_read = generate_voicevox_check(
             pack["word"],
@@ -97,7 +98,7 @@ def htmlpack_process(htmlpack_list):
         os.makedirs(wav_raw_path)
 
     for i in tqdm(range(len(htmlpack_list))):
-        pack = htmlpack_list[i]
+        pack = ensure_htmlpack_dict(htmlpack_list[i])
         # 生成图片 命名为 index_单词_假名表记.png
         h2p.generate_pic(
             pack["html"], f"{png_path}/{i:04d}_{pack['word']}_{pack['read']}.png"

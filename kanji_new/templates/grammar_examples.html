@@ -1,0 +1,17 @@
+<p>
+  <span class="zh">　　{{ chapter }}</span>
+  <span class="zh">　　{{ point }}</span>
+  <span class="zh">　　{{ item }}</span>
+</p>
+{% if note %}
+<p><span class="zh">{{ note }}</span></p>
+{% endif %}
+<br/>
+{% for example in examples %}
+<p>
+  <span class="{{ 'highlight' if loop.index0 == active_index else '' }}">
+    {{ example.sentence }}
+  </span>
+</p>
+<p><span class="zh">{{ example.chinese }}</span></p>
+{% endfor %}

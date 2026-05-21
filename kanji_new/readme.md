@@ -37,6 +37,7 @@ kanji_new/
 - 读取 Excel。
 - 转成内部的语法层级结构。
 - 生成 `HtmlPack`。
+- 调用 Jinja2 模板生成 HTML。
 - 调用图片生成流程。
 - 调用配音生成流程。
 - 调用音频补静音流程。
@@ -71,17 +72,7 @@ HtmlToPic
 
 ### `html_style.py`
 
-约定 `HtmlPack` 格式，并提供批处理函数。
-
-`HtmlPack` 是当前流程里最核心的中间格式：
-
-```python
-{
-    "word": "要配音的日语例句",
-    "read": "假名读音标注，可以为 None",
-    "html": "用于生成图片的 HTML 片段",
-}
-```
+提供批处理函数，把 `HtmlPack` 落地成图片、音频和校对文件。
 
 主要函数：
 
@@ -89,6 +80,62 @@ HtmlToPic
 - `htmlpack_process_wav()`：生成原始音频，并记录可能的读音错误。
 - `replace_err()`：读取人工校对后的 `err.txt`，重新生成指定音频。
 - `extend_all_audio()`：给音频补静音。
+
+### `htmlpack.py`
+
+正式定义 `HtmlPack` 规范。
+
+`HtmlPack` 是当前流程里最核心的中间格式。不同来源的输入最终都应该转换成它：
+
+```text
+Excel / JSON / Notebook 数据
+  -> HtmlPack
+  -> 图片 / 音频 / err.txt
+```
+
+当前字段：
+
+```python
+{
+    "id": "0001",
+    "speak": "要送去 TTS 朗读的文本",
+    "read": "人工读音标注，可以为 None",
+    "html": "用于生成图片的 HTML 片段",
+    "meta": {
+        "source_type": "grammar_examples",
+        "template": "grammar_examples.html"
+    }
+}
+```
+
+为了兼容旧代码，`HtmlPack` 可以转换成旧版 dict：
+
+```python
+{
+    "word": "要送去 TTS 朗读的文本",
+    "read": "人工读音标注，可以为 None",
+    "html": "用于生成图片的 HTML 片段",
+}
+```
+
+### `template_renderer.py`
+
+封装 Jinja2 模板渲染。
+
+Python 负责整理数据，HTML 结构交给模板文件维护。这样不同类型的内容可以使用不同模板：
+
+```text
+templates/
+  grammar_examples.html   语法例句页面
+  vocabulary_list.html    之后可增加：单词列表页面
+  kanji_detail.html       之后可增加：汉字详解页面
+```
+
+当前已迁移：
+
+```text
+templates/grammar_examples.html
+```
 
 ### `voicevox.py`
 
@@ -196,8 +243,8 @@ index<TAB>word<TAB>read<TAB>AquesTalk风记法
 
 1. 把硬编码路径迁移到 `config.yaml`。
 2. 增加 `Excel -> JSON/YAML` 的中间格式导出，方便检查和复用。
-3. 用 `dataclass` 明确定义 `HtmlPack`、章节、语法点、小项、例文。
-4. 把 HTML 字符串拼接迁移到模板文件。
+3. 用 `dataclass` 继续明确章节、语法点、小项、例文等输入模型。
+4. 继续增加模板，例如单词列表、ruby 单词网格、汉字详解。
 5. 给 VOICEVOX 请求增加超时、重试和服务未启动提示。
 6. 给输出文件生成 `manifest.json`，记录图片、音频和校对状态。
 7. 等人工流程稳定后，再考虑自动视频合成。
