@@ -127,6 +127,7 @@ Python 负责整理数据，HTML 结构交给模板文件维护。这样不同�
 ```text
 templates/
   grammar_examples.html   语法例句页面
+  katakana_words.html     N3 片假名单词页面
   vocabulary_list.html    之后可增加：单词列表页面
   kanji_detail.html       之后可增加：汉字详解页面
 ```
@@ -135,6 +136,46 @@ templates/
 
 ```text
 templates/grammar_examples.html
+templates/katakana_words.html
+```
+
+### `katakana_words.py`
+
+从 JLPT 单词 JSON 中提取 N3 片假名单词，并生成 HtmlPack。
+
+默认数据源：
+
+```text
+../kanji_dict/dict/5mdld/全部JLPT单词.json
+```
+
+筛选规则：
+
+```python
+level_num == "N3"
+read.startswith("(")
+```
+
+当前数据中，纯片假名单词的 `read` 字段总是以 `(` 开头，例如：
+
+```text
+(英) advice
+(法) enquete
+```
+
+页面规则：
+
+- 每页显示 5 个单词。
+- 最后一页不足 5 个时照常显示。
+- 每个单词生成一个高亮版本的 HtmlPack。
+- 每个词显示：单词、来源、声调、词性、等级、中文翻译。
+- 英语来源只显示来源词，例如 `advice`。
+- 非英语来源显示语言标记，例如 `法: enquete`。
+
+对应模板：
+
+```text
+templates/katakana_words.html
 ```
 
 ### `voicevox.py`

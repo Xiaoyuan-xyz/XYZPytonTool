@@ -100,8 +100,8 @@ def create_video_clip(
 
 if __name__ == "__main__":
     create_video_clip(
-        r'C:\This\VideoMake\日语语法速刷\蓝宝书N4 3\usg.mp3',
-        r'C:\This\VideoMake\日语语法速刷\蓝宝书N4 3\usg.mp4',
+        r'C:\This\VideoMake\日语语法速刷\语法速刷 表达\usg.mp3',
+        r'C:\This\VideoMake\日语语法速刷\语法速刷 表达\usg.mp4',
     )
 
 #todo 给眨眼加入一定的随机性

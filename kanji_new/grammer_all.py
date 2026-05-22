@@ -18,9 +18,9 @@ from template_renderer import render_template
 # ===== 用户配置区 =====
 
 # 要解析的excel
-INPUT_EXCEL_PATH = r"H:\Life\Project\markdown\语言\日本語\蓝宝书.xlsx"
+INPUT_EXCEL_PATH = r"H:\Life\Project\markdown\语言\日本語\语法速刷.xlsx"
 # 读取的sheet
-SHEET_NAME = "new2"
+SHEET_NAME = "new"
 
 GENERATE_PICTURES = True # 生成html图片
 GENERATE_WAV = True # 生成音频

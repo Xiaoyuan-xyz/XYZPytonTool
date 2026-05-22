@@ -1,0 +1,12 @@
+{% for word in words %}
+<p>
+  <span class="{{ 'highlight' if loop.index0 == active_index else '' }}">
+    {{ word.word }}
+    {% if word.source %}<span class="source">（{{ word.source }}）</span>{% endif %}
+    {% if word.accent %}<span class="accent">{{ word.accent }}</span>{% endif %}
+  </span>
+  {% if word.tag %}<span class="tag">《{{ word.tag }}》</span>{% endif %}
+  <br/>
+  <span class="zh">{{ word.meaning }}</span>
+</p>
+{% endfor %}
