@@ -51,6 +51,7 @@ SHEET_NAME = "new2"
 GENERATE_PICTURES = True
 GENERATE_WAV = False
 EXTEND_WAV = False
+EXTEND_SAFETY_MARGIN_MS = 10
 ```
 
 建议工作方式：
@@ -59,6 +60,8 @@ EXTEND_WAV = False
 2. 图片无误后，把 `GENERATE_WAV = True`，生成音频和 `err.txt`。
 3. 校对 `err.txt` 后，再运行修正读音相关流程。
 4. 最后根据需要把 `EXTEND_WAV = True`，生成补静音后的音频。
+
+补静音时默认会额外保留 `EXTEND_SAFETY_MARGIN_MS = 10` 毫秒安全余量。这样导入 PR 或其他视频时间线时，即使发生采样点取整或帧显示误差，也不会把目标 `2000ms` 的音频显示成约 `1970ms`。
 
 ### `html_to_pic.py`
 

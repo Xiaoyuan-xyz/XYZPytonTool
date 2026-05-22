@@ -32,11 +32,12 @@ WORDS_PER_PAGE = 5
 
 # 和 grammer_all.py 一样，建议先只开图片，检查排版后再生成音频。
 GENERATE_PICTURES = False
-GENERATE_WAV = False
+GENERATE_WAV = True
 EXTEND_WAV = True
 
 EXTEND_TARGET_DURATION_MS = 2000
 EXTEND_IS_APPEND = False
+EXTEND_SAFETY_MARGIN_MS = 5
 
 
 STYLE = """
@@ -221,6 +222,7 @@ def main():
         extend_all_audio(
             target_duration_ms=EXTEND_TARGET_DURATION_MS,
             is_append=EXTEND_IS_APPEND,
+            safety_margin_ms=EXTEND_SAFETY_MARGIN_MS,
         )
 
 

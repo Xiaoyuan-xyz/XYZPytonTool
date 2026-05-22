@@ -129,12 +129,21 @@ def replace_err():
                 break
 
 
-def extend_audio(file_path, file_out_path, target_duration_ms=1500, is_append=False):
+def extend_audio(
+    file_path,
+    file_out_path,
+    target_duration_ms=1500,
+    is_append=False,
+    safety_margin_ms=10,
+):
     """
     将单个音频补静音后保存。
 
     - is_append=False：只把短于 target_duration_ms 的音频补到目标时长。
     - is_append=True：无论原音频多长，都额外追加 target_duration_ms 的静音。
+
+    safety_margin_ms 用于给导入 PR / 视频时间线时的采样点取整和帧显示留余量。
+    例如目标 2000ms 时，实际输出会略长于 2000ms，而不会短成 1970ms。
 
     返回输出音频的时长，单位毫秒。
     """
@@ -145,12 +154,20 @@ def extend_audio(file_path, file_out_path, target_duration_ms=1500, is_append=Fa
 
     # 如果音频时长小于目标时长 增加一段静音
     if is_append:
-        silence_duration = target_duration_ms
-        silence = AudioSegment.silent(duration=silence_duration)
+        silence_duration = target_duration_ms + safety_margin_ms
+        silence = AudioSegment.silent(
+            duration=silence_duration,
+            frame_rate=audio.frame_rate,
+        )
+        silence = silence.set_channels(audio.channels).set_sample_width(audio.sample_width)
         audio_with_silence = audio + silence
     elif current_duration < target_duration_ms:
-        silence_duration = target_duration_ms - current_duration
-        silence = AudioSegment.silent(duration=silence_duration)
+        silence_duration = target_duration_ms - current_duration + safety_margin_ms
+        silence = AudioSegment.silent(
+            duration=silence_duration,
+            frame_rate=audio.frame_rate,
+        )
+        silence = silence.set_channels(audio.channels).set_sample_width(audio.sample_width)
         audio_with_silence = audio + silence
     else:
         audio_with_silence = audio
@@ -160,7 +177,7 @@ def extend_audio(file_path, file_out_path, target_duration_ms=1500, is_append=Fa
     return len(audio_with_silence)
 
 
-def extend_all_audio(target_duration_ms=1500, is_append=False):
+def extend_all_audio(target_duration_ms=1500, is_append=False, safety_margin_ms=10):
     """
     将 wav_raw_path 中的所有 wav 音频补静音后保存到 wav_path。
     """
@@ -169,4 +186,10 @@ def extend_all_audio(target_duration_ms=1500, is_append=False):
 
     for filename in tqdm(os.listdir(wav_raw_path)):
         if filename.endswith('.wav'):
-            extend_audio(os.path.join(wav_raw_path, filename), os.path.join(wav_path, filename), target_duration_ms, is_append)
+            extend_audio(
+                os.path.join(wav_raw_path, filename),
+                os.path.join(wav_path, filename),
+                target_duration_ms,
+                is_append,
+                safety_margin_ms=safety_margin_ms,
+            )

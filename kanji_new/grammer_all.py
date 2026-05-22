@@ -31,6 +31,7 @@ EXTEND_WAV = True # 扩张音频
 # - is_append=False 表示只把短音频补到目标时长。
 EXTEND_TARGET_DURATION_MS = 2000
 EXTEND_IS_APPEND = True
+EXTEND_SAFETY_MARGIN_MS = 50
 
 
 COLUMN_CHAPTER = "章节"
@@ -197,6 +198,7 @@ def main():
         extend_all_audio(
             target_duration_ms=EXTEND_TARGET_DURATION_MS,
             is_append=EXTEND_IS_APPEND,
+            safety_margin_ms=EXTEND_SAFETY_MARGIN_MS,
         )
 
 
