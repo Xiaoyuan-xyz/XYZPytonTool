@@ -27,11 +27,11 @@ from template_renderer import render_template
 
 JLPT_JSON_DIR = Path(__file__).parent.parent / "kanji_dict" / "dict" / "5mdld"
 JLPT_JSON_PATTERN = "*JLPT*.json"
-LEVEL_NUM = "N2"
+LEVEL_NUM = "N1"
 WORDS_PER_PAGE = 5
 
 # 和 grammer_all.py 一样，建议先只开图片，检查排版后再生成音频。
-GENERATE_PICTURES = False
+GENERATE_PICTURES = True
 GENERATE_WAV = True
 EXTEND_WAV = True
 
@@ -45,9 +45,9 @@ STYLE = """
             background-color: black;
             font-family: "Georgia", "UD デジタル 教科書体 N", sans-serif;
             color: white;
-            font-size: 44px;
+            font-size: 38px;
             margin: 0;
-            padding: 42px;
+            padding: 38px;
         }
 
         .content {
@@ -94,7 +94,7 @@ STYLE = """
             text-indent: -2em;
             margin-left: 2em;
             margin-top: 0;
-            margin-bottom: 12px;
+            margin-bottom: 6px;
         }
 """
 
