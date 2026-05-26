@@ -131,6 +131,7 @@ Python 负责整理数据，HTML 结构交给模板文件维护。这样不同�
 templates/
   grammar_examples.html   语法例句页面
   katakana_words.html     N3 片假名单词页面
+  giongo_words.html       拟声拟态语候选页面
   vocabulary_list.html    之后可增加：单词列表页面
   kanji_detail.html       之后可增加：汉字详解页面
 ```
@@ -140,6 +141,7 @@ templates/
 ```text
 templates/grammar_examples.html
 templates/katakana_words.html
+templates/giongo_words.html
 ```
 
 ### `katakana_words.py`
@@ -179,6 +181,49 @@ read.startswith("(")
 
 ```text
 templates/katakana_words.html
+```
+
+### `giongo_words.py`
+
+从 JLPT 单词 JSON 中提取拟声拟态语候选，并生成 HtmlPack。
+
+默认数据源同样来自：
+
+```text
+../kanji_dict/dict/5mdld/全部JLPT单词.json
+```
+
+因为当前词典没有直接的“拟声拟态语”标签，所以采用“形态规则 + 词性辅助”的方式提取候选。
+
+形态规则：
+
+```text
+ABAB       ぴかぴか、びしょびしょ、がらがら
+AっBり    はっきり、うっかり、がっかり
+AんBり    ぼんやり、しょんぼり、うんざり
+〜っと     からっと、じっと、ぐっと
+〜りと     うらうらと
+〜んと     ぽろんと、きちんと
+```
+
+词性辅助：
+
+```text
+tag_str 中包含 副 / 形動 / 動自サ / 動他サ
+```
+
+页面规则：
+
+- 每页显示 5 个词。
+- 最后一页不足 5 个时照常显示。
+- 每个词生成一个高亮版本的 HtmlPack。
+- 每个词显示：单词、声调、词性、等级、命中的形态规则、中文翻译。
+- 命中的形态规则会显示在页面上，方便人工检查筛选是否过宽。
+
+对应模板：
+
+```text
+templates/giongo_words.html
 ```
 
 ### `voicevox.py`
